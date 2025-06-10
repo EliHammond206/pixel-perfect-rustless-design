@@ -38,8 +38,25 @@ const Index = () => {
             </h2>
           </div>
 
-          {/* Post Section (Centered) */}
+          {/* Center Section with Hashtag and Post */}
           <div className="flex-shrink-0 flex flex-col items-center relative">
+            {/* Neon Hashtag */}
+            <div className="mb-6 md:mb-8">
+              <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-center">
+                <span 
+                  className="inline-block"
+                  style={{
+                    color: '#00ffff',
+                    textShadow: '0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff',
+                    filter: 'brightness(1.2)'
+                  }}
+                >
+                  #
+                </span>
+              </div>
+            </div>
+
+            {/* Post Container */}
             <div className="post-container relative w-[260px] h-[325px] sm:w-[280px] sm:h-[350px] md:w-[320px] md:h-[400px] lg:w-[384px] lg:h-[480px] z-[3] rounded-3xl" 
                  style={{ boxShadow: '0 0 12px 20px rgba(0, 0, 0, 0.5)' }}>
               <div 
