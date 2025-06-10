@@ -40,15 +40,16 @@ const Index = () => {
 
           {/* Post Section (Centered) */}
           <div className="flex-shrink-0 flex flex-col items-center relative">
-            <div className="relative post-container">
+            <div className="post-container relative w-[260px] h-[325px] sm:w-[280px] sm:h-[350px] md:w-[320px] md:h-[400px] lg:w-[384px] lg:h-[480px] z-[3] rounded-3xl" 
+                 style={{ boxShadow: '0 0 12px 20px rgba(0, 0, 0, 0.5)' }}>
               <div 
-                className="post"
+                className="post relative w-full h-full bg-cover bg-center rounded-3xl"
                 style={{
                   backgroundImage: "url('https://raw.githubusercontent.com/EliHammond206/rustless/main/pictures/bce4a4b6cd43e7a78a98d8795508fc27.jpg')"
                 }}
               >
-                <div className="gradient-overlay"></div>
-                <div className="gradient-overlay-bottom"></div>
+                <div className="gradient-overlay absolute top-0 left-0 w-full h-[150px] bg-gradient-to-b from-black/60 to-transparent z-[1] pointer-events-none rounded-t-3xl"></div>
+                <div className="gradient-overlay-bottom absolute bottom-0 left-0 w-full h-[150px] bg-gradient-to-t from-black/60 to-transparent z-[1] pointer-events-none rounded-b-3xl"></div>
               </div>
             </div>
           </div>
@@ -64,7 +65,7 @@ const Index = () => {
       </div>
 
       {/* Subtle Gradient Overlay */}
-      <div className="blur-gradient"></div>
+      <div className="blur-gradient absolute bottom-0 left-0 right-0 h-[200px] bg-gradient-to-b from-transparent to-black/1 pointer-events-none z-[5]"></div>
 
       {/* Mentions Section */}
       <section className="text-center py-8 md:py-12">
@@ -95,84 +96,6 @@ const Index = () => {
         <a href="#" className="hover:underline">Join Rustless Family</a>
         <a href="#" className="hover:underline">Community Guidelines</a>
       </footer>
-
-      <style jsx>{`
-        .post-container {
-          position: relative;
-          width: 280px;
-          height: 350px;
-          box-shadow: 0 0 15px 25px rgba(0, 0, 0, 0.5);
-          z-index: 3;
-          border-radius: 1.5rem;
-        }
-
-        .post {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          background-size: cover;
-          background-position: center;
-          border-radius: 1.5rem;
-        }
-
-        .gradient-overlay {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 150px;
-          background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
-          z-index: 1;
-          pointer-events: none;
-          border-radius: 1.5rem 1.5rem 0 0;
-        }
-
-        .gradient-overlay-bottom {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 150px;
-          background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
-          z-index: 1;
-          pointer-events: none;
-          border-radius: 0 0 1.5rem 1.5rem;
-        }
-
-        .blur-gradient {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 200px;
-          background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.01) 100%);
-          pointer-events: none;
-          z-index: 5;
-        }
-
-        @media (min-width: 768px) {
-          .post-container {
-            width: 320px;
-            height: 400px;
-            box-shadow: 0 0 20px 35px rgba(0, 0, 0, 0.5);
-          }
-        }
-
-        @media (min-width: 1024px) {
-          .post-container {
-            width: 384px;
-            height: 480px;
-          }
-        }
-
-        @media (max-width: 640px) {
-          .post-container {
-            width: 260px;
-            height: 325px;
-            box-shadow: 0 0 12px 20px rgba(0, 0, 0, 0.5);
-          }
-        }
-      `}</style>
     </div>
   );
 };
