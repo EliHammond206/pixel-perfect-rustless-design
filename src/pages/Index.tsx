@@ -29,21 +29,22 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
             size="desktop-round"
-            style={{ left: '230px', top: '87px' }}
+            style={{ left: '230px', top: '20px' }}
             className=""
           />
           
           <FloatingPhoto
             src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
             size="desktop-tiktok"
-            style={{ left: '92px', top: '308px' }}
+            style={{ left: '92px', top: '200px' }}
             className=""
             isRectangular={true}
+            rotation="left"
           />
           
           <div 
-            className="absolute text-[96px] z-10"
-            style={{ left: '242px', top: '476px' }}
+            className="absolute text-[76px] z-10"
+            style={{ left: '242px', top: '380px' }}
           >
             🥰
           </div>
@@ -51,7 +52,7 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
             size="desktop-round"
-            style={{ left: '348px', top: '532px' }}
+            style={{ left: '348px', top: '430px' }}
             className=""
           />
 
@@ -59,13 +60,13 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
             size="desktop-round"
-            style={{ left: '924px', top: '148px' }}
+            style={{ left: '924px', top: '50px' }}
             className=""
           />
           
           <div 
-            className="absolute text-[96px] z-10"
-            style={{ left: '993px', top: '247px' }}
+            className="absolute text-[76px] z-10"
+            style={{ left: '993px', top: '150px' }}
           >
             😮‍💨
           </div>
@@ -73,15 +74,16 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
             size="desktop-tiktok"
-            style={{ left: '1018px', top: '359px' }}
+            style={{ left: '1018px', top: '260px' }}
             className=""
             isRectangular={true}
+            rotation="right"
           />
           
           <FloatingPhoto
             src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
             size="desktop-round"
-            style={{ left: '774px', top: '559px' }}
+            style={{ left: '774px', top: '460px' }}
             className=""
           />
         </div>
@@ -90,8 +92,8 @@ const Index = () => {
         <div className="block md:hidden">
           {/* Above "Live It Your Way" */}
           <div 
-            className="absolute text-[60px] z-10"
-            style={{ left: '45px', top: '91px' }}
+            className="absolute text-[48px] z-10"
+            style={{ left: '45px', top: '20px' }}
           >
             🥰
           </div>
@@ -99,23 +101,25 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
             size="mobile-tiktok"
-            style={{ left: '65px', top: '113px' }}
+            style={{ left: '65px', top: '40px' }}
             className=""
             isRectangular={true}
+            rotation="left"
           />
           
           <FloatingPhoto
             src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
             size="mobile-tiktok"
-            style={{ left: '235px', top: '59px' }}
+            style={{ left: '235px', top: '0px' }}
             className=""
             isRectangular={true}
+            rotation="right"
           />
           
           <FloatingPhoto
             src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
             size="mobile-round"
-            style={{ left: '263px', top: '210px' }}
+            style={{ left: '263px', top: '140px' }}
             className=""
           />
 
@@ -123,13 +127,13 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
             size="mobile-large-round"
-            style={{ left: '45px', top: '653px' }}
+            style={{ left: '45px', top: '580px' }}
             className=""
           />
           
           <div 
-            className="absolute text-[60px] z-10"
-            style={{ left: '159px', top: '668px' }}
+            className="absolute text-[48px] z-10"
+            style={{ left: '159px', top: '595px' }}
           >
             😮‍💨
           </div>
@@ -137,14 +141,14 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
             size="mobile-round"
-            style={{ left: '263px', top: '748px' }}
+            style={{ left: '263px', top: '675px' }}
             className=""
           />
           
           <FloatingPhoto
             src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
             size="mobile-round"
-            style={{ left: '213px', top: '766px' }}
+            style={{ left: '213px', top: '693px' }}
             className=""
           />
         </div>
@@ -171,8 +175,8 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Mentions Section */}
-      <section className="text-center py-8 md:py-12 relative z-10">
+      {/* Mentions Section - Repositioned lower */}
+      <section className="text-center py-16 md:py-20 relative z-10 mt-8">
         <h2 className="text-xl md:text-2xl font-bold text-white mb-8 md:mb-12">
           As Soon On
         </h2>

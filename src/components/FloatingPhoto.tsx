@@ -9,6 +9,7 @@ interface FloatingPhotoProps {
   emojiPosition?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
   isRectangular?: boolean;
   style?: React.CSSProperties;
+  rotation?: 'left' | 'right' | 'none';
 }
 
 const FloatingPhoto: React.FC<FloatingPhotoProps> = ({ 
@@ -18,17 +19,18 @@ const FloatingPhoto: React.FC<FloatingPhotoProps> = ({
   size,
   emojiPosition = 'top-right',
   isRectangular = false,
-  style
+  style,
+  rotation = 'none'
 }) => {
   const sizeClasses = {
-    small: isRectangular ? 'w-16 h-20 md:w-20 md:h-28' : 'w-16 h-16 md:w-20 md:h-20',
-    medium: isRectangular ? 'w-20 h-28 md:w-24 md:h-32' : 'w-20 h-20 md:w-24 md:h-24',
-    large: isRectangular ? 'w-24 h-32 md:w-32 md:h-44' : 'w-24 h-24 md:w-32 md:h-32',
-    'desktop-round': 'w-[150px] h-[150px]',
-    'desktop-tiktok': 'w-[187px] h-[266px]',
-    'mobile-round': 'w-[100px] h-[100px]',
-    'mobile-tiktok': 'w-[142px] h-[192px]',
-    'mobile-large-round': 'w-[150px] h-[150px]'
+    small: isRectangular ? 'w-12 h-16 md:w-16 md:h-22' : 'w-12 h-12 md:w-16 md:h-16',
+    medium: isRectangular ? 'w-16 h-22 md:w-20 md:h-28' : 'w-16 h-16 md:w-20 md:h-20',
+    large: isRectangular ? 'w-20 h-28 md:w-28 md:h-38' : 'w-20 h-20 md:w-28 md:h-28',
+    'desktop-round': 'w-[120px] h-[120px]',
+    'desktop-tiktok': 'w-[150px] h-[213px]',
+    'mobile-round': 'w-[80px] h-[80px]',
+    'mobile-tiktok': 'w-[114px] h-[154px]',
+    'mobile-large-round': 'w-[120px] h-[120px]'
   };
 
   const emojiPositionClasses = {
@@ -38,13 +40,19 @@ const FloatingPhoto: React.FC<FloatingPhotoProps> = ({
     'bottom-right': '-bottom-2 -right-2'
   };
 
+  const rotationClasses = {
+    'left': 'rotate-[10deg]',
+    'right': 'rotate-[-10deg]',
+    'none': ''
+  };
+
   const borderRadius = isRectangular ? 'rounded-2xl' : 'rounded-full';
 
-  const emojiSize = size.includes('desktop') ? 'text-[96px]' : 'text-[60px]';
+  const emojiSize = size.includes('desktop') ? 'text-[76px]' : 'text-[48px]';
 
   return (
     <div className={`absolute ${className}`} style={style}>
-      <div className={`relative ${sizeClasses[size]} ${borderRadius} overflow-hidden border-2 border-white`}>
+      <div className={`relative ${sizeClasses[size]} ${borderRadius} ${rotationClasses[rotation]} overflow-hidden border-2 border-white`}>
         <img 
           src={src} 
           alt="User photo" 
