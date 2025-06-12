@@ -25,52 +25,52 @@ const Index = () => {
       <div className="flex-1 flex flex-col justify-center items-center relative px-4 py-12">
         {/* Floating Photos - Desktop Layout */}
         <div className="hidden md:block">
-          {/* Top Left - TikTok style photo with emoji */}
+          {/* Top Left - Circular photo */}
+          <FloatingPhoto
+            src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+            size="medium"
+            className="top-20 left-20"
+          />
+          
+          {/* Top Right - Circular photo with emoji */}
+          <FloatingPhoto
+            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+            emoji="😮‍💨"
+            size="medium"
+            className="top-32 right-20"
+            emojiPosition="bottom-right"
+          />
+          
+          {/* Left Side - Rectangular photo with emoji */}
           <FloatingPhoto
             src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
             emoji="🥰"
             size="large"
-            className="top-32 left-32"
+            className="top-1/2 left-16 -translate-y-1/2"
             emojiPosition="bottom-left"
             isRectangular={true}
           />
           
-          {/* Top Right - Circle photo */}
-          <FloatingPhoto
-            src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
-            size="medium"
-            className="top-24 right-32"
-          />
-          
-          {/* Right Side - TikTok style photo with emoji */}
+          {/* Right Side - Rectangular photo */}
           <FloatingPhoto
             src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
-            emoji="😮‍💨"
             size="large"
-            className="top-1/2 right-16 -translate-y-1/2"
-            emojiPosition="bottom-right"
+            className="top-1/3 right-12"
             isRectangular={true}
           />
           
-          {/* Bottom Left - Circle photo */}
+          {/* Bottom Left - Circular photo */}
           <FloatingPhoto
-            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+            src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
             size="medium"
-            className="bottom-32 left-40"
+            className="bottom-20 left-32"
           />
           
-          {/* Bottom Center - Circle photo */}
-          <FloatingPhoto
-            src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
-            size="medium"
-            className="bottom-24 left-1/2 -translate-x-1/2"
-          />
-          
-          {/* Bottom Right - Circle photo */}
+          {/* Bottom Center - Circular photo */}
           <FloatingPhoto
             src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
             size="medium"
-            className="bottom-32 right-40"
+            className="bottom-32 right-32"
           />
         </div>
 
@@ -78,10 +78,25 @@ const Index = () => {
         <div className="block md:hidden">
           {/* Top Photos */}
           <FloatingPhoto
+            src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+            size="small"
+            className="top-8 left-4"
+          />
+          
+          <FloatingPhoto
+            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+            emoji="😮‍💨"
+            size="small"
+            className="top-16 right-8"
+            emojiPosition="bottom-right"
+          />
+          
+          {/* Bottom Photos */}
+          <FloatingPhoto
             src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
             emoji="🥰"
             size="small"
-            className="top-8 left-4"
+            className="bottom-20 left-8"
             emojiPosition="bottom-left"
             isRectangular={true}
           />
@@ -89,23 +104,8 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
             size="small"
-            className="top-16 right-8"
-          />
-          
-          {/* Bottom Photos */}
-          <FloatingPhoto
-            src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
-            emoji="😮‍💨"
-            size="small"
-            className="bottom-20 left-8"
-            emojiPosition="bottom-right"
-            isRectangular={true}
-          />
-          
-          <FloatingPhoto
-            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
-            size="small"
             className="bottom-32 right-4"
+            isRectangular={true}
           />
         </div>
 
