@@ -35,7 +35,7 @@ const DynamicHashtag = () => {
   }, [displayText, isDeleting, currentIndex, hashtags]);
 
   return (
-    <span className="text-foreground">
+    <span className="text-white">
       #{displayText}
       <span className="animate-pulse">|</span>
     </span>
