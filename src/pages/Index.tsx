@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Apple, Android } from 'lucide-react';
+import { Apple } from 'lucide-react';
 import DynamicHashtag from '../components/DynamicHashtag';
 import FloatingPhoto from '../components/FloatingPhoto';
 
@@ -122,7 +122,9 @@ const Index = () => {
               <Apple className="w-6 h-6" />
             </button>
             <button className="w-[88px] h-[65px] bg-foreground text-background rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
-              <Android className="w-6 h-6" />
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.523 15.3414c-.5665-.0159-1.4148-.2458-2.384-.8034-.9693-.5576-1.8745-1.263-2.7158-2.1155C11.5831 11.6217 10.7338 10.6234 10.1428 9.4844 9.5518 8.3454 9.1953 7.1775 9.0732 6.0977c-.1221-1.0798.0244-2.0781.4395-3.0059.4151-.9278 1.1084-1.7852 2.0801-2.5713 1.0952-.8862 2.5171-1.328 4.2656-1.3262h.4658c1.7485-.0018 3.1704.4399 4.2656 1.3261.9717.7862 1.665 1.6436 2.0801 2.5714.4151.9278.5616 1.9261.4395 3.0059-.1221 1.0798-.4786 2.2477-1.0696 3.3867-.5911 1.1389-1.4405 2.1372-2.5405 2.936-.9413.6824-1.8465 1.388-2.7158 2.1155-.9692.5576-1.8175.7875-2.384.8034z"/>
+              </svg>
             </button>
           </div>
         </div>
