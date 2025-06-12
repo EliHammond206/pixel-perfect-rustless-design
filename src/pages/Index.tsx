@@ -1,76 +1,137 @@
 
 import React from 'react';
+import { Apple, Android } from 'lucide-react';
+import DynamicHashtag from '../components/DynamicHashtag';
+import FloatingPhoto from '../components/FloatingPhoto';
 
 const Index = () => {
   return (
-    <div className="bg-black text-white flex flex-col min-h-screen relative">
+    <div className="bg-background text-foreground flex flex-col min-h-screen relative overflow-hidden">
       {/* Header */}
-      <header className="flex justify-between items-center p-4 md:p-6">
-        <h1 className="text-xl md:text-2xl font-bold">Rustless</h1>
+      <header className="flex justify-between items-center p-4 md:p-6 relative z-20">
+        <h1 className="text-xl md:text-2xl font-bold text-foreground">Rustless</h1>
         <div className="flex items-center space-x-2 md:space-x-4">
-          <a href="#" className="text-white text-xs md:text-sm align-middle">
+          <a href="#" className="text-foreground text-xs md:text-sm align-middle">
             <span className="hidden md:inline">Advertise with Rustless</span>
             <span className="md:hidden">Ads</span>
             <span className="bg-red-500 text-white text-xs px-1 py-0.5 rounded ml-1">New</span>
           </a>
-          <button className="bg-white text-black px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium">
+          <button className="bg-foreground text-background px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium">
             Get The App
           </button>
         </div>
       </header>
 
-      {/* Main Content */}
-      <div className="flex-1 flex flex-col justify-center">
-        <main className="flex flex-col md:flex-row items-center justify-center px-6 md:px-10 lg:px-20 max-w-7xl mx-auto w-full">
-          {/* Mobile Top Text */}
-          <div className="block md:hidden text-center mb-8">
-            <h2 className="text-4xl sm:text-5xl font-bold leading-tight">
-              <span className="block">Live It</span>
-              <span className="block">Your Way</span>
-            </h2>
-          </div>
+      {/* Hero Section */}
+      <div className="flex-1 flex flex-col justify-center items-center relative px-4 py-12">
+        {/* Floating Photos - Desktop Layout */}
+        <div className="hidden md:block">
+          {/* Top Left Area */}
+          <FloatingPhoto
+            src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
+            size="medium"
+            className="top-32 left-32"
+          />
+          
+          {/* Top Right Area */}
+          <FloatingPhoto
+            src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
+            emoji="😮‍💨"
+            size="medium"
+            className="top-24 right-32"
+            emojiPosition="bottom-right"
+          />
+          
+          {/* Left Side */}
+          <FloatingPhoto
+            src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
+            emoji="🥰"
+            size="large"
+            className="top-1/2 left-16 -translate-y-1/2"
+            emojiPosition="bottom-left"
+          />
+          
+          {/* Right Side */}
+          <FloatingPhoto
+            src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
+            size="large"
+            className="top-1/2 right-16 -translate-y-1/2"
+          />
+          
+          {/* Bottom Left */}
+          <FloatingPhoto
+            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+            size="medium"
+            className="bottom-32 left-40"
+          />
+          
+          {/* Bottom Right */}
+          <FloatingPhoto
+            src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+            size="medium"
+            className="bottom-24 right-40"
+          />
+        </div>
 
-          {/* Left Text Section (Desktop Only) */}
-          <div className="hidden md:block md:flex-1 text-right pr-4 lg:pr-8">
-            <h2 className="text-6xl lg:text-8xl xl:text-9xl font-bold leading-none">
-              <span className="block">Live</span>
-              <span className="block">It</span>
-            </h2>
-          </div>
+        {/* Floating Photos - Mobile Layout */}
+        <div className="block md:hidden">
+          {/* Top Photos */}
+          <FloatingPhoto
+            src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
+            emoji="🥰"
+            size="small"
+            className="top-8 left-4"
+            emojiPosition="top-right"
+          />
+          
+          <FloatingPhoto
+            src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
+            size="small"
+            className="top-16 right-8"
+          />
+          
+          {/* Bottom Photos */}
+          <FloatingPhoto
+            src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
+            emoji="😮‍💨"
+            size="small"
+            className="bottom-20 left-8"
+            emojiPosition="bottom-left"
+          />
+          
+          <FloatingPhoto
+            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+            size="small"
+            className="bottom-32 right-4"
+          />
+        </div>
 
-          {/* Post Section (Centered) */}
-          <div className="flex-shrink-0 flex flex-col items-center relative">
-            <div className="post-container relative w-[260px] h-[325px] sm:w-[280px] sm:h-[350px] md:w-[320px] md:h-[400px] lg:w-[384px] lg:h-[480px] z-[3] rounded-3xl" 
-                 style={{ boxShadow: '0 0 12px 20px rgba(0, 0, 0, 0.5)' }}>
-              <div 
-                className="post relative w-full h-full bg-cover bg-center rounded-3xl"
-                style={{
-                  backgroundImage: "url('https://raw.githubusercontent.com/EliHammond206/rustless/main/pictures/bce4a4b6cd43e7a78a98d8795508fc27.jpg')"
-                }}
-              >
-                <div className="gradient-overlay absolute top-0 left-0 w-full h-[150px] bg-gradient-to-b from-black/60 to-transparent z-[1] pointer-events-none rounded-t-3xl"></div>
-                <div className="gradient-overlay-bottom absolute bottom-0 left-0 w-full h-[150px] bg-gradient-to-t from-black/60 to-transparent z-[1] pointer-events-none rounded-b-3xl"></div>
-              </div>
+        {/* Main Content - Centered */}
+        <div className="text-center relative z-10">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-foreground leading-none mb-8">
+            <div className="mb-2">Live It</div>
+            <div className="mb-2">Your Way</div>
+            <div className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl">
+              <DynamicHashtag />
             </div>
-          </div>
+          </h1>
 
-          {/* Right Text Section (Desktop Only) */}
-          <div className="hidden md:block md:flex-1 text-left pl-4 lg:pl-8">
-            <h2 className="text-6xl lg:text-8xl xl:text-9xl font-bold leading-none">
-              <span className="block">Your</span>
-              <span className="block">Way</span>
-            </h2>
+          {/* App Store Buttons */}
+          <div className="flex justify-center gap-4 mt-12">
+            <button className="w-[88px] h-[65px] bg-foreground text-background rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+              <Apple className="w-6 h-6" />
+            </button>
+            <button className="w-[88px] h-[65px] bg-foreground text-background rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+              <Android className="w-6 h-6" />
+            </button>
           </div>
-        </main>
+        </div>
       </div>
 
-      {/* Subtle Gradient Overlay */}
-      <div className="blur-gradient absolute bottom-0 left-0 right-0 h-[200px] bg-gradient-to-b from-transparent to-black/1 pointer-events-none z-[5]"></div>
-
       {/* Mentions Section */}
-      <section className="text-center py-8 md:py-12">
-        <h2 className="text-xl md:text-2xl font-bold text-white mb-8 md:mb-12">
-          Soon In Mentions
+      <section className="text-center py-8 md:py-12 relative z-10">
+        <h2 className="text-xl md:text-2xl font-bold text-foreground mb-8 md:mb-12">
+          As Soon On
         </h2>
         <div className="flex justify-center items-center gap-4 md:gap-8 lg:gap-12 flex-wrap px-6 md:px-12">
           {[
@@ -91,10 +152,10 @@ const Index = () => {
       {/* Footer */}
       <footer className="flex flex-wrap justify-center items-center p-4 md:p-6 text-xs md:text-sm space-x-2 md:space-x-4 relative z-10">
         <span>© 2026 Rustless</span>
-        <a href="#" className="hover:underline">Terms of Service</a>
-        <a href="#" className="hover:underline">Get Help</a>
-        <a href="#" className="hover:underline">Join Rustless Family</a>
-        <a href="#" className="hover:underline">Community Guidelines</a>
+        <a href="#" className="hover:underline text-foreground">Terms of Service</a>
+        <a href="#" className="hover:underline text-foreground">Get Help</a>
+        <a href="#" className="hover:underline text-foreground">Join Rustless Family</a>
+        <a href="#" className="hover:underline text-foreground">Community Guidelines</a>
       </footer>
     </div>
   );
