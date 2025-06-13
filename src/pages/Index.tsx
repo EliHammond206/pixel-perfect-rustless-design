@@ -1,3 +1,4 @@
+
 import React from 'react';
 import DynamicHashtag from '../components/DynamicHashtag';
 import FloatingPhoto from '../components/FloatingPhoto';
@@ -28,22 +29,22 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
             size="desktop-round"
-            style={{ left: '230px', top: '20px' }}
+            style={{ left: '15%', top: '10%' }}
             className=""
           />
           
           <FloatingPhoto
             src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
             size="desktop-tiktok"
-            style={{ left: '92px', top: '200px', transform: 'rotate(9deg)' }}
+            style={{ left: '8%', top: '35%', transform: 'rotate(9deg)' }}
             className=""
             isRectangular={true}
             rotation="left"
           />
           
           <div 
-            className="absolute text-[76px] z-10"
-            style={{ left: '242px', top: '380px' }}
+            className="absolute text-[60px] z-10"
+            style={{ left: '20%', top: '65%' }}
           >
             🥰
           </div>
@@ -51,7 +52,7 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
             size="desktop-round"
-            style={{ left: '348px', top: '430px' }}
+            style={{ left: '25%', top: '75%' }}
             className=""
           />
 
@@ -59,13 +60,13 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
             size="desktop-round"
-            style={{ left: '924px', top: '50px' }}
+            style={{ left: '70%', top: '8%' }}
             className=""
           />
           
           <div 
-            className="absolute text-[76px] z-10"
-            style={{ left: '993px', top: '150px' }}
+            className="absolute text-[60px] z-10"
+            style={{ left: '75%', top: '25%' }}
           >
             😮‍💨
           </div>
@@ -73,7 +74,7 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
             size="desktop-tiktok"
-            style={{ left: '1018px', top: '260px', transform: 'rotate(-9deg)' }}
+            style={{ left: '78%', top: '40%', transform: 'rotate(-9deg)' }}
             className=""
             isRectangular={true}
           />
@@ -81,17 +82,17 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
             size="desktop-round"
-            style={{ left: '774px', top: '460px' }}
+            style={{ left: '65%', top: '78%' }}
             className=""
           />
         </div>
 
         {/* Floating Photos - Mobile Layout */}
         <div className="block md:hidden">
-          {/* Above "Live It Your Way" - positioned higher to not overlap with logos */}
+          {/* Above "Live It Your Way" */}
           <div 
-            className="absolute text-[48px] z-10"
-            style={{ left: '45px', top: '80px' }}
+            className="absolute text-[36px] z-10"
+            style={{ left: '10%', top: '5%' }}
           >
             🥰
           </div>
@@ -99,7 +100,7 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
             size="mobile-tiktok"
-            style={{ left: '65px', top: '100px', transform: 'rotate(9deg)' }}
+            style={{ left: '15%', top: '8%', transform: 'rotate(9deg)' }}
             className=""
             isRectangular={true}
           />
@@ -107,7 +108,7 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
             size="mobile-tiktok"
-            style={{ left: '235px', top: '60px', transform: 'rotate(-9deg)' }}
+            style={{ left: '65%', top: '3%', transform: 'rotate(-9deg)' }}
             className=""
             isRectangular={true}
           />
@@ -115,21 +116,21 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
             size="mobile-round"
-            style={{ left: '263px', top: '200px' }}
+            style={{ left: '70%', top: '25%' }}
             className=""
           />
 
-          {/* Below "Live It Your Way" - positioned much lower */}
+          {/* Below "Live It Your Way" */}
           <FloatingPhoto
             src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
             size="mobile-large-round"
-            style={{ left: '45px', top: '720px' }}
+            style={{ left: '10%', top: '85%' }}
             className=""
           />
           
           <div 
-            className="absolute text-[48px] z-10"
-            style={{ left: '159px', top: '735px' }}
+            className="absolute text-[36px] z-10"
+            style={{ left: '40%', top: '88%' }}
           >
             😮‍💨
           </div>
@@ -137,20 +138,20 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
             size="mobile-round"
-            style={{ left: '263px', top: '815px' }}
+            style={{ left: '70%', top: '95%' }}
             className=""
           />
           
           <FloatingPhoto
             src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
             size="mobile-round"
-            style={{ left: '213px', top: '833px' }}
+            style={{ left: '60%', top: '110%' }}
             className=""
           />
         </div>
 
-        {/* Main Content - Centered, positioned lower on mobile */}
-        <div className="text-center relative z-10 mt-0 md:mt-0" style={{ marginTop: '120px' }}>
+        {/* Main Content - Centered */}
+        <div className="text-center relative z-10 mt-16 md:mt-0">
           <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white leading-none mb-8">
             <div className="mb-2">Live It</div>
             <div className="mb-2">Your Way</div>
@@ -171,8 +172,8 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Mentions Section - Repositioned much lower on mobile */}
-      <section className="text-center py-16 md:py-20 relative z-10 mt-8" style={{ marginTop: '200px' }}>
+      {/* Mentions Section */}
+      <section className="text-center py-16 md:py-20 relative z-10 mt-20 md:mt-8">
         <h2 className="text-xl md:text-2xl font-bold text-white mb-8 md:mb-12">
           As Soon On
         </h2>
