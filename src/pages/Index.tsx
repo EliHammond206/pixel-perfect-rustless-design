@@ -40,6 +40,7 @@ const Index = () => {
             className=""
             isRectangular={true}
             rotation="left"
+            style={{ left: '92px', top: '200px', transform: 'rotate(9deg)' }}
           />
           
           <div 
@@ -74,10 +75,9 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
             size="desktop-tiktok"
-            style={{ left: '1018px', top: '260px' }}
+            style={{ left: '1018px', top: '260px', transform: 'rotate(-9deg)' }}
             className=""
             isRectangular={true}
-            rotation="right"
           />
           
           <FloatingPhoto
@@ -90,10 +90,10 @@ const Index = () => {
 
         {/* Floating Photos - Mobile Layout */}
         <div className="block md:hidden">
-          {/* Above "Live It Your Way" */}
+          {/* Above "Live It Your Way" - positioned higher to not overlap with logos */}
           <div 
             className="absolute text-[48px] z-10"
-            style={{ left: '45px', top: '20px' }}
+            style={{ left: '45px', top: '80px' }}
           >
             🥰
           </div>
@@ -101,39 +101,37 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
             size="mobile-tiktok"
-            style={{ left: '65px', top: '40px' }}
+            style={{ left: '65px', top: '100px', transform: 'rotate(9deg)' }}
             className=""
             isRectangular={true}
-            rotation="left"
           />
           
           <FloatingPhoto
             src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
             size="mobile-tiktok"
-            style={{ left: '235px', top: '0px' }}
+            style={{ left: '235px', top: '60px', transform: 'rotate(-9deg)' }}
             className=""
             isRectangular={true}
-            rotation="right"
           />
           
           <FloatingPhoto
             src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
             size="mobile-round"
-            style={{ left: '263px', top: '140px' }}
+            style={{ left: '263px', top: '200px' }}
             className=""
           />
 
-          {/* Below "Live It Your Way" */}
+          {/* Below "Live It Your Way" - positioned much lower */}
           <FloatingPhoto
             src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
             size="mobile-large-round"
-            style={{ left: '45px', top: '580px' }}
+            style={{ left: '45px', top: '720px' }}
             className=""
           />
           
           <div 
             className="absolute text-[48px] z-10"
-            style={{ left: '159px', top: '595px' }}
+            style={{ left: '159px', top: '735px' }}
           >
             😮‍💨
           </div>
@@ -141,20 +139,20 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
             size="mobile-round"
-            style={{ left: '263px', top: '675px' }}
+            style={{ left: '263px', top: '815px' }}
             className=""
           />
           
           <FloatingPhoto
             src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
             size="mobile-round"
-            style={{ left: '213px', top: '693px' }}
+            style={{ left: '213px', top: '833px' }}
             className=""
           />
         </div>
 
-        {/* Main Content - Centered */}
-        <div className="text-center relative z-10">
+        {/* Main Content - Centered, positioned lower on mobile */}
+        <div className="text-center relative z-10 mt-0 md:mt-0" style={{ marginTop: '120px' }}>
           <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white leading-none mb-8">
             <div className="mb-2">Live It</div>
             <div className="mb-2">Your Way</div>
@@ -175,8 +173,8 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Mentions Section - Repositioned lower */}
-      <section className="text-center py-16 md:py-20 relative z-10 mt-8">
+      {/* Mentions Section - Repositioned much lower on mobile */}
+      <section className="text-center py-16 md:py-20 relative z-10 mt-8" style={{ marginTop: '200px' }}>
         <h2 className="text-xl md:text-2xl font-bold text-white mb-8 md:mb-12">
           As Soon On
         </h2>
