@@ -1,4 +1,3 @@
-
 import React from 'react';
 import DynamicHashtag from '../components/DynamicHashtag';
 import FloatingPhoto from '../components/FloatingPhoto';
@@ -36,11 +35,10 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
             size="desktop-tiktok"
-            style={{ left: '92px', top: '200px' }}
+            style={{ left: '92px', top: '200px', transform: 'rotate(9deg)' }}
             className=""
             isRectangular={true}
             rotation="left"
-            style={{ left: '92px', top: '200px', transform: 'rotate(9deg)' }}
           />
           
           <div 
