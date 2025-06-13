@@ -113,10 +113,11 @@ const Index = () => {
             🥰
           </div>
           
+          {/* Moved this photo to the left to avoid overlap with Apple button */}
           <FloatingPhoto
             src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
             size="tablet-round"
-            style={{ left: '25%', top: '75%' }}
+            style={{ left: '18%', top: '75%', zIndex: '5' }}
             className=""
           />
 
@@ -153,10 +154,10 @@ const Index = () => {
 
         {/* Floating Photos - Mobile Layout */}
         <div className="block md:hidden">
-          {/* Above "Live It Your Way" */}
+          {/* Top collage - positioned higher above the text */}
           <div 
-            className="absolute text-[36px] z-10"
-            style={{ left: '10%', top: '5%' }}
+            className="absolute text-[36px] z-20"
+            style={{ left: '5%', top: '2%' }}
           >
             🥰
           </div>
@@ -164,7 +165,7 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
             size="mobile-tiktok"
-            style={{ left: '15%', top: '8%', transform: 'rotate(9deg)' }}
+            style={{ left: '12%', top: '3%', transform: 'rotate(9deg)' }}
             className=""
             isRectangular={true}
           />
@@ -172,7 +173,7 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
             size="mobile-tiktok"
-            style={{ left: '65%', top: '3%', transform: 'rotate(-9deg)' }}
+            style={{ left: '68%', top: '1%', transform: 'rotate(-9deg)' }}
             className=""
             isRectangular={true}
           />
@@ -180,21 +181,21 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
             size="mobile-round"
-            style={{ left: '70%', top: '25%' }}
+            style={{ left: '75%', top: '20%' }}
             className=""
           />
 
-          {/* Below "Live It Your Way" */}
+          {/* Bottom collage - positioned much lower below the buttons */}
           <FloatingPhoto
             src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
             size="mobile-large-round"
-            style={{ left: '10%', top: '75%' }}
+            style={{ left: '5%', top: '90%' }}
             className=""
           />
           
           <div 
-            className="absolute text-[36px] z-10"
-            style={{ left: '40%', top: '78%' }}
+            className="absolute text-[36px] z-20"
+            style={{ left: '35%', top: '95%' }}
           >
             😮‍💨
           </div>
@@ -202,24 +203,24 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
             size="mobile-round"
-            style={{ left: '70%', top: '85%' }}
+            style={{ left: '65%', top: '100%' }}
             className=""
           />
           
           <FloatingPhoto
             src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
             size="mobile-round"
-            style={{ left: '60%', top: '100%' }}
+            style={{ left: '55%', top: '115%' }}
             className=""
           />
         </div>
 
-        {/* Main Content - Centered */}
+        {/* Main Content - Centered and adjusted for mobile */}
         <div className="text-center relative z-10 mt-8 sm:mt-16 md:mt-0">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white leading-none mb-4 sm:mb-8">
+          <h1 className="text-4xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white leading-none mb-4 sm:mb-8">
             <div className="mb-2">Live It</div>
             <div className="mb-2">Your Way</div>
-            <div className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl">
+            <div className="text-3xl md:text-6xl lg:text-7xl xl:text-8xl">
               <DynamicHashtag />
             </div>
           </h1>
