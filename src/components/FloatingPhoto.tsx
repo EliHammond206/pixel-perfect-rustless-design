@@ -5,7 +5,7 @@ interface FloatingPhotoProps {
   src: string;
   emoji?: string;
   className: string;
-  size: 'small' | 'medium' | 'large' | 'desktop-round' | 'desktop-tiktok' | 'mobile-round' | 'mobile-tiktok' | 'mobile-large-round';
+  size: 'small' | 'medium' | 'large' | 'desktop-round' | 'desktop-tiktok' | 'mobile-round' | 'mobile-tiktok' | 'mobile-large-round' | 'tablet-round' | 'tablet-tiktok' | 'tablet-large-round';
   emojiPosition?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
   isRectangular?: boolean;
   style?: React.CSSProperties;
@@ -30,7 +30,10 @@ const FloatingPhoto: React.FC<FloatingPhotoProps> = ({
     'desktop-tiktok': 'w-[150px] h-[213px]',
     'mobile-round': 'w-[80px] h-[80px]',
     'mobile-tiktok': 'w-[114px] h-[154px]',
-    'mobile-large-round': 'w-[120px] h-[120px]'
+    'mobile-large-round': 'w-[120px] h-[120px]',
+    'tablet-round': 'w-[100px] h-[100px]',
+    'tablet-tiktok': 'w-[95px] h-[128px]',
+    'tablet-large-round': 'w-[100px] h-[100px]'
   };
 
   const emojiPositionClasses = {
