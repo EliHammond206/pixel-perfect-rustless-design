@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import DynamicHashtag from '../components/DynamicHashtag';
@@ -308,14 +307,14 @@ const PartnerWithUs = () => {
           <FloatingPhoto
             src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
             size="desktop-round"
-            style={{ left: '10%', top: '20%', opacity: '0.3' }}
+            style={{ left: '10%', top: '20%' }}
             className=""
           />
           
           <FloatingPhoto
             src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
             size="desktop-round"
-            style={{ right: '10%', top: '30%', opacity: '0.3' }}
+            style={{ right: '10%', top: '30%' }}
             className=""
           />
         </div>
@@ -328,15 +327,67 @@ const PartnerWithUs = () => {
               #You Can Do It!
             </div>
           </h2>
-          
-          <p className="text-lg md:text-xl text-gray-700 mb-8 md:mb-10 max-w-2xl mx-auto">
-            Join thousands of businesses that have transformed their reach and engagement through Rustless. 
-            We provide the tools, you bring the vision.
-          </p>
-          
-          <button className="bg-black text-white px-8 py-4 rounded-full text-lg font-medium hover:opacity-80 transition-opacity">
-            Start Now ↗
-          </button>
+        </div>
+      </section>
+
+      {/* Additional Perks Section */}
+      <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {/* Perk 1 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">📸</div>
+              <div className="text-xl md:text-2xl font-bold text-black mb-3">Format</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                In-feed static or video content that appears alongside close friends.
+              </p>
+            </div>
+
+            {/* Perk 2 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">🎬</div>
+              <div className="text-xl md:text-2xl font-bold text-black mb-3">Content</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                Offer a behind the scenes & unique perspective that users won't find anywhere else.
+              </p>
+            </div>
+
+            {/* Perk 3 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">✅</div>
+              <div className="text-xl md:text-2xl font-bold text-black mb-3">Environment</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                Safe, moderated, and intimate community for authentic connections.
+              </p>
+            </div>
+
+            {/* Perk 4 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">🎯</div>
+              <div className="text-xl md:text-2xl font-bold text-black mb-3">Targeting</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                Reach your ideal audience with precision targeting and authentic engagement.
+              </p>
+            </div>
+
+            {/* Perk 5 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">📊</div>
+              <div className="text-xl md:text-2xl font-bold text-black mb-3">Analytics</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                Real-time insights and detailed analytics to track your campaign performance.
+              </p>
+            </div>
+
+            {/* Perk 6 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">🤝</div>
+              <div className="text-xl md:text-2xl font-bold text-black mb-3">Support</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                Dedicated support team to help you maximize your advertising success.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
