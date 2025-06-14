@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import DynamicHashtag from '../components/DynamicHashtag';
@@ -305,16 +304,16 @@ const Index = () => {
         
         {/* Second Line - Navigation Links */}
         <div className="flex flex-wrap justify-center items-center gap-2 md:gap-3 text-base font-medium">
-          <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Safety</a>
+          <Link to="/safety" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Safety</Link>
           <span className="text-gray-400">|</span>
-          <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Help</a>
+          <Link to="/help" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Help</Link>
           <span className="text-gray-400">|</span>
-          <a href="#" className="hover:opacity-70 flex items-center text-black">
+          <Link to="/join-us" className="hover:opacity-70 flex items-center text-black">
             <span className="underline underline-offset-4 decoration-1">Join Us</span>
             <span className="ml-1 text-sm">👋</span>
-          </a>
+          </Link>
           <span className="text-gray-400">|</span>
-          <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Guidelines</a>
+          <Link to="/guidelines" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Guidelines</Link>
         </div>
         
         {/* Third Line - Copyright */}
