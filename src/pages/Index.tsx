@@ -152,7 +152,7 @@ const Index = () => {
           <div className="relative h-44 mb-6">
             <div 
               className="absolute text-[30px] z-20"
-              style={{ left: '20px', top: '10px' }}
+              style={{ left: '30px', top: '10px' }}
             >
               🥰
             </div>
@@ -160,7 +160,7 @@ const Index = () => {
             <FloatingPhoto
               src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
               size="mobile-tiktok"
-              style={{ left: '40px', top: '35px', transform: 'rotate(15deg)' }}
+              style={{ left: '60px', top: '35px', transform: 'rotate(15deg)' }}
               className=""
               isRectangular={true}
             />
@@ -168,7 +168,7 @@ const Index = () => {
             <FloatingPhoto
               src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
               size="mobile-tiktok"
-              style={{ left: '200px', top: '5px', transform: 'rotate(-15deg)' }}
+              style={{ left: '180px', top: '5px', transform: 'rotate(-15deg)' }}
               className=""
               isRectangular={true}
             />
@@ -176,7 +176,7 @@ const Index = () => {
             <FloatingPhoto
               src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
               size="mobile-round"
-              style={{ left: '220px', top: '120px' }}
+              style={{ left: '200px', top: '120px' }}
               className=""
             />
           </div>
@@ -205,19 +205,19 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Bottom section with remaining photos - Fixed positioning for iPhone 14 Plus */}
+          {/* Bottom section with remaining photos - Better centered positioning */}
           <div className="relative h-32 mb-2 flex justify-center">
-            <div className="relative w-full max-w-[280px]">
+            <div className="relative w-full max-w-[300px]">
               <FloatingPhoto
                 src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
                 size="mobile-large-round"
-                style={{ left: '0px', top: '5px' }}
+                style={{ left: '20px', top: '5px' }}
                 className=""
               />
               
               <div 
                 className="absolute text-[30px] z-20"
-                style={{ left: '130px', top: '10px' }}
+                style={{ left: '140px', top: '10px' }}
               >
                 😮‍💨
               </div>
