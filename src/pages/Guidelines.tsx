@@ -186,8 +186,8 @@ const Guidelines = () => {
 
           <div className="text-center relative z-10 mb-8">
             <h1 className="text-4xl font-bold text-black leading-tight mb-4">
-              <div className="mb-1">Get Known</div>
-              <div className="mb-1">Your Way</div>
+              <div className="mb-1">Community</div>
+              <div className="mb-1">Guidelines</div>
               <div className="text-3xl">
                 <DynamicHashtag isWhiteTheme={true} />
               </div>
@@ -196,7 +196,7 @@ const Guidelines = () => {
             {/* Business Button - Mobile */}
             <div className="flex justify-center mt-6">
               <button className="bg-black text-white px-4 py-2 rounded-full text-sm font-medium hover:opacity-80 transition-opacity">
-                Start Now ↗
+                Decentralised Ecosystem ↗
               </button>
             </div>
           </div>
@@ -238,8 +238,8 @@ const Guidelines = () => {
         {/* Main Content - Desktop and Tablet */}
         <div className="text-center relative z-10 hidden md:block mt-8 sm:mt-8 md:mt-0">
           <h1 className="text-4xl md:text-7xl lg:text-8xl xl:text-[96px] font-bold text-black leading-tight mb-4 sm:mb-6">
-            <div className="mb-1">Get Known</div>
-            <div className="mb-1">Your Way</div>
+            <div className="mb-1">Community</div>
+            <div className="mb-1">Guidelines</div>
             <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px]">
               <DynamicHashtag isWhiteTheme={true} />
             </div>
@@ -248,18 +248,28 @@ const Guidelines = () => {
           {/* Business Button - Desktop/Tablet */}
           <div className="flex justify-center mt-6 sm:mt-8">
             <button className="bg-black text-white px-6 py-3 rounded-full text-lg font-medium hover:opacity-80 transition-opacity">
-              Start Now ↗
+              Decentralised Ecosystem ↗
             </button>
           </div>
         </div>
       </div>
 
-      {/* We Speak Your Language Section */}
+      {/* Balance Free Speech Section */}
       <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-12 md:mb-16">
-            We Speak<br />Your Language
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-8 md:mb-12">
+            Balance Free Speech<br />With Moderation
           </h2>
+          
+          {/* Explanatory Text */}
+          <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
+            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6">
+              At Rustless, we believe in creating a space where authentic expression thrives while maintaining a safe and respectful environment for everyone. Our community guidelines are designed to protect free speech while preventing harmful content that could damage our vibrant ecosystem.
+            </p>
+            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
+              We use a combination of AI-powered moderation tools and human review to ensure content meets our standards. Our approach focuses on transparency, fairness, and giving creators the freedom to express themselves within reasonable boundaries that protect our community.
+            </p>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {/* Perk 1 */}
