@@ -22,7 +22,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <div className="flex-1 flex flex-col justify-center items-center relative px-4 py-8 sm:py-12">
+      <div className="flex-1 flex flex-col justify-center items-center relative px-4 py-4 sm:py-12">
         {/* Floating Photos - Desktop Layout */}
         <div className="hidden lg:block">
           {/* Left side of "Live It Your Way" */}
@@ -152,48 +152,48 @@ const Index = () => {
           />
         </div>
 
-        {/* Mobile Layout - Restructured for proper flow */}
-        <div className="block md:hidden w-full">
-          {/* Top section with photos - relative positioning */}
-          <div className="relative h-64 mb-8">
+        {/* Mobile Layout - Tighter spacing and better positioning */}
+        <div className="block md:hidden w-full max-w-sm mx-auto">
+          {/* Top section with photos - reduced height and better positioning */}
+          <div className="relative h-48 mb-4">
             {/* emoji 🥰 */}
             <div 
               className="absolute text-[30px] z-20"
-              style={{ left: '45px', top: '20px' }}
+              style={{ left: '20px', top: '10px' }}
             >
               🥰
             </div>
             
-            {/* tiktok picture (rotated 9 degree) */}
+            {/* tiktok picture (rotated 9 degree) - moved more to center */}
             <FloatingPhoto
               src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
               size="mobile-tiktok"
-              style={{ left: '65px', top: '42px', transform: 'rotate(9deg)' }}
+              style={{ left: '40px', top: '30px', transform: 'rotate(9deg)' }}
               className=""
               isRectangular={true}
             />
 
-            {/* tiktok pictures (rotated negative 9 degree) */}
+            {/* tiktok pictures (rotated negative 9 degree) - repositioned */}
             <FloatingPhoto
               src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
               size="mobile-tiktok"
-              style={{ left: '235px', top: '0px', transform: 'rotate(-9deg)' }}
+              style={{ left: '200px', top: '0px', transform: 'rotate(-9deg)' }}
               className=""
               isRectangular={true}
             />
             
-            {/* circled picture */}
+            {/* circled picture - repositioned */}
             <FloatingPhoto
               src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
               size="mobile-round"
-              style={{ left: '263px', top: '140px' }}
+              style={{ left: '220px', top: '120px' }}
               className=""
             />
           </div>
 
-          {/* Main Content - "Live It Your Way" with buttons */}
-          <div className="text-center relative z-10 mb-12">
-            <h1 className="text-4xl font-bold text-white leading-tight mb-6">
+          {/* Main Content - "Live It Your Way" with buttons - reduced margins */}
+          <div className="text-center relative z-10 mb-6">
+            <h1 className="text-4xl font-bold text-white leading-tight mb-4">
               <div className="mb-1">Live It</div>
               <div className="mb-1">Your Way</div>
               <div className="text-3xl">
@@ -202,7 +202,7 @@ const Index = () => {
             </h1>
 
             {/* App Store Buttons */}
-            <div className="flex justify-center gap-4 mt-8">
+            <div className="flex justify-center gap-4 mt-6">
               <button className="w-[60px] h-[45px] bg-white text-black rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
                 <img src="/lovable-uploads/7c463ba4-3f87-404b-b05b-7b3d1c5fc3e3.png" alt="Apple" className="w-5 h-5" />
               </button>
@@ -212,37 +212,37 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Bottom section with remaining photos */}
-          <div className="relative h-48">
-            {/* big circled image */}
+          {/* Bottom section with remaining photos - reduced height and repositioned */}
+          <div className="relative h-32 mb-4">
+            {/* big circled image - repositioned */}
             <FloatingPhoto
               src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
               size="mobile-large-round"
-              style={{ left: '45px', top: '0px' }}
+              style={{ left: '20px', top: '0px' }}
               className=""
             />
             
-            {/* emoji 😮‍💨 */}
+            {/* emoji 😮‍💨 - repositioned */}
             <div 
               className="absolute text-[30px] z-20"
-              style={{ left: '159px', top: '15px' }}
+              style={{ left: '150px', top: '5px' }}
             >
               😮‍💨
             </div>
             
-            {/* circle */}
+            {/* circle - repositioned */}
             <FloatingPhoto
               src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
               size="mobile-round"
-              style={{ left: '263px', top: '0px' }}
+              style={{ left: '220px', top: '0px' }}
               className=""
             />
             
-            {/* circle */}
+            {/* circle - repositioned */}
             <FloatingPhoto
               src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
               size="mobile-round"
-              style={{ left: '213px', top: '100px' }}
+              style={{ left: '180px', top: '70px' }}
               className=""
             />
           </div>
@@ -270,8 +270,8 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Mentions Section */}
-      <section className="text-center py-16 md:py-20 relative z-10 mt-12 sm:mt-20 md:mt-8">
+      {/* Mentions Section - reduced top margin for mobile */}
+      <section className="text-center py-8 md:py-20 relative z-10 mt-4 sm:mt-20 md:mt-8">
         <h2 className="text-xl md:text-2xl font-bold text-white mb-8 md:mb-12">
           As Soon On
         </h2>
