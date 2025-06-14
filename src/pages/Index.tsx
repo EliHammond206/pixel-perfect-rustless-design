@@ -1,3 +1,4 @@
+
 import React from 'react';
 import DynamicHashtag from '../components/DynamicHashtag';
 import FloatingPhoto from '../components/FloatingPhoto';
@@ -145,12 +146,19 @@ const Index = () => {
           />
         </div>
 
-        {/* Mobile Layout - Fixed positioning for photos above text */}
+        {/* Mobile Layout - Reverted to original positioning */}
         <div className="block md:hidden w-full max-w-sm mx-auto">
-          <div className="relative h-44 mb-6">
+          <div className="relative h-64 mb-8">
+            <FloatingPhoto
+              src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+              size="mobile-round"
+              style={{ left: '10px', top: '20px' }}
+              className=""
+            />
+            
             <div 
               className="absolute text-[30px] z-20"
-              style={{ left: '60px', top: '10px' }}
+              style={{ left: '100px', top: '10px' }}
             >
               🥰
             </div>
@@ -158,7 +166,7 @@ const Index = () => {
             <FloatingPhoto
               src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
               size="mobile-tiktok"
-              style={{ left: '90px', top: '35px', transform: 'rotate(15deg)' }}
+              style={{ left: '140px', top: '35px', transform: 'rotate(15deg)' }}
               className=""
               isRectangular={true}
             />
@@ -166,7 +174,7 @@ const Index = () => {
             <FloatingPhoto
               src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
               size="mobile-tiktok"
-              style={{ left: '150px', top: '5px', transform: 'rotate(-15deg)' }}
+              style={{ left: '200px', top: '5px', transform: 'rotate(-15deg)' }}
               className=""
               isRectangular={true}
             />
@@ -174,7 +182,28 @@ const Index = () => {
             <FloatingPhoto
               src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
               size="mobile-round"
-              style={{ left: '170px', top: '120px' }}
+              style={{ left: '250px', top: '120px' }}
+              className=""
+            />
+            
+            <div 
+              className="absolute text-[30px] z-20"
+              style={{ left: '50px', top: '150px' }}
+            >
+              😮‍💨
+            </div>
+            
+            <FloatingPhoto
+              src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
+              size="mobile-round"
+              style={{ left: '90px', top: '180px' }}
+              className=""
+            />
+            
+            <FloatingPhoto
+              src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
+              size="mobile-round"
+              style={{ left: '190px', top: '190px' }}
               className=""
             />
           </div>
@@ -200,39 +229,6 @@ const Index = () => {
                   <path d="M 9.723 12.93 L 7.437 8.83 C 7.308 8.599 7.388 8.307 7.605 8.173 C 7.823 8.039 8.11 8.116 8.234 8.347 L 10.55 12.502 C 12.318 11.665 14.306 11.2 16.446 11.2 C 18.586 11.2 20.574 11.665 22.341 12.502 L 24.658 8.347 C 24.787 8.116 25.069 8.039 25.292 8.173 C 25.515 8.307 25.59 8.599 25.46 8.83 L 23.174 12.93 C 27.112 15.14 29.781 19.271 30.222 24.107 L 2.667 24.107 C 3.108 19.271 5.777 15.14 9.723 12.93 Z M 22.771 20.102 C 23.411 20.102 23.927 19.565 23.927 18.906 C 23.927 18.243 23.408 17.709 22.771 17.709 C 22.132 17.709 21.616 18.246 21.616 18.906 C 21.613 19.562 22.132 20.102 22.771 20.102 Z M 10.12 20.102 C 10.76 20.102 11.276 19.565 11.276 18.906 C 11.276 18.243 10.757 17.709 10.12 17.709 C 9.481 17.709 8.965 18.246 8.965 18.906 C 8.962 19.562 9.483 20.102 10.12 20.102 Z" fill="white"/>
                 </svg>
               </button>
-            </div>
-          </div>
-
-          {/* Bottom section with remaining photos - Better centered positioning */}
-          <div className="relative h-32 mb-2 flex justify-center">
-            <div className="relative w-full max-w-[300px]">
-              <FloatingPhoto
-                src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
-                size="mobile-large-round"
-                style={{ left: '20px', top: '5px' }}
-                className=""
-              />
-              
-              <div 
-                className="absolute text-[30px] z-20"
-                style={{ left: '140px', top: '10px' }}
-              >
-                😮‍💨
-              </div>
-              
-              <FloatingPhoto
-                src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
-                size="mobile-round"
-                style={{ left: '200px', top: '5px' }}
-                className=""
-              />
-              
-              <FloatingPhoto
-                src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
-                size="mobile-round"
-                style={{ left: '160px', top: '65px' }}
-                className=""
-              />
             </div>
           </div>
         </div>
