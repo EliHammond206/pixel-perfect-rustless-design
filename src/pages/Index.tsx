@@ -297,9 +297,9 @@ const Index = () => {
 
       {/* New Footer Design */}
       <footer className="text-center p-6 md:p-8 relative z-10 space-y-3">
-        {/* First Line - Where You Matter <> */}
+        {/* First Line - Where You Matter ❤︎ */}
         <div className="text-lg md:text-xl font-medium text-black">
-          Where You Matter &lt;&gt;
+          Where You Matter ❤︎
         </div>
         
         {/* Second Line - Navigation Links */}
@@ -308,8 +308,12 @@ const Index = () => {
           <span className="text-gray-400">|</span>
           <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Help</a>
           <span className="text-gray-400">|</span>
-          <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">
-            Join Us
+          <a href="#" className="hover:opacity-70 flex items-center">
+            <img 
+              src="/lovable-uploads/5f4ca833-3a87-4486-bbec-4f3823905548.png"
+              alt="Wow"
+              className="h-5 w-auto"
+            />
           </a>
           <span className="text-gray-400">|</span>
           <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Guidelines</a>
