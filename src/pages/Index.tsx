@@ -11,13 +11,9 @@ const Index = () => {
         <h1 className="text-xl md:text-2xl font-bold text-black">Rustless</h1>
         <div className="flex items-center space-x-2 md:space-x-4">
           <a href="#" className="text-black text-base md:text-base align-middle font-medium hover:scale-105 transition-transform duration-300 ease-in-out flex items-center">
-            <span className="hidden md:inline">Advertise with Rustless</span>
-            <span className="md:hidden">Ads</span>
-            <img 
-              src="/lovable-uploads/8922f240-d23a-4728-a292-4c9f5b3e3103.png"
-              alt="New"
-              className="ml-1 h-4 w-auto"
-            />
+            <span className="hidden md:inline">Partner With Us</span>
+            <span className="md:hidden">👋</span>
+            <span className="ml-1 text-base hidden md:inline">👋</span>
           </a>
           <button className="bg-black text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-base md:text-base font-medium">
             Get The App
@@ -151,7 +147,7 @@ const Index = () => {
           />
         </div>
 
-        {/* Mobile Layout - Better balanced spacing */}
+        {/* Mobile Layout - Better balanced spacing and fixed iPhone 14 Plus positioning */}
         <div className="block md:hidden w-full max-w-sm mx-auto">
           <div className="relative h-44 mb-6">
             <div 
@@ -209,44 +205,46 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Bottom section with remaining photos */}
-          <div className="relative h-32 mb-6">
-            <FloatingPhoto
-              src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
-              size="mobile-large-round"
-              style={{ left: '20px', top: '5px' }}
-              className=""
-            />
-            
-            <div 
-              className="absolute text-[30px] z-20"
-              style={{ left: '150px', top: '10px' }}
-            >
-              😮‍💨
+          {/* Bottom section with remaining photos - Fixed positioning for iPhone 14 Plus */}
+          <div className="relative h-32 mb-6 flex justify-center">
+            <div className="relative w-full max-w-[280px]">
+              <FloatingPhoto
+                src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+                size="mobile-large-round"
+                style={{ left: '0px', top: '5px' }}
+                className=""
+              />
+              
+              <div 
+                className="absolute text-[30px] z-20"
+                style={{ left: '130px', top: '10px' }}
+              >
+                😮‍💨
+              </div>
+              
+              <FloatingPhoto
+                src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
+                size="mobile-round"
+                style={{ left: '200px', top: '5px' }}
+                className=""
+              />
+              
+              <FloatingPhoto
+                src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
+                size="mobile-round"
+                style={{ left: '160px', top: '65px' }}
+                className=""
+              />
             </div>
-            
-            <FloatingPhoto
-              src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
-              size="mobile-round"
-              style={{ left: '220px', top: '5px' }}
-              className=""
-            />
-            
-            <FloatingPhoto
-              src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
-              size="mobile-round"
-              style={{ left: '180px', top: '65px' }}
-              className=""
-            />
           </div>
         </div>
 
-        {/* Main Content - Desktop and Tablet */}
+        {/* Main Content - Desktop and Tablet - Reduced text size for MacBook Air */}
         <div className="text-center relative z-10 hidden md:block mt-8 sm:mt-8 md:mt-0">
-          <h1 className="text-4xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-black leading-tight mb-4 sm:mb-6">
+          <h1 className="text-4xl md:text-7xl lg:text-8xl xl:text-[96px] font-bold text-black leading-tight mb-4 sm:mb-6">
             <div className="mb-1">Live It</div>
             <div className="mb-1">Your Way</div>
-            <div className="text-3xl md:text-6xl lg:text-7xl xl:text-8xl">
+            <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px]">
               <DynamicHashtag isWhiteTheme={true} />
             </div>
           </h1>
@@ -267,8 +265,8 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Mentions Section - Enhanced contrast and larger text */}
-      <section className="text-center py-6 md:py-8 relative z-10 mt-4 sm:mt-6 md:mt-6">
+      {/* Mentions Section - Reduced spacing on mobile */}
+      <section className="text-center py-4 md:py-8 relative z-10 mt-2 sm:mt-4 md:mt-6">
         <h2 className="text-xl md:text-2xl font-bold text-black mb-4 md:mb-6">
           As Soon On
         </h2>
@@ -308,12 +306,8 @@ const Index = () => {
           <span className="text-gray-400">|</span>
           <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Help</a>
           <span className="text-gray-400">|</span>
-          <a href="#" className="hover:opacity-70 flex items-center">
-            <img 
-              src="/lovable-uploads/5f4ca833-3a87-4486-bbec-4f3823905548.png"
-              alt="Wow"
-              className="h-5 w-auto"
-            />
+          <a href="#" className="hover:opacity-70 flex items-center text-black underline underline-offset-4 decoration-1">
+            Join Us 👋
           </a>
           <span className="text-gray-400">|</span>
           <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Guidelines</a>
@@ -321,7 +315,7 @@ const Index = () => {
         
         {/* Third Line - Copyright */}
         <div className="text-base font-medium text-black opacity-80">
-          © 2025 - Till Forever Rustless-Unlimited
+          2025 - till forever Rustless/Unlimited
         </div>
       </footer>
     </div>
