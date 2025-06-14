@@ -323,9 +323,15 @@ const PartnerWithUs = () => {
           <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold text-black leading-tight mb-6 md:mb-8">
             <div className="mb-2">Your Success</div>
             <div className="mb-2">Our Top Priority</div>
-            <div className="text-3xl md:text-6xl lg:text-7xl text-black">
-              #You Can Do It!
-            </div>
+          </h2>
+        </div>
+      </section>
+
+      {/* You Can Do It Section */}
+      <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h2 className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] font-bold text-black">
+            #You Can Do It!
           </h2>
         </div>
       </section>
@@ -367,24 +373,6 @@ const PartnerWithUs = () => {
               <div className="text-xl md:text-2xl font-bold text-black mb-3">Targeting</div>
               <p className="text-gray-700 text-sm md:text-base">
                 Reach your ideal audience with precision targeting and authentic engagement.
-              </p>
-            </div>
-
-            {/* Perk 5 */}
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">📊</div>
-              <div className="text-xl md:text-2xl font-bold text-black mb-3">Analytics</div>
-              <p className="text-gray-700 text-sm md:text-base">
-                Real-time insights and detailed analytics to track your campaign performance.
-              </p>
-            </div>
-
-            {/* Perk 6 */}
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🤝</div>
-              <div className="text-xl md:text-2xl font-bold text-black mb-3">Support</div>
-              <p className="text-gray-700 text-sm md:text-base">
-                Dedicated support team to help you maximize your advertising success.
               </p>
             </div>
           </div>
