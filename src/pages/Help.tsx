@@ -1,25 +1,11 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Plus, X } from 'lucide-react';
+import { Plus, Minus } from 'lucide-react';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 const Help = () => {
   const [activeSection, setActiveSection] = useState('approach');
-  const [openFAQ, setOpenFAQ] = useState<{ [key: string]: number | null }>({
-    approach: null,
-    moderation: null,
-    reporting: null,
-    account: null,
-    technical: null,
-    billing: null
-  });
-
-  const toggleFAQ = (section: string, index: number) => {
-    setOpenFAQ(prev => ({
-      ...prev,
-      [section]: prev[section] === index ? null : index
-    }));
-  };
 
   const sections = [
     { id: 'approach', label: 'our approach to help' },
@@ -199,29 +185,22 @@ const Help = () => {
                 </h2>
                 <div className="space-y-4">
                   {items.map((item, index) => (
-                    <div
-                      key={index}
-                      className={`border border-gray-200 rounded-lg p-4 bg-gray-50 ${
-                        openFAQ[sectionKey] === index ? 'bg-gray-100' : ''
-                      }`}
-                    >
-                      <div
-                        className="flex items-center gap-2 cursor-pointer font-bold text-lg md:text-xl"
-                        onClick={() => toggleFAQ(sectionKey, index)}
-                      >
-                        {openFAQ[sectionKey] === index ? (
-                          <X className="w-6 h-6 flex-shrink-0" />
-                        ) : (
-                          <Plus className="w-6 h-6 flex-shrink-0" />
-                        )}
-                        <span>Q: {item.question}</span>
-                      </div>
-                      {openFAQ[sectionKey] === index && (
-                        <div className="mt-2 text-lg md:text-xl font-bold ml-8">
+                    <Collapsible key={index}>
+                      <CollapsibleTrigger className="w-full">
+                        <div className="flex items-center gap-3 p-4 bg-gray-50 border border-gray-200 rounded-lg hover:bg-gray-100 transition-colors">
+                          <Plus className="w-5 h-5 flex-shrink-0 group-data-[state=open]:hidden" />
+                          <Minus className="w-5 h-5 flex-shrink-0 hidden group-data-[state=open]:block" />
+                          <span className="text-left font-bold text-lg md:text-xl">
+                            Q: {item.question}
+                          </span>
+                        </div>
+                      </CollapsibleTrigger>
+                      <CollapsibleContent>
+                        <div className="p-4 ml-8 text-lg md:text-xl font-bold bg-gray-50 border-l border-r border-b border-gray-200 rounded-b-lg">
                           A: {item.answer}
                         </div>
-                      )}
-                    </div>
+                      </CollapsibleContent>
+                    </Collapsible>
                   ))}
                 </div>
               </div>
