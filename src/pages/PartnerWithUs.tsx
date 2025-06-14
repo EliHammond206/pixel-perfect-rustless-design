@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import DynamicHashtag from '../components/DynamicHashtag';
@@ -327,55 +328,55 @@ const PartnerWithUs = () => {
         </div>
       </section>
 
+      {/* Duplicated We Speak Your Language Boxes Section */}
+      <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {/* Perk 1 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">🌍</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">50M</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                active users worldwide, ready to discover your business.
+              </p>
+            </div>
+
+            {/* Perk 2 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">🧢</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">80%</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                of Rustless users are 18-35, your prime target audience.
+              </p>
+            </div>
+
+            {/* Perk 3 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">⚡️</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">90%</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                of daily active users engage with business content.
+              </p>
+            </div>
+
+            {/* Perk 4 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">🔔</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">75%</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                of users act on notifications within 5 minutes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* You Can Do It Section */}
       <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] font-bold text-black">
             #You Can Do It!
           </h2>
-        </div>
-      </section>
-
-      {/* Additional Perks Section */}
-      <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {/* Perk 1 */}
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">📸</div>
-              <div className="text-xl md:text-2xl font-bold text-black mb-3">Format</div>
-              <p className="text-gray-700 text-sm md:text-base">
-                In-feed static or video content that appears alongside close friends.
-              </p>
-            </div>
-
-            {/* Perk 2 */}
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🎬</div>
-              <div className="text-xl md:text-2xl font-bold text-black mb-3">Content</div>
-              <p className="text-gray-700 text-sm md:text-base">
-                Offer a behind the scenes & unique perspective that users won't find anywhere else.
-              </p>
-            </div>
-
-            {/* Perk 3 */}
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">✅</div>
-              <div className="text-xl md:text-2xl font-bold text-black mb-3">Environment</div>
-              <p className="text-gray-700 text-sm md:text-base">
-                Safe, moderated, and intimate community for authentic connections.
-              </p>
-            </div>
-
-            {/* Perk 4 */}
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🎯</div>
-              <div className="text-xl md:text-2xl font-bold text-black mb-3">Targeting</div>
-              <p className="text-gray-700 text-sm md:text-base">
-                Reach your ideal audience with precision targeting and authentic engagement.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
