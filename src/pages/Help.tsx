@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 import { Plus, X } from 'lucide-react';
 
 const Help = () => {
-  const [activeSection, setActiveSection] = useState('approach');
+  const [activeSection, setActiveSection] = useState('getting-started');
   const [openFAQ, setOpenFAQ] = useState<{ [key: string]: number | null }>({
-    approach: null,
-    moderation: null,
-    reporting: null,
-    account: null,
-    technical: null,
-    billing: null
+    'getting-started': null,
+    'account': null,
+    'messaging': null,
+    'technical': null,
+    'privacy': null,
+    'billing': null
   });
 
   const toggleFAQ = (section: string, index: number) => {
@@ -22,117 +22,121 @@ const Help = () => {
   };
 
   const sections = [
-    { id: 'approach', label: 'our approach to help' },
-    { id: 'moderation', label: 'moderation help' },
-    { id: 'reporting', label: 'reporting help' },
+    { id: 'getting-started', label: 'getting started' },
     { id: 'account', label: 'account help' },
+    { id: 'messaging', label: 'messaging help' },
     { id: 'technical', label: 'technical help' },
+    { id: 'privacy', label: 'privacy & safety' },
     { id: 'billing', label: 'billing help' }
   ];
 
   const helpContent = {
-    approach: [
-      {
-        question: "How can we help you today?",
-        answer: "We're here to help you get the most out of Rustless. Browse through our help sections or contact our support team directly for personalized assistance."
-      },
-      {
-        question: "What support options are available?",
-        answer: "We offer multiple support channels including in-app help, email support, and our comprehensive help center. Our team is available 24/7 to assist you."
-      },
-      {
-        question: "How quickly can I expect a response?",
-        answer: "We typically respond to support requests within 2-4 hours during business hours, and within 24 hours for all other times."
-      }
-    ],
-    moderation: [
-      {
-        question: "How does content moderation work on Rustless?",
-        answer: "We use a combination of AI-powered moderation and human review to ensure content meets our community guidelines. Messages are scanned for inappropriate content before delivery."
-      },
-      {
-        question: "What happens when content is flagged?",
-        answer: "Flagged content is reviewed by our moderation team. Depending on the severity, actions may include content removal, user warnings, or account restrictions."
-      },
-      {
-        question: "Can I appeal a moderation decision?",
-        answer: "Yes, you can appeal any moderation decision by contacting our support team with details about your case. We'll review the decision and respond within 48 hours."
-      },
-      {
-        question: "How do you handle false positives in moderation?",
-        answer: "Our moderation system is continuously improved to reduce false positives. If your content was incorrectly flagged, please contact support for immediate review."
-      }
-    ],
-    reporting: [
-      {
-        question: "How do I report inappropriate content or behavior?",
-        answer: "You can report content by tapping the Report button (⚠) on any message. Select the appropriate reason and provide additional details if needed."
-      },
-      {
-        question: "What types of content should I report?",
-        answer: "Report any content that violates our community guidelines, including harassment, spam, inappropriate images, or threatening behavior."
-      },
-      {
-        question: "What happens after I submit a report?",
-        answer: "Reports are reviewed by our moderation team within 24 hours. We'll take appropriate action and may follow up with you if additional information is needed."
-      },
-      {
-        question: "Can I report someone anonymously?",
-        answer: "Yes, all reports are handled confidentially. The reported user will not know who submitted the report."
-      }
-    ],
-    account: [
+    'getting-started': [
       {
         question: "How do I create a Rustless account?",
-        answer: "Download the Rustless app and follow the signup process. You'll need a valid email address and phone number for verification."
+        answer: "Download the Rustless app from the App Store or Google Play Store. Open the app and follow the signup process - you'll need a valid email address and phone number for verification. The whole process takes less than 2 minutes!"
+      },
+      {
+        question: "How do I add friends on Rustless?",
+        answer: "You can add friends by searching for their username, scanning their QR code, or importing contacts from your phone. Go to the 'Friends' tab and tap the '+' button to see all available options for connecting with people."
+      },
+      {
+        question: "What makes Rustless different from other messaging apps?",
+        answer: "Rustless focuses on authentic connections and meaningful conversations. We prioritize your privacy, have no ads, and use advanced features to help you stay connected with the people who matter most to you."
+      },
+      {
+        question: "Is Rustless free to use?",
+        answer: "Yes! Rustless is free to download and use. We also offer premium features through our subscription plans for users who want additional functionality and customization options."
+      }
+    ],
+    'account': [
+      {
+        question: "How do I change my profile picture?",
+        answer: "Go to your profile by tapping your avatar in the top left corner. Tap on your current profile picture and select 'Change Photo'. You can choose from your camera roll or take a new photo."
       },
       {
         question: "I forgot my password. How can I reset it?",
-        answer: "Use the 'Forgot Password' link on the login screen. We'll send a reset link to your registered email address."
+        answer: "On the login screen, tap 'Forgot Password?' and enter your email address. We'll send you a secure link to reset your password. Check your spam folder if you don't see the email within a few minutes."
+      },
+      {
+        question: "How do I change my username?",
+        answer: "Go to Settings > Account > Username. You can change your username once every 30 days. Choose carefully as frequent changes may confuse your friends and connections."
       },
       {
         question: "How do I delete my account?",
-        answer: "You can delete your account from the Settings menu in the app. This action is permanent and cannot be undone."
-      },
-      {
-        question: "Can I change my username?",
-        answer: "Usernames can be changed once every 30 days from your profile settings. Choose carefully as frequent changes may confuse your connections."
+        answer: "Go to Settings > Account > Delete Account. This action is permanent and cannot be undone. All your messages, photos, and data will be permanently removed from our servers."
       }
     ],
-    technical: [
+    'messaging': [
+      {
+        question: "How do I send photos and videos?",
+        answer: "In any chat, tap the camera icon next to the message box. You can take a new photo/video or select from your camera roll. You can also send multiple photos at once by selecting them in your gallery."
+      },
+      {
+        question: "Can I edit or delete messages after sending?",
+        answer: "Yes! Long press on any message you've sent to see options to edit or delete it. Edited messages will show an 'edited' indicator, and deleted messages will be removed for everyone in the chat."
+      },
+      {
+        question: "How do group chats work?",
+        answer: "Create a group chat by tapping the '+' button in your chats list and selecting 'New Group'. Add friends, give your group a name, and start chatting! Group admins can add/remove members and change group settings."
+      },
+      {
+        question: "What are Rustless reactions?",
+        answer: "You can react to messages by double-tapping them or long-pressing and selecting a reaction. We have a variety of emoji reactions to help you express yourself quickly without typing a response."
+      }
+    ],
+    'technical': [
       {
         question: "The app is crashing. What should I do?",
-        answer: "Try restarting the app and your device. If issues persist, check for app updates or contact support with your device details."
+        answer: "First, try force-closing and reopening the app. If that doesn't work, restart your device. Make sure you have the latest version of Rustless installed. If problems persist, contact our support team with your device model and operating system version."
       },
       {
         question: "Messages aren't sending. How can I fix this?",
-        answer: "Check your internet connection and app permissions. Try switching between WiFi and mobile data to isolate the issue."
+        answer: "Check your internet connection - try switching between WiFi and mobile data. Ensure Rustless has permission to use your device's network. If you're in a low-signal area, messages will send automatically when connection improves."
       },
       {
         question: "I'm not receiving notifications. What's wrong?",
-        answer: "Ensure notifications are enabled in your device settings and within the Rustless app. Check if Do Not Disturb mode is active."
+        answer: "Go to Settings > Notifications and make sure they're enabled. Also check your device's system settings to ensure Rustless has notification permissions. Make sure Do Not Disturb mode isn't blocking notifications."
       },
       {
-        question: "The app is running slowly. How can I improve performance?",
-        answer: "Clear the app cache, close other running apps, and ensure you have sufficient storage space on your device."
+        question: "How do I backup my chats?",
+        answer: "Go to Settings > Chats > Backup. You can backup to iCloud (iOS) or Google Drive (Android). We recommend enabling automatic daily backups to never lose your important conversations."
       }
     ],
-    billing: [
+    'privacy': [
       {
-        question: "How much does Rustless cost?",
-        answer: "Rustless offers both free and premium plans. Check our pricing page in the app for current subscription options and features."
+        question: "How does Rustless protect my privacy?",
+        answer: "All messages are encrypted end-to-end, meaning only you and the recipient can read them. We don't store your messages on our servers after they're delivered, and we never sell your data to third parties."
+      },
+      {
+        question: "Who can see my profile information?",
+        answer: "By default, only your friends can see your full profile. You can adjust these settings in Privacy > Profile Visibility. You can also control who can message you and add you to groups."
+      },
+      {
+        question: "How do I block someone?",
+        answer: "Go to the person's profile and tap 'Block User'. Blocked users cannot message you, see your profile, or add you to groups. You can unblock users anytime from Settings > Privacy > Blocked Users."
+      },
+      {
+        question: "Can I report inappropriate content?",
+        answer: "Yes, long-press on any message and select 'Report'. Choose the appropriate reason and provide additional details. Our moderation team reviews all reports within 24 hours and takes appropriate action."
+      }
+    ],
+    'billing': [
+      {
+        question: "What premium features does Rustless offer?",
+        answer: "Rustless Premium includes unlimited cloud storage, advanced chat customization, priority customer support, exclusive themes, and early access to new features. Check the Premium tab in settings for current features."
+      },
+      {
+        question: "How much does Rustless Premium cost?",
+        answer: "Rustless Premium is available for $4.99/month or $49.99/year. We occasionally offer promotional pricing for new subscribers. You can see current pricing in the app under Settings > Premium."
       },
       {
         question: "How do I cancel my subscription?",
-        answer: "Cancel your subscription through your app store (iOS App Store or Google Play Store) or contact our billing support team."
+        answer: "For iOS: Go to Settings > Subscriptions in your iPhone settings. For Android: Open Google Play Store > Subscriptions. You can also contact our support team for assistance with cancellation."
       },
       {
         question: "I was charged incorrectly. How do I get a refund?",
-        answer: "Contact our billing support team with your transaction details. We'll review your case and process refunds for eligible charges."
-      },
-      {
-        question: "When will my subscription renew?",
-        answer: "Subscription renewal dates are shown in the app settings under 'Subscription'. You'll also receive reminder notifications before renewal."
+        answer: "Contact our billing support team at billing@rustless.com with your transaction details and account information. We'll review your case and process refunds for eligible charges within 3-5 business days."
       }
     ]
   };
@@ -168,7 +172,7 @@ const Help = () => {
       <div className="flex flex-col xl:grid xl:grid-cols-4 gap-8 md:gap-12 px-4 md:px-20 pb-20">
         {/* Sidebar */}
         <div className="xl:col-span-1">
-          <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">help</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">help topics</h2>
           <ul className="space-y-3 md:space-y-4">
             {sections.map((section) => (
               <li
@@ -191,234 +195,80 @@ const Help = () => {
 
         {/* Content Area */}
         <div className="xl:col-span-2">
-          {activeSection === 'approach' && (
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">our approach to safety</h2>
-              <div className="space-y-4">
-                {helpContent.approach.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`border border-gray-200 rounded-lg p-4 bg-gray-50 ${
-                      openFAQ.approach === index ? 'bg-gray-100' : ''
-                    }`}
-                  >
+          {sections.map((section) => (
+            activeSection === section.id && (
+              <div key={section.id}>
+                <h2 className="text-3xl md:text-5xl font-bold mb-6">{section.label}</h2>
+                <div className="space-y-4">
+                  {helpContent[section.id as keyof typeof helpContent].map((item, index) => (
                     <div
-                      className="flex items-center gap-2 cursor-pointer font-bold text-lg md:text-xl"
-                      onClick={() => toggleFAQ('approach', index)}
+                      key={index}
+                      className={`border border-gray-200 rounded-lg p-4 bg-gray-50 transition-colors ${
+                        openFAQ[section.id] === index ? 'bg-gray-100' : 'hover:bg-gray-75'
+                      }`}
                     >
-                      {openFAQ.approach === index ? (
-                        <X className="w-6 h-6 flex-shrink-0" />
-                      ) : (
-                        <Plus className="w-6 h-6 flex-shrink-0" />
-                      )}
-                      <span>Q: {item.question}</span>
-                    </div>
-                    {openFAQ.approach === index && (
-                      <div className="mt-2 text-lg md:text-xl font-bold ml-8">
-                        A: {item.answer}
+                      <div
+                        className="flex items-start gap-3 cursor-pointer"
+                        onClick={() => toggleFAQ(section.id, index)}
+                      >
+                        <div className="flex-shrink-0 mt-1">
+                          {openFAQ[section.id] === index ? (
+                            <X className="w-5 h-5" />
+                          ) : (
+                            <Plus className="w-5 h-5" />
+                          )}
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="font-bold text-lg md:text-xl mb-1">
+                            {item.question}
+                          </h3>
+                          {openFAQ[section.id] === index && (
+                            <div className="text-base md:text-lg font-medium text-gray-800 mt-3 leading-relaxed">
+                              {item.answer}
+                            </div>
+                          )}
+                        </div>
                       </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {activeSection === 'moderation' && (
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">moderation</h2>
-              <div className="space-y-4">
-                {helpContent.moderation.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`border border-gray-200 rounded-lg p-4 bg-gray-50 ${
-                      openFAQ.moderation === index ? 'bg-gray-100' : ''
-                    }`}
-                  >
-                    <div
-                      className="flex items-center gap-2 cursor-pointer font-bold text-lg md:text-xl"
-                      onClick={() => toggleFAQ('moderation', index)}
-                    >
-                      {openFAQ.moderation === index ? (
-                        <X className="w-6 h-6 flex-shrink-0" />
-                      ) : (
-                        <Plus className="w-6 h-6 flex-shrink-0" />
-                      )}
-                      <span>Q: {item.question}</span>
                     </div>
-                    {openFAQ.moderation === index && (
-                      <div className="mt-2 text-lg md:text-xl font-bold ml-8">
-                        A: {item.answer}
-                      </div>
-                    )}
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
-
-          {activeSection === 'reporting' && (
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">reporting</h2>
-              <div className="space-y-4">
-                {helpContent.reporting.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`border border-gray-200 rounded-lg p-4 bg-gray-50 ${
-                      openFAQ.reporting === index ? 'bg-gray-100' : ''
-                    }`}
-                  >
-                    <div
-                      className="flex items-center gap-2 cursor-pointer font-bold text-lg md:text-xl"
-                      onClick={() => toggleFAQ('reporting', index)}
-                    >
-                      {openFAQ.reporting === index ? (
-                        <X className="w-6 h-6 flex-shrink-0" />
-                      ) : (
-                        <Plus className="w-6 h-6 flex-shrink-0" />
-                      )}
-                      <span>Q: {item.question}</span>
-                    </div>
-                    {openFAQ.reporting === index && (
-                      <div className="mt-2 text-lg md:text-xl font-bold ml-8">
-                        A: {item.answer}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {activeSection === 'account' && (
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">account help</h2>
-              <div className="space-y-4">
-                {helpContent.account.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`border border-gray-200 rounded-lg p-4 bg-gray-50 ${
-                      openFAQ.account === index ? 'bg-gray-100' : ''
-                    }`}
-                  >
-                    <div
-                      className="flex items-center gap-2 cursor-pointer font-bold text-lg md:text-xl"
-                      onClick={() => toggleFAQ('account', index)}
-                    >
-                      {openFAQ.account === index ? (
-                        <X className="w-6 h-6 flex-shrink-0" />
-                      ) : (
-                        <Plus className="w-6 h-6 flex-shrink-0" />
-                      )}
-                      <span>Q: {item.question}</span>
-                    </div>
-                    {openFAQ.account === index && (
-                      <div className="mt-2 text-lg md:text-xl font-bold ml-8">
-                        A: {item.answer}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {activeSection === 'technical' && (
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">technical help</h2>
-              <div className="space-y-4">
-                {helpContent.technical.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`border border-gray-200 rounded-lg p-4 bg-gray-50 ${
-                      openFAQ.technical === index ? 'bg-gray-100' : ''
-                    }`}
-                  >
-                    <div
-                      className="flex items-center gap-2 cursor-pointer font-bold text-lg md:text-xl"
-                      onClick={() => toggleFAQ('technical', index)}
-                    >
-                      {openFAQ.technical === index ? (
-                        <X className="w-6 h-6 flex-shrink-0" />
-                      ) : (
-                        <Plus className="w-6 h-6 flex-shrink-0" />
-                      )}
-                      <span>Q: {item.question}</span>
-                    </div>
-                    {openFAQ.technical === index && (
-                      <div className="mt-2 text-lg md:text-xl font-bold ml-8">
-                        A: {item.answer}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {activeSection === 'billing' && (
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">billing help</h2>
-              <div className="space-y-4">
-                {helpContent.billing.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`border border-gray-200 rounded-lg p-4 bg-gray-50 ${
-                      openFAQ.billing === index ? 'bg-gray-100' : ''
-                    }`}
-                  >
-                    <div
-                      className="flex items-center gap-2 cursor-pointer font-bold text-lg md:text-xl"
-                      onClick={() => toggleFAQ('billing', index)}
-                    >
-                      {openFAQ.billing === index ? (
-                        <X className="w-6 h-6 flex-shrink-0" />
-                      ) : (
-                        <Plus className="w-6 h-6 flex-shrink-0" />
-                      )}
-                      <span>Q: {item.question}</span>
-                    </div>
-                    {openFAQ.billing === index && (
-                      <div className="mt-2 text-lg md:text-xl font-bold ml-8">
-                        A: {item.answer}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+            )
+          ))}
         </div>
 
         {/* Contact Form */}
         <div className="xl:col-span-1">
-          <h2 className="text-2xl md:text-4xl font-bold mb-6">contact</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-6">need more help?</h2>
           <div className="space-y-4">
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
               <h3 className="text-lg md:text-xl font-bold mb-2">Contact Support</h3>
-              <p className="text-sm md:text-base font-medium text-gray-700">
+              <p className="text-sm md:text-base font-medium text-gray-700 mb-3">
                 Get help from our team for any issues or questions.
               </p>
+              <button className="w-full bg-black text-white px-4 py-2 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+                Open Support Chat
+              </button>
             </div>
             
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
-              <h3 className="text-lg md:text-xl font-bold mb-2">Legal Requests</h3>
+              <h3 className="text-lg md:text-xl font-bold mb-2">Email Us</h3>
               <p className="text-sm md:text-base font-medium text-gray-700">
-                For legal inquiries, please email <a href="mailto:legalrequests@kodex.com" className="text-black underline">legalrequests@kodex.com</a>.
+                Send us an email at <a href="mailto:help@rustless.com" className="text-black underline">help@rustless.com</a>
               </p>
             </div>
             
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
-              <h3 className="text-lg md:text-xl font-bold mb-2">Account Issues</h3>
+              <h3 className="text-lg md:text-xl font-bold mb-2">Community Forum</h3>
               <p className="text-sm md:text-base font-medium text-gray-700">
-                Contact support inside the app for account-related queries.
+                Connect with other users and get tips in our community forum.
               </p>
             </div>
             
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
-              <h3 className="text-lg md:text-xl font-bold mb-2">Physical Papers</h3>
+              <h3 className="text-lg md:text-xl font-bold mb-2">Video Tutorials</h3>
               <p className="text-sm md:text-base font-medium text-gray-700">
-                Send letters to our agent at: 123 Safety Lane, Secure City, SC 12345.
+                Watch step-by-step guides on our YouTube channel.
               </p>
             </div>
           </div>
