@@ -1,7 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
 
-const DynamicHashtag = () => {
+interface DynamicHashtagProps {
+  isWhiteTheme?: boolean;
+}
+
+const DynamicHashtag: React.FC<DynamicHashtagProps> = ({ isWhiteTheme = false }) => {
   const suffixes = ['one', 'day', 'where'];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
@@ -45,8 +49,10 @@ const DynamicHashtag = () => {
     return () => clearTimeout(timeout);
   }, [displayText, isDeleting, currentIndex, suffixes, isPaused]);
 
+  const textColor = isWhiteTheme ? 'text-black' : 'text-white';
+
   return (
-    <span className="text-white">
+    <span className={textColor}>
       #Every{displayText}
       <span className="animate-pulse">|</span>
     </span>
