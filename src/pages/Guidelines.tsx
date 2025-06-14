@@ -1,144 +1,11 @@
-
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Plus, X } from 'lucide-react';
+import DynamicHashtag from '../components/DynamicHashtag';
+import FloatingPhoto from '../components/FloatingPhoto';
 
 const Guidelines = () => {
-  const [activeSection, setActiveSection] = useState('approach');
-  const [openFAQ, setOpenFAQ] = useState<{ [key: string]: number | null }>({
-    approach: null,
-    respect: null,
-    content: null,
-    behavior: null,
-    enforcement: null,
-    reporting: null
-  });
-
-  const toggleFAQ = (section: string, index: number) => {
-    setOpenFAQ(prev => ({
-      ...prev,
-      [section]: prev[section] === index ? null : index
-    }));
-  };
-
-  const sections = [
-    { id: 'approach', label: 'our community approach' },
-    { id: 'respect', label: 'respect & kindness' },
-    { id: 'content', label: 'content guidelines' },
-    { id: 'behavior', label: 'acceptable behavior' },
-    { id: 'enforcement', label: 'enforcement policy' },
-    { id: 'reporting', label: 'reporting violations' }
-  ];
-
-  const guidelinesContent = {
-    approach: [
-      {
-        question: "What are Rustless Community Guidelines?",
-        answer: "Our Community Guidelines are the foundation of how we interact on Rustless. They ensure everyone feels safe, respected, and valued while fostering authentic connections."
-      },
-      {
-        question: "Why do we need community guidelines?",
-        answer: "Guidelines help create a positive environment where meaningful relationships can flourish. They protect all users and maintain the quality of interactions on our platform."
-      },
-      {
-        question: "How were these guidelines developed?",
-        answer: "Our guidelines were created with input from our community, safety experts, and reflect our core values of authenticity, kindness, and respect."
-      }
-    ],
-    respect: [
-      {
-        question: "What does respect mean on Rustless?",
-        answer: "Respect means treating others with kindness, understanding different perspectives, and communicating in ways that make others feel valued and heard."
-      },
-      {
-        question: "How should I handle disagreements?",
-        answer: "Disagreements are natural, but handle them constructively. Focus on the topic, not personal attacks. Listen actively and try to understand different viewpoints."
-      },
-      {
-        question: "What about cultural differences?",
-        answer: "We celebrate diversity and encourage learning from different cultures. Be open-minded, ask respectful questions, and avoid making assumptions about others."
-      },
-      {
-        question: "How do I show kindness in my interactions?",
-        answer: "Use encouraging language, offer support when appropriate, celebrate others' achievements, and approach conversations with empathy and understanding."
-      }
-    ],
-    content: [
-      {
-        question: "What content is allowed on Rustless?",
-        answer: "We welcome content that is authentic, positive, and contributes to meaningful connections. Share your interests, experiences, and genuine thoughts."
-      },
-      {
-        question: "What content should I avoid sharing?",
-        answer: "Avoid sharing content that is hateful, threatening, sexually explicit, involves illegal activities, or could harm others. When in doubt, err on the side of caution."
-      },
-      {
-        question: "Can I share personal information?",
-        answer: "Be cautious with personal information. Avoid sharing sensitive details like full addresses, financial information, or passwords. Protect your privacy and others'."
-      },
-      {
-        question: "What about copyrighted material?",
-        answer: "Only share content you own or have permission to use. Respect intellectual property rights and give credit where appropriate."
-      }
-    ],
-    behavior: [
-      {
-        question: "What behaviors are encouraged on Rustless?",
-        answer: "We encourage authentic communication, supportive interactions, constructive feedback, celebrating others, and contributing positively to conversations."
-      },
-      {
-        question: "What behaviors are not acceptable?",
-        answer: "Harassment, bullying, hate speech, threats, spam, impersonation, and any behavior that makes others feel unsafe or unwelcome is not acceptable."
-      },
-      {
-        question: "How should I handle unwanted contact?",
-        answer: "Use our blocking and reporting features if someone makes you uncomfortable. You have the right to control your interactions and feel safe on our platform."
-      },
-      {
-        question: "What about privacy and consent?",
-        answer: "Always respect others' privacy. Don't share someone's personal information without consent, and respect boundaries when they're communicated."
-      }
-    ],
-    enforcement: [
-      {
-        question: "How are guidelines enforced?",
-        answer: "We use a combination of automated moderation, community reporting, and human review to enforce our guidelines fairly and consistently."
-      },
-      {
-        question: "What happens if I violate the guidelines?",
-        answer: "Depending on the severity, actions may include content removal, warnings, temporary restrictions, or account suspension. We aim to be fair and educational."
-      },
-      {
-        question: "Can I appeal enforcement actions?",
-        answer: "Yes, you can appeal any enforcement action you believe was made in error. Contact our support team with details about your case for review."
-      },
-      {
-        question: "How do you ensure fair enforcement?",
-        answer: "Our moderation team receives regular training, we have clear policies, and we continuously review and improve our enforcement processes based on community feedback."
-      }
-    ],
-    reporting: [
-      {
-        question: "How do I report guideline violations?",
-        answer: "Use the report button on any content or message that violates our guidelines. Provide specific details to help our team understand the issue."
-      },
-      {
-        question: "What information should I include in reports?",
-        answer: "Include specific details about what happened, when it occurred, and why you believe it violates our guidelines. Screenshots can be helpful but aren't required."
-      },
-      {
-        question: "What happens after I submit a report?",
-        answer: "Our moderation team reviews all reports promptly. We'll take appropriate action and may follow up with you if we need additional information."
-      },
-      {
-        question: "Will the reported person know I reported them?",
-        answer: "No, all reports are confidential. The person you report will not know who submitted the report, protecting your privacy and safety."
-      }
-    ]
-  };
-
   return (
-    <div className="bg-white text-black min-h-screen font-bold">
+    <div className="bg-white text-black flex flex-col min-h-screen relative overflow-hidden">
       {/* Header */}
       <header className="flex justify-between items-center p-4 md:p-4 relative z-20">
         <Link to="/" className="text-xl md:text-2xl font-bold text-black hover:opacity-80 transition-opacity">
@@ -156,113 +23,395 @@ const Guidelines = () => {
         </div>
       </header>
 
-      {/* Title Section */}
-      <div className="px-4 md:px-20 py-8 md:py-10">
-        <h1 className="text-5xl md:text-8xl lg:text-[96px] font-bold leading-none">
-          community<br />
-          <span className="block">guidelines</span>
-        </h1>
+      {/* Hero Section */}
+      <div className="flex-1 flex flex-col justify-center items-center relative px-4 py-4 sm:py-6 md:py-8">
+        {/* Floating Photos - Desktop Layout */}
+        <div className="hidden lg:block">
+          <FloatingPhoto
+            src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+            size="desktop-round"
+            style={{ left: '15%', top: '10%' }}
+            className=""
+          />
+          
+          <FloatingPhoto
+            src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
+            size="desktop-tiktok"
+            style={{ left: '8%', top: '35%', transform: 'rotate(15deg)' }}
+            className=""
+            isRectangular={true}
+            rotation="left"
+          />
+          
+          <div 
+            className="absolute text-[60px] z-10"
+            style={{ left: '20%', top: '65%' }}
+          >
+            🥰
+          </div>
+          
+          <FloatingPhoto
+            src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
+            size="desktop-round"
+            style={{ left: '25%', top: '75%' }}
+            className=""
+          />
+
+          <FloatingPhoto
+            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+            size="desktop-round"
+            style={{ left: '70%', top: '8%' }}
+            className=""
+          />
+          
+          <div 
+            className="absolute text-[60px] z-10"
+            style={{ left: '75%', top: '25%' }}
+          >
+            😮‍💨
+          </div>
+          
+          <FloatingPhoto
+            src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
+            size="desktop-tiktok"
+            style={{ left: '78%', top: '40%', transform: 'rotate(-15deg)' }}
+            className=""
+            isRectangular={true}
+          />
+          
+          <FloatingPhoto
+            src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
+            size="desktop-round"
+            style={{ left: '65%', top: '78%' }}
+            className=""
+          />
+        </div>
+
+        {/* Floating Photos - Tablet Layout (iPad) */}
+        <div className="hidden md:block lg:hidden">
+          <FloatingPhoto
+            src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+            size="tablet-round"
+            style={{ left: '15%', top: '10%' }}
+            className=""
+          />
+          
+          <FloatingPhoto
+            src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
+            size="tablet-tiktok"
+            style={{ left: '8%', top: '35%', transform: 'rotate(15deg)' }}
+            className=""
+            isRectangular={true}
+            rotation="left"
+          />
+          
+          <div 
+            className="absolute text-[50px] z-10"
+            style={{ left: '20%', top: '65%' }}
+          >
+            🥰
+          </div>
+          
+          <FloatingPhoto
+            src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
+            size="tablet-round"
+            style={{ left: '18%', top: '75%', zIndex: '5' }}
+            className=""
+          />
+
+          <FloatingPhoto
+            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+            size="tablet-round"
+            style={{ left: '70%', top: '8%' }}
+            className=""
+          />
+          
+          <div 
+            className="absolute text-[50px] z-10"
+            style={{ left: '75%', top: '25%' }}
+          >
+            😮‍💨
+          </div>
+          
+          <FloatingPhoto
+            src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
+            size="tablet-tiktok"
+            style={{ left: '78%', top: '40%', transform: 'rotate(-15deg)' }}
+            className=""
+            isRectangular={true}
+          />
+          
+          <FloatingPhoto
+            src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
+            size="tablet-round"
+            style={{ left: '65%', top: '78%' }}
+            className=""
+          />
+        </div>
+
+        {/* Mobile Layout */}
+        <div className="block md:hidden w-full max-w-sm mx-auto">
+          <div className="relative h-44 mb-6">
+            <div 
+              className="absolute text-[30px] z-20"
+              style={{ left: '30px', top: '10px' }}
+            >
+              🥰
+            </div>
+            
+            <FloatingPhoto
+              src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
+              size="mobile-tiktok"
+              style={{ left: '60px', top: '35px', transform: 'rotate(15deg)' }}
+              className=""
+              isRectangular={true}
+            />
+
+            <FloatingPhoto
+              src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
+              size="mobile-tiktok"
+              style={{ left: '180px', top: '5px', transform: 'rotate(-15deg)' }}
+              className=""
+              isRectangular={true}
+            />
+            
+            <FloatingPhoto
+              src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+              size="mobile-round"
+              style={{ left: '200px', top: '120px' }}
+              className=""
+            />
+          </div>
+
+          <div className="text-center relative z-10 mb-8">
+            <h1 className="text-4xl font-bold text-black leading-tight mb-4">
+              <div className="mb-1">Community</div>
+              <div className="mb-1">Guidelines</div>
+              <div className="text-3xl">
+                <DynamicHashtag isWhiteTheme={true} />
+              </div>
+            </h1>
+
+            {/* Guidelines Button - Mobile */}
+            <div className="flex justify-center mt-6">
+              <button className="bg-black text-white px-4 py-2 rounded-full text-sm font-medium hover:opacity-80 transition-opacity">
+                Read Guidelines ↗
+              </button>
+            </div>
+          </div>
+
+          {/* Bottom section with remaining photos */}
+          <div className="relative h-32 mb-2 flex justify-center">
+            <div className="relative w-full max-w-[300px]">
+              <FloatingPhoto
+                src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+                size="mobile-large-round"
+                style={{ left: '20px', top: '5px' }}
+                className=""
+              />
+              
+              <div 
+                className="absolute text-[30px] z-20"
+                style={{ left: '140px', top: '10px' }}
+              >
+                😮‍💨
+              </div>
+              
+              <FloatingPhoto
+                src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
+                size="mobile-round"
+                style={{ left: '200px', top: '5px' }}
+                className=""
+              />
+              
+              <FloatingPhoto
+                src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
+                size="mobile-round"
+                style={{ left: '160px', top: '65px' }}
+                className=""
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Main Content - Desktop and Tablet */}
+        <div className="text-center relative z-10 hidden md:block mt-8 sm:mt-8 md:mt-0">
+          <h1 className="text-4xl md:text-7xl lg:text-8xl xl:text-[96px] font-bold text-black leading-tight mb-4 sm:mb-6">
+            <div className="mb-1">Community</div>
+            <div className="mb-1">Guidelines</div>
+            <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px]">
+              <DynamicHashtag isWhiteTheme={true} />
+            </div>
+          </h1>
+
+          {/* Guidelines Button - Desktop/Tablet */}
+          <div className="flex justify-center mt-6 sm:mt-8">
+            <button className="bg-black text-white px-6 py-3 rounded-full text-lg font-medium hover:opacity-80 transition-opacity">
+              Read Guidelines ↗
+            </button>
+          </div>
+        </div>
       </div>
 
-      {/* Main Content */}
-      <div className="flex flex-col xl:grid xl:grid-cols-4 gap-8 md:gap-12 px-4 md:px-20 pb-20">
-        {/* Sidebar */}
-        <div className="xl:col-span-1">
-          <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">guidelines</h2>
-          <ul className="space-y-3 md:space-y-4">
-            {sections.map((section) => (
-              <li
-                key={section.id}
-                className={`text-base md:text-lg font-bold cursor-pointer transition-colors ${
-                  activeSection === section.id 
-                    ? 'text-black' 
-                    : 'text-gray-600 hover:text-black'
-                }`}
-                onClick={() => setActiveSection(section.id)}
-              >
-                {activeSection === section.id && (
-                  <span className="text-black mr-2">•</span>
-                )}
-                {section.label}
-              </li>
-            ))}
-          </ul>
-        </div>
+      {/* Community Values Section */}
+      <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-12 md:mb-16">
+            Our<br />Community Values
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {/* Value 1 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">🤝</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Respect</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                Every member deserves to be treated with kindness and respect.
+              </p>
+            </div>
 
-        {/* Content Area */}
-        <div className="xl:col-span-2">
-          {Object.entries(guidelinesContent).map(([sectionKey, items]) => (
-            activeSection === sectionKey && (
-              <div key={sectionKey}>
-                <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                  {sections.find(s => s.id === sectionKey)?.label}
-                </h2>
-                <div className="space-y-4">
-                  {items.map((item, index) => (
-                    <div
-                      key={index}
-                      className={`border border-gray-200 rounded-lg p-4 bg-gray-50 ${
-                        openFAQ[sectionKey] === index ? 'bg-gray-100' : ''
-                      }`}
-                    >
-                      <div
-                        className="flex items-center gap-2 cursor-pointer font-bold text-lg md:text-xl"
-                        onClick={() => toggleFAQ(sectionKey, index)}
-                      >
-                        {openFAQ[sectionKey] === index ? (
-                          <X className="w-6 h-6 flex-shrink-0" />
-                        ) : (
-                          <Plus className="w-6 h-6 flex-shrink-0" />
-                        )}
-                        <span>Q: {item.question}</span>
-                      </div>
-                      {openFAQ[sectionKey] === index && (
-                        <div className="mt-2 text-lg md:text-xl font-bold ml-8">
-                          A: {item.answer}
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )
-          ))}
-        </div>
+            {/* Value 2 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">🛡️</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Safety</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                We maintain a safe space for authentic connections.
+              </p>
+            </div>
 
-        {/* Contact Form */}
-        <div className="xl:col-span-1">
-          <h2 className="text-2xl md:text-4xl font-bold mb-6">support</h2>
-          <div className="space-y-4">
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
-              <h3 className="text-lg md:text-xl font-bold mb-2">Report Violations</h3>
-              <p className="text-sm md:text-base font-medium text-gray-700">
-                See something that violates our guidelines? Report it directly in the app.
+            {/* Value 3 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">✨</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Authenticity</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                Be genuine and true to yourself in all interactions.
               </p>
             </div>
-            
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
-              <h3 className="text-lg md:text-xl font-bold mb-2">Guidelines Questions</h3>
-              <p className="text-sm md:text-base font-medium text-gray-700">
-                Have questions about our guidelines? Contact <a href="mailto:community@rustlessapp.com" className="text-black underline">community@rustlessapp.com</a>.
-              </p>
-            </div>
-            
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
-              <h3 className="text-lg md:text-xl font-bold mb-2">Appeal Process</h3>
-              <p className="text-sm md:text-base font-medium text-gray-700">
-                Think we made a mistake? You can appeal enforcement actions through our support system.
-              </p>
-            </div>
-            
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
-              <h3 className="text-lg md:text-xl font-bold mb-2">Community Feedback</h3>
-              <p className="text-sm md:text-base font-medium text-gray-700">
-                Help us improve our guidelines by sharing your feedback and suggestions.
+
+            {/* Value 4 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">💝</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Kindness</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                Small acts of kindness create meaningful connections.
               </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Your Safety Our Priority Section */}
+      <section className="py-12 md:py-20 px-4 md:px-8 bg-white relative overflow-hidden">
+        {/* Background floating photos for this section - Desktop */}
+        <div className="hidden lg:block">
+          <FloatingPhoto
+            src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+            size="desktop-round"
+            style={{ left: '10%', top: '20%' }}
+            className=""
+          />
+          
+          <FloatingPhoto
+            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+            size="desktop-round"
+            style={{ right: '10%', top: '30%' }}
+            className=""
+          />
+        </div>
+
+        {/* Background floating photos - Tablet */}
+        <div className="hidden md:block lg:hidden">
+          <FloatingPhoto
+            src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+            size="tablet-round"
+            style={{ left: '10%', top: '20%' }}
+            className=""
+          />
+          
+          <FloatingPhoto
+            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+            size="tablet-round"
+            style={{ right: '10%', top: '30%' }}
+            className=""
+          />
+        </div>
+
+        {/* Background floating photos - Mobile */}
+        <div className="block md:hidden">
+          <FloatingPhoto
+            src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+            size="mobile-round"
+            style={{ left: '10%', top: '10%' }}
+            className=""
+          />
+          
+          <FloatingPhoto
+            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+            size="mobile-round"
+            style={{ right: '10%', top: '15%' }}
+            className=""
+          />
+        </div>
+
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold text-black leading-tight mb-6 md:mb-8">
+            <div className="mb-2">Your Safety</div>
+            <div className="mb-2">Our Priority</div>
+          </h2>
+        </div>
+      </section>
+
+      {/* Duplicated Community Values Section */}
+      <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {/* Value 1 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">🤝</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Respect</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                Every member deserves to be treated with kindness and respect.
+              </p>
+            </div>
+
+            {/* Value 2 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">🛡️</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Safety</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                We maintain a safe space for authentic connections.
+              </p>
+            </div>
+
+            {/* Value 3 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">✨</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Authenticity</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                Be genuine and true to yourself in all interactions.
+              </p>
+            </div>
+
+            {/* Value 4 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">💝</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Kindness</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                Small acts of kindness create meaningful connections.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Be Kind Always Section */}
+      <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h2 className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] font-bold text-black">
+            #Be Kind Always!
+          </h2>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="text-center p-6 md:p-8 space-y-3 bg-white border-t border-gray-100">

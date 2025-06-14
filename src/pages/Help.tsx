@@ -191,203 +191,42 @@ const Help = () => {
 
         {/* Content Area */}
         <div className="xl:col-span-2">
-          {activeSection === 'approach' && (
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">our approach to safety</h2>
-              <div className="space-y-4">
-                {helpContent.approach.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`border border-gray-200 rounded-lg p-4 bg-gray-50 ${
-                      openFAQ.approach === index ? 'bg-gray-100' : ''
-                    }`}
-                  >
+          {Object.entries(helpContent).map(([sectionKey, items]) => (
+            activeSection === sectionKey && (
+              <div key={sectionKey}>
+                <h2 className="text-3xl md:text-5xl font-bold mb-6">
+                  {sections.find(s => s.id === sectionKey)?.label}
+                </h2>
+                <div className="space-y-4">
+                  {items.map((item, index) => (
                     <div
-                      className="flex items-center gap-2 cursor-pointer font-bold text-lg md:text-xl"
-                      onClick={() => toggleFAQ('approach', index)}
+                      key={index}
+                      className={`border border-gray-200 rounded-lg p-4 bg-gray-50 ${
+                        openFAQ[sectionKey] === index ? 'bg-gray-100' : ''
+                      }`}
                     >
-                      {openFAQ.approach === index ? (
-                        <X className="w-6 h-6 flex-shrink-0" />
-                      ) : (
-                        <Plus className="w-6 h-6 flex-shrink-0" />
-                      )}
-                      <span>Q: {item.question}</span>
-                    </div>
-                    {openFAQ.approach === index && (
-                      <div className="mt-2 text-lg md:text-xl font-bold ml-8">
-                        A: {item.answer}
+                      <div
+                        className="flex items-center gap-2 cursor-pointer font-bold text-lg md:text-xl"
+                        onClick={() => toggleFAQ(sectionKey, index)}
+                      >
+                        {openFAQ[sectionKey] === index ? (
+                          <X className="w-6 h-6 flex-shrink-0" />
+                        ) : (
+                          <Plus className="w-6 h-6 flex-shrink-0" />
+                        )}
+                        <span>Q: {item.question}</span>
                       </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {activeSection === 'moderation' && (
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">moderation</h2>
-              <div className="space-y-4">
-                {helpContent.moderation.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`border border-gray-200 rounded-lg p-4 bg-gray-50 ${
-                      openFAQ.moderation === index ? 'bg-gray-100' : ''
-                    }`}
-                  >
-                    <div
-                      className="flex items-center gap-2 cursor-pointer font-bold text-lg md:text-xl"
-                      onClick={() => toggleFAQ('moderation', index)}
-                    >
-                      {openFAQ.moderation === index ? (
-                        <X className="w-6 h-6 flex-shrink-0" />
-                      ) : (
-                        <Plus className="w-6 h-6 flex-shrink-0" />
+                      {openFAQ[sectionKey] === index && (
+                        <div className="mt-2 text-lg md:text-xl font-bold ml-8">
+                          A: {item.answer}
+                        </div>
                       )}
-                      <span>Q: {item.question}</span>
                     </div>
-                    {openFAQ.moderation === index && (
-                      <div className="mt-2 text-lg md:text-xl font-bold ml-8">
-                        A: {item.answer}
-                      </div>
-                    )}
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
-
-          {activeSection === 'reporting' && (
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">reporting</h2>
-              <div className="space-y-4">
-                {helpContent.reporting.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`border border-gray-200 rounded-lg p-4 bg-gray-50 ${
-                      openFAQ.reporting === index ? 'bg-gray-100' : ''
-                    }`}
-                  >
-                    <div
-                      className="flex items-center gap-2 cursor-pointer font-bold text-lg md:text-xl"
-                      onClick={() => toggleFAQ('reporting', index)}
-                    >
-                      {openFAQ.reporting === index ? (
-                        <X className="w-6 h-6 flex-shrink-0" />
-                      ) : (
-                        <Plus className="w-6 h-6 flex-shrink-0" />
-                      )}
-                      <span>Q: {item.question}</span>
-                    </div>
-                    {openFAQ.reporting === index && (
-                      <div className="mt-2 text-lg md:text-xl font-bold ml-8">
-                        A: {item.answer}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {activeSection === 'account' && (
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">account help</h2>
-              <div className="space-y-4">
-                {helpContent.account.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`border border-gray-200 rounded-lg p-4 bg-gray-50 ${
-                      openFAQ.account === index ? 'bg-gray-100' : ''
-                    }`}
-                  >
-                    <div
-                      className="flex items-center gap-2 cursor-pointer font-bold text-lg md:text-xl"
-                      onClick={() => toggleFAQ('account', index)}
-                    >
-                      {openFAQ.account === index ? (
-                        <X className="w-6 h-6 flex-shrink-0" />
-                      ) : (
-                        <Plus className="w-6 h-6 flex-shrink-0" />
-                      )}
-                      <span>Q: {item.question}</span>
-                    </div>
-                    {openFAQ.account === index && (
-                      <div className="mt-2 text-lg md:text-xl font-bold ml-8">
-                        A: {item.answer}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {activeSection === 'technical' && (
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">technical help</h2>
-              <div className="space-y-4">
-                {helpContent.technical.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`border border-gray-200 rounded-lg p-4 bg-gray-50 ${
-                      openFAQ.technical === index ? 'bg-gray-100' : ''
-                    }`}
-                  >
-                    <div
-                      className="flex items-center gap-2 cursor-pointer font-bold text-lg md:text-xl"
-                      onClick={() => toggleFAQ('technical', index)}
-                    >
-                      {openFAQ.technical === index ? (
-                        <X className="w-6 h-6 flex-shrink-0" />
-                      ) : (
-                        <Plus className="w-6 h-6 flex-shrink-0" />
-                      )}
-                      <span>Q: {item.question}</span>
-                    </div>
-                    {openFAQ.technical === index && (
-                      <div className="mt-2 text-lg md:text-xl font-bold ml-8">
-                        A: {item.answer}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {activeSection === 'billing' && (
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">billing help</h2>
-              <div className="space-y-4">
-                {helpContent.billing.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`border border-gray-200 rounded-lg p-4 bg-gray-50 ${
-                      openFAQ.billing === index ? 'bg-gray-100' : ''
-                    }`}
-                  >
-                    <div
-                      className="flex items-center gap-2 cursor-pointer font-bold text-lg md:text-xl"
-                      onClick={() => toggleFAQ('billing', index)}
-                    >
-                      {openFAQ.billing === index ? (
-                        <X className="w-6 h-6 flex-shrink-0" />
-                      ) : (
-                        <Plus className="w-6 h-6 flex-shrink-0" />
-                      )}
-                      <span>Q: {item.question}</span>
-                    </div>
-                    {openFAQ.billing === index && (
-                      <div className="mt-2 text-lg md:text-xl font-bold ml-8">
-                        A: {item.answer}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+            )
+          ))}
         </div>
 
         {/* Contact Form */}
@@ -436,12 +275,12 @@ const Help = () => {
           <span className="text-gray-400">|</span>
           <Link to="/help" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Help</Link>
           <span className="text-gray-400">|</span>
-          <a href="#" className="hover:opacity-70 flex items-center text-black">
+          <Link to="/join-us" className="hover:opacity-70 flex items-center text-black">
             <span className="underline underline-offset-4 decoration-1">Join Us</span>
             <span className="ml-1 text-sm">👋</span>
-          </a>
+          </Link>
           <span className="text-gray-400">|</span>
-          <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Guidelines</a>
+          <Link to="/guidelines" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Guidelines</Link>
         </div>
         
         <div className="text-base font-medium text-black">
