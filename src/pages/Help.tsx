@@ -17,110 +17,165 @@ const Help = () => {
   ];
 
   const helpContent = {
-    approach: [
-      {
-        question: "How can we help you today?",
-        answer: "We're here to help you get the most out of Rustless. Browse through our help sections or contact our support team directly for personalized assistance."
-      },
-      {
-        question: "What support options are available?",
-        answer: "We offer multiple support channels including in-app help, email support, and our comprehensive help center. Our team is available 24/7 to assist you."
-      },
-      {
-        question: "How quickly can I expect a response?",
-        answer: "We typically respond to support requests within 2-4 hours during business hours, and within 24 hours for all other times."
-      }
-    ],
-    moderation: [
-      {
-        question: "How does content moderation work on Rustless?",
-        answer: "We use a combination of AI-powered moderation and human review to ensure content meets our community guidelines. Messages are scanned for inappropriate content before delivery."
-      },
-      {
-        question: "What happens when content is flagged?",
-        answer: "Flagged content is reviewed by our moderation team. Depending on the severity, actions may include content removal, user warnings, or account restrictions."
-      },
-      {
-        question: "Can I appeal a moderation decision?",
-        answer: "Yes, you can appeal any moderation decision by contacting our support team with details about your case. We'll review the decision and respond within 48 hours."
-      },
-      {
-        question: "How do you handle false positives in moderation?",
-        answer: "Our moderation system is continuously improved to reduce false positives. If your content was incorrectly flagged, please contact support for immediate review."
-      }
-    ],
-    reporting: [
-      {
-        question: "How do I report inappropriate content or behavior?",
-        answer: "You can report content by tapping the Report button (⚠) on any message. Select the appropriate reason and provide additional details if needed."
-      },
-      {
-        question: "What types of content should I report?",
-        answer: "Report any content that violates our community guidelines, including harassment, spam, inappropriate images, or threatening behavior."
-      },
-      {
-        question: "What happens after I submit a report?",
-        answer: "Reports are reviewed by our moderation team within 24 hours. We'll take appropriate action and may follow up with you if additional information is needed."
-      },
-      {
-        question: "Can I report someone anonymously?",
-        answer: "Yes, all reports are handled confidentially. The reported user will not know who submitted the report."
-      }
-    ],
-    account: [
-      {
-        question: "How do I create a Rustless account?",
-        answer: "Download the Rustless app and follow the signup process. You'll need a valid email address and phone number for verification."
-      },
-      {
-        question: "I forgot my password. How can I reset it?",
-        answer: "Use the 'Forgot Password' link on the login screen. We'll send a reset link to your registered email address."
-      },
-      {
-        question: "How do I delete my account?",
-        answer: "You can delete your account from the Settings menu in the app. This action is permanent and cannot be undone."
-      },
-      {
-        question: "Can I change my username?",
-        answer: "Usernames can be changed once every 30 days from your profile settings. Choose carefully as frequent changes may confuse your connections."
-      }
-    ],
-    technical: [
-      {
-        question: "The app is crashing. What should I do?",
-        answer: "Try restarting the app and your device. If issues persist, check for app updates or contact support with your device details."
-      },
-      {
-        question: "Messages aren't sending. How can I fix this?",
-        answer: "Check your internet connection and app permissions. Try switching between WiFi and mobile data to isolate the issue."
-      },
-      {
-        question: "I'm not receiving notifications. What's wrong?",
-        answer: "Ensure notifications are enabled in your device settings and within the Rustless app. Check if Do Not Disturb mode is active."
-      },
-      {
-        question: "The app is running slowly. How can I improve performance?",
-        answer: "Clear the app cache, close other running apps, and ensure you have sufficient storage space on your device."
-      }
-    ],
-    billing: [
-      {
-        question: "How much does Rustless cost?",
-        answer: "Rustless offers both free and premium plans. Check our pricing page in the app for current subscription options and features."
-      },
-      {
-        question: "How do I cancel my subscription?",
-        answer: "Cancel your subscription through your app store (iOS App Store or Google Play Store) or contact our billing support team."
-      },
-      {
-        question: "I was charged incorrectly. How do I get a refund?",
-        answer: "Contact our billing support team with your transaction details. We'll review your case and process refunds for eligible charges."
-      },
-      {
-        question: "When will my subscription renew?",
-        answer: "Subscription renewal dates are shown in the app settings under 'Subscription'. You'll also receive reminder notifications before renewal."
-      }
-    ]
+    approach: {
+      miniParagraphs: [
+        {
+          title: "general help",
+          questions: [
+            {
+              question: "How can we help you today?",
+              answer: "We're here to help you get the most out of Rustless. Browse through our help sections or contact our support team directly for personalized assistance."
+            },
+            {
+              question: "What support options are available?",
+              answer: "We offer multiple support channels including in-app help, email support, and our comprehensive help center. Our team is available 24/7 to assist you."
+            },
+            {
+              question: "How quickly can I expect a response?",
+              answer: "We typically respond to support requests within 2-4 hours during business hours, and within 24 hours for all other times."
+            }
+          ]
+        }
+      ]
+    },
+    moderation: {
+      miniParagraphs: [
+        {
+          title: "moderation",
+          questions: [
+            {
+              question: "How does content moderation work on Rustless?",
+              answer: "We use a combination of AI-powered moderation and human review to ensure content meets our community guidelines. Messages are scanned for inappropriate content before delivery."
+            },
+            {
+              question: "What happens when content is flagged?",
+              answer: "Flagged content is reviewed by our moderation team. Depending on the severity, actions may include content removal, user warnings, or account restrictions."
+            },
+            {
+              question: "Can I appeal a moderation decision?",
+              answer: "Yes, you can appeal any moderation decision by contacting our support team with details about your case. We'll review the decision and respond within 48 hours."
+            },
+            {
+              question: "How do you handle false positives in moderation?",
+              answer: "Our moderation system is continuously improved to reduce false positives. If your content was incorrectly flagged, please contact support for immediate review."
+            }
+          ]
+        }
+      ]
+    },
+    reporting: {
+      miniParagraphs: [
+        {
+          title: "reporting",
+          questions: [
+            {
+              question: "What is and isn't allowed on Rustless?",
+              answer: "Our Community Guidelines and Terms of Service provide an overview of behaviors and content that are and are not permitted on Rustless. In general, Rustless is a place for you to have fun, be kind, and make connections; we recommend keeping your communications positive and lighthearted to uplift your Rustless community."
+            },
+            {
+              question: "Can I block message senders on Rustless?",
+              answer: "Yes; to block an individual, just tap the Report button (▲), report the message, and tap 'Block user'. The message will be deleted from your inbox and the user will be forbidden from sending you any further messages."
+            }
+          ]
+        },
+        {
+          title: "how to report",
+          questions: [
+            {
+              question: "How do I report inappropriate content or behavior?",
+              answer: "You can report content by tapping the Report button (⚠) on any message. Select the appropriate reason and provide additional details if needed."
+            },
+            {
+              question: "What types of content should I report?",
+              answer: "Report any content that violates our community guidelines, including harassment, spam, inappropriate images, or threatening behavior."
+            },
+            {
+              question: "What happens after I submit a report?",
+              answer: "Reports are reviewed by our moderation team within 24 hours. We'll take appropriate action and may follow up with you if additional information is needed."
+            },
+            {
+              question: "Can I report someone anonymously?",
+              answer: "Yes, all reports are handled confidentially. The reported user will not know who submitted the report."
+            }
+          ]
+        }
+      ]
+    },
+    account: {
+      miniParagraphs: [
+        {
+          title: "account management",
+          questions: [
+            {
+              question: "How do I create a Rustless account?",
+              answer: "Download the Rustless app and follow the signup process. You'll need a valid email address and phone number for verification."
+            },
+            {
+              question: "I forgot my password. How can I reset it?",
+              answer: "Use the 'Forgot Password' link on the login screen. We'll send a reset link to your registered email address."
+            },
+            {
+              question: "How do I delete my account?",
+              answer: "You can delete your account from the Settings menu in the app. This action is permanent and cannot be undone."
+            },
+            {
+              question: "Can I change my username?",
+              answer: "Usernames can be changed once every 30 days from your profile settings. Choose carefully as frequent changes may confuse your connections."
+            }
+          ]
+        }
+      ]
+    },
+    technical: {
+      miniParagraphs: [
+        {
+          title: "troubleshooting",
+          questions: [
+            {
+              question: "The app is crashing. What should I do?",
+              answer: "Try restarting the app and your device. If issues persist, check for app updates or contact support with your device details."
+            },
+            {
+              question: "Messages aren't sending. How can I fix this?",
+              answer: "Check your internet connection and app permissions. Try switching between WiFi and mobile data to isolate the issue."
+            },
+            {
+              question: "I'm not receiving notifications. What's wrong?",
+              answer: "Ensure notifications are enabled in your device settings and within the Rustless app. Check if Do Not Disturb mode is active."
+            },
+            {
+              question: "The app is running slowly. How can I improve performance?",
+              answer: "Clear the app cache, close other running apps, and ensure you have sufficient storage space on your device."
+            }
+          ]
+        }
+      ]
+    },
+    billing: {
+      miniParagraphs: [
+        {
+          title: "billing",
+          questions: [
+            {
+              question: "How much does Rustless cost?",
+              answer: "Rustless offers both free and premium plans. Check our pricing page in the app for current subscription options and features."
+            },
+            {
+              question: "How do I cancel my subscription?",
+              answer: "Cancel your subscription through your app store (iOS App Store or Google Play Store) or contact our billing support team."
+            },
+            {
+              question: "I was charged incorrectly. How do I get a refund?",
+              answer: "Contact our billing support team with your transaction details. We'll review your case and process refunds for eligible charges."
+            },
+            {
+              question: "When will my subscription renew?",
+              answer: "Subscription renewal dates are shown in the app settings under 'Subscription'. You'll also receive reminder notifications before renewal."
+            }
+          ]
+        }
+      ]
+    }
   };
 
   return (
@@ -177,35 +232,44 @@ const Help = () => {
 
         {/* Content Area */}
         <div className="xl:col-span-2">
-          {Object.entries(helpContent).map(([sectionKey, items]) => (
-            activeSection === sectionKey && (
-              <div key={sectionKey}>
-                <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                  {sections.find(s => s.id === sectionKey)?.label}
-                </h2>
-                <div className="space-y-4">
-                  {items.map((item, index) => (
-                    <Collapsible key={index}>
-                      <CollapsibleTrigger className="w-full">
-                        <div className="flex items-center gap-3 p-4 bg-gray-50 border border-gray-200 rounded-lg hover:bg-gray-100 transition-colors">
-                          <Plus className="w-5 h-5 flex-shrink-0 group-data-[state=open]:hidden" />
-                          <Minus className="w-5 h-5 flex-shrink-0 hidden group-data-[state=open]:block" />
-                          <span className="text-left font-bold text-lg md:text-xl">
-                            Q: {item.question}
-                          </span>
-                        </div>
-                      </CollapsibleTrigger>
-                      <CollapsibleContent>
-                        <div className="p-4 ml-8 text-lg md:text-xl font-bold bg-gray-50 border-l border-r border-b border-gray-200 rounded-b-lg">
-                          A: {item.answer}
-                        </div>
-                      </CollapsibleContent>
-                    </Collapsible>
-                  ))}
-                </div>
+          {helpContent[activeSection] && (
+            <div>
+              <h2 className="text-3xl md:text-5xl font-bold mb-6">
+                {sections.find(s => s.id === activeSection)?.label}
+              </h2>
+              
+              {/* Mini Paragraphs */}
+              <div className="space-y-8">
+                {helpContent[activeSection].miniParagraphs.map((miniParagraph, paragraphIndex) => (
+                  <div key={paragraphIndex}>
+                    <h3 className="text-2xl md:text-4xl font-bold mb-4">
+                      {miniParagraph.title}
+                    </h3>
+                    <div className="space-y-4">
+                      {miniParagraph.questions.map((item, index) => (
+                        <Collapsible key={index}>
+                          <CollapsibleTrigger className="w-full">
+                            <div className="flex items-center gap-3 p-4 bg-gray-50 border border-gray-200 rounded-lg hover:bg-gray-100 transition-colors">
+                              <Plus className="w-5 h-5 flex-shrink-0 group-data-[state=open]:hidden" />
+                              <Minus className="w-5 h-5 flex-shrink-0 hidden group-data-[state=open]:block" />
+                              <span className="text-left font-bold text-lg md:text-xl">
+                                Q: {item.question}
+                              </span>
+                            </div>
+                          </CollapsibleTrigger>
+                          <CollapsibleContent>
+                            <div className="p-4 ml-8 text-lg md:text-xl font-bold bg-gray-50 border-l border-r border-b border-gray-200 rounded-b-lg">
+                              A: {item.answer}
+                            </div>
+                          </CollapsibleContent>
+                        </Collapsible>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
-            )
-          ))}
+            </div>
+          )}
         </div>
 
         {/* Contact Form */}
