@@ -4,7 +4,7 @@ import DynamicHashtag from '../components/DynamicHashtag';
 import FloatingPhoto from '../components/FloatingPhoto';
 
 const Index = () => {
-  const [isWhiteTheme, setIsWhiteTheme] = useState(false);
+  const [isWhiteTheme, setIsWhiteTheme] = useState(true); // Changed default to white
 
   const themeClasses = isWhiteTheme 
     ? "bg-white text-black" 
@@ -306,7 +306,7 @@ const Index = () => {
               <img 
                 src={`https://raw.githubusercontent.com/EliHammond206/rustless/main/pictures/${logo}`} 
                 alt={`Logo ${index + 1}`}
-                className={`h-6 md:h-8 w-auto object-contain ${isWhiteTheme ? 'opacity-80' : ''}`}
+                className={`h-6 md:h-8 w-auto object-contain ${isWhiteTheme ? 'opacity-60' : ''}`}
               />
             </div>
           ))}
