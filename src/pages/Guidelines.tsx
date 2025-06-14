@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import DynamicHashtag from '../components/DynamicHashtag';
 import FloatingPhoto from '../components/FloatingPhoto';
+import { HoverCard, HoverCardContent, HoverCardTrigger } from '../components/ui/hover-card';
 
 const Guidelines = () => {
   return (
@@ -261,52 +262,101 @@ const Guidelines = () => {
             Balance Free Speech<br />With Moderation
           </h2>
           
-          {/* Explanatory Text */}
+          {/* Explanatory Text - Made Bold */}
           <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
-            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6">
+            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6 font-semibold">
               At Rustless, we believe in creating a space where authentic expression thrives while maintaining a safe and respectful environment for everyone. Our community guidelines are designed to protect free speech while preventing harmful content that could damage our vibrant ecosystem.
             </p>
-            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
               We use a combination of AI-powered moderation tools and human review to ensure content meets our standards. Our approach focuses on transparency, fairness, and giving creators the freedom to express themselves within reasonable boundaries that protect our community.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {/* Perk 1 */}
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🌍</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">50M</div>
-              <p className="text-gray-700 text-sm md:text-base">
-                active users worldwide, ready to discover your business.
-              </p>
-            </div>
+          {/* Image Gallery with Hover Effects */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {/* Image 1 */}
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <div className="cursor-pointer transition-transform duration-300 hover:scale-105">
+                  <img 
+                    src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+                    alt="Community member"
+                    className="w-full h-48 md:h-64 object-cover rounded-2xl shadow-lg"
+                  />
+                </div>
+              </HoverCardTrigger>
+              <HoverCardContent className="w-80">
+                <div className="space-y-2">
+                  <h4 className="text-sm font-semibold">Authentic Expression</h4>
+                  <p className="text-sm text-muted-foreground">
+                    We encourage genuine self-expression while maintaining respect for our diverse community.
+                  </p>
+                </div>
+              </HoverCardContent>
+            </HoverCard>
 
-            {/* Perk 2 */}
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🧢</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">80%</div>
-              <p className="text-gray-700 text-sm md:text-base">
-                of Rustless users are 18-35, your prime target audience.
-              </p>
-            </div>
+            {/* Image 2 */}
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <div className="cursor-pointer transition-transform duration-300 hover:scale-105">
+                  <img 
+                    src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+                    alt="Community safety"
+                    className="w-full h-48 md:h-64 object-cover rounded-2xl shadow-lg"
+                  />
+                </div>
+              </HoverCardTrigger>
+              <HoverCardContent className="w-80">
+                <div className="space-y-2">
+                  <h4 className="text-sm font-semibold">Safe Environment</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Creating a secure space where everyone can participate without fear of harassment or harm.
+                  </p>
+                </div>
+              </HoverCardContent>
+            </HoverCard>
 
-            {/* Perk 3 */}
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">⚡️</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">90%</div>
-              <p className="text-gray-700 text-sm md:text-base">
-                of daily active users engage with business content.
-              </p>
-            </div>
+            {/* Image 3 */}
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <div className="cursor-pointer transition-transform duration-300 hover:scale-105">
+                  <img 
+                    src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
+                    alt="Community moderation"
+                    className="w-full h-48 md:h-64 object-cover rounded-2xl shadow-lg"
+                  />
+                </div>
+              </HoverCardTrigger>
+              <HoverCardContent className="w-80">
+                <div className="space-y-2">
+                  <h4 className="text-sm font-semibold">Fair Moderation</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Transparent and consistent content moderation that balances freedom with responsibility.
+                  </p>
+                </div>
+              </HoverCardContent>
+            </HoverCard>
 
-            {/* Perk 4 */}
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🔔</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">75%</div>
-              <p className="text-gray-700 text-sm md:text-base">
-                of users act on notifications within 5 minutes.
-              </p>
-            </div>
+            {/* Image 4 */}
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <div className="cursor-pointer transition-transform duration-300 hover:scale-105">
+                  <img 
+                    src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
+                    alt="Community growth"
+                    className="w-full h-48 md:h-64 object-cover rounded-2xl shadow-lg"
+                  />
+                </div>
+              </HoverCardTrigger>
+              <HoverCardContent className="w-80">
+                <div className="space-y-2">
+                  <h4 className="text-sm font-semibold">Community Growth</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Supporting healthy community growth through clear guidelines and positive engagement.
+                  </p>
+                </div>
+              </HoverCardContent>
+            </HoverCard>
           </div>
         </div>
       </section>
