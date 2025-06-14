@@ -1,35 +1,21 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import DynamicHashtag from '../components/DynamicHashtag';
 import FloatingPhoto from '../components/FloatingPhoto';
 
 const Index = () => {
-  const [advertiseText, setAdvertiseText] = useState("Advertise with Rustless");
-  
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setAdvertiseText(prev => 
-        prev === "Advertise with Rustless" ? "We're Climbing" : "Advertise with Rustless"
-      );
-    }, 3000);
-    
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="bg-white text-black flex flex-col min-h-screen relative overflow-hidden">
       {/* Header */}
       <header className="flex justify-between items-center p-4 md:p-4 relative z-20">
         <h1 className="text-xl md:text-2xl font-bold text-black">Rustless</h1>
         <div className="flex items-center space-x-2 md:space-x-4">
-          <a href="#" className="text-black text-base md:text-base align-middle font-semibold">
-            <span className="hidden md:inline transition-all duration-500 ease-in-out">
-              {advertiseText}
-            </span>
-            <span className="md:hidden font-semibold">Advertise</span>
+          <a href="#" className="text-black text-xs md:text-sm align-middle">
+            <span className="hidden md:inline">Advertise with Rustless</span>
+            <span className="md:hidden">Ads</span>
             <span className="bg-red-500 text-white text-[10px] px-1.5 py-0.5 rounded ml-1 font-medium leading-none">New</span>
           </a>
-          <button className="bg-black text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-base md:text-base font-semibold">
+          <button className="bg-black text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium">
             Get The App
           </button>
         </div>
@@ -214,15 +200,15 @@ const Index = () => {
               </div>
             </h1>
 
-            {/* App Store Buttons - Mobile */}
-            <div className="flex justify-center gap-6 mt-6">
-              <button className="w-[70px] h-[55px] bg-black text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-7 h-7">
+            {/* App Store Buttons */}
+            <div className="flex justify-center gap-4 mt-6">
+              <button className="w-[60px] h-[45px] bg-black text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-5 h-5">
                   <path d="M 15.967 9.072 C 15.967 9.072 15.608 7.492 17.011 5.644 C 18.587 3.567 20.778 3.555 20.778 3.555 C 20.778 3.555 21.105 5.51 19.536 7.389 C 17.866 9.403 15.967 9.072 15.967 9.072 Z M 22.543 16.271 C 22.543 13.052 25.136 11.728 25.136 11.728 C 25.136 11.728 23.808 9.328 20.439 9.328 C 18.48 9.328 16.975 10.443 16.164 10.443 C 15.218 10.443 13.811 9.395 11.991 9.395 C 9.201 9.395 6.222 11.897 6.222 16.665 C 6.222 21.511 9.741 27.544 12.527 27.544 C 13.5 27.544 14.993 26.563 16.499 26.563 C 17.976 26.563 19.064 27.508 20.466 27.508 C 23.516 27.508 25.778 21.149 25.778 21.149 C 25.778 21.149 22.543 19.9 22.543 16.271 Z" fill="white"/>
                 </svg>
               </button>
-              <button className="w-[70px] h-[55px] bg-black text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-7 h-7">
+              <button className="w-[60px] h-[45px] bg-black text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-5 h-5">
                   <path d="M 9.723 12.93 L 7.437 8.83 C 7.308 8.599 7.388 8.307 7.605 8.173 C 7.823 8.039 8.11 8.116 8.234 8.347 L 10.55 12.502 C 12.318 11.665 14.306 11.2 16.446 11.2 C 18.586 11.2 20.574 11.665 22.341 12.502 L 24.658 8.347 C 24.787 8.116 25.069 8.039 25.292 8.173 C 25.515 8.307 25.59 8.599 25.46 8.83 L 23.174 12.93 C 27.112 15.14 29.781 19.271 30.222 24.107 L 2.667 24.107 C 3.108 19.271 5.777 15.14 9.723 12.93 Z M 22.771 20.102 C 23.411 20.102 23.927 19.565 23.927 18.906 C 23.927 18.243 23.408 17.709 22.771 17.709 C 22.132 17.709 21.616 18.246 21.616 18.906 C 21.613 19.562 22.132 20.102 22.771 20.102 Z M 10.12 20.102 C 10.76 20.102 11.276 19.565 11.276 18.906 C 11.276 18.243 10.757 17.709 10.12 17.709 C 9.481 17.709 8.965 18.246 8.965 18.906 C 8.962 19.562 9.483 20.102 10.12 20.102 Z" fill="white"/>
                 </svg>
               </button>
@@ -275,15 +261,15 @@ const Index = () => {
             </div>
           </h1>
 
-          {/* App Store Buttons - Desktop and Tablet */}
-          <div className="flex justify-center gap-8 mt-6 sm:mt-8">
-            <button className="w-[100px] h-[75px] md:w-[120px] md:h-[85px] bg-black text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-10 h-10 md:w-12 md:h-12">
+          {/* App Store Buttons */}
+          <div className="flex justify-center gap-4 mt-6 sm:mt-8">
+            <button className="w-[60px] h-[45px] md:w-[88px] md:h-[65px] bg-black text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-5 h-5 md:w-8 md:h-8">
                 <path d="M 15.967 9.072 C 15.967 9.072 15.608 7.492 17.011 5.644 C 18.587 3.567 20.778 3.555 20.778 3.555 C 20.778 3.555 21.105 5.51 19.536 7.389 C 17.866 9.403 15.967 9.072 15.967 9.072 Z M 22.543 16.271 C 22.543 13.052 25.136 11.728 25.136 11.728 C 25.136 11.728 23.808 9.328 20.439 9.328 C 18.48 9.328 16.975 10.443 16.164 10.443 C 15.218 10.443 13.811 9.395 11.991 9.395 C 9.201 9.395 6.222 11.897 6.222 16.665 C 6.222 21.511 9.741 27.544 12.527 27.544 C 13.5 27.544 14.993 26.563 16.499 26.563 C 17.976 26.563 19.064 27.508 20.466 27.508 C 23.516 27.508 25.778 21.149 25.778 21.149 C 25.778 21.149 22.543 19.9 22.543 16.271 Z" fill="white"/>
               </svg>
             </button>
-            <button className="w-[100px] h-[75px] md:w-[120px] md:h-[85px] bg-black text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-10 h-10 md:w-12 md:h-12">
+            <button className="w-[60px] h-[45px] md:w-[88px] md:h-[65px] bg-black text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-5 h-5 md:w-8 md:h-8">
                 <path d="M 9.723 12.93 L 7.437 8.83 C 7.308 8.599 7.388 8.307 7.605 8.173 C 7.823 8.039 8.11 8.116 8.234 8.347 L 10.55 12.502 C 12.318 11.665 14.306 11.2 16.446 11.2 C 18.586 11.2 20.574 11.665 22.341 12.502 L 24.658 8.347 C 24.787 8.116 25.069 8.039 25.292 8.173 C 25.515 8.307 25.59 8.599 25.46 8.83 L 23.174 12.93 C 27.112 15.14 29.781 19.271 30.222 24.107 L 2.667 24.107 C 3.108 19.271 5.777 15.14 9.723 12.93 Z M 22.771 20.102 C 23.411 20.102 23.927 19.565 23.927 18.906 C 23.927 18.243 23.408 17.709 22.771 17.709 C 22.132 17.709 21.616 18.246 21.616 18.906 C 21.613 19.562 22.132 20.102 22.771 20.102 Z M 10.12 20.102 C 10.76 20.102 11.276 19.565 11.276 18.906 C 11.276 18.243 10.757 17.709 10.12 17.709 C 9.481 17.709 8.965 18.246 8.965 18.906 C 8.962 19.562 9.483 20.102 10.12 20.102 Z" fill="white"/>
               </svg>
             </button>
@@ -312,8 +298,7 @@ const Index = () => {
               <img 
                 src={logo.img} 
                 alt={logo.alt}
-                className="h-6 md:h-8 w-auto object-contain opacity-90 contrast-125 saturate-110 brightness-110"
-                style={{ filter: 'contrast(1.3) saturate(1.2) brightness(1.1)' }}
+                className="h-6 md:h-8 w-auto object-contain opacity-60"
               />
             </div>
           ))}
@@ -321,41 +306,12 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="text-center py-8 md:py-10 relative z-10 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
-          {/* First line - Where You Matter with heart */}
-          <div className="mb-4">
-            <h3 className="text-lg md:text-xl font-bold text-black">
-              Where You Matter ❤️
-            </h3>
-          </div>
-          
-          {/* Second line - Links with underlines and separators */}
-          <div className="mb-4">
-            <div className="flex flex-wrap justify-center items-center gap-1 text-base md:text-base font-semibold">
-              <a href="#" className="text-black hover:text-gray-600 transition-colors underline decoration-2 underline-offset-4">
-                Terms of Service
-              </a>
-              <span className="text-black mx-2">|</span>
-              <a href="#" className="text-black hover:text-gray-600 transition-colors underline decoration-2 underline-offset-4">
-                Get Help
-              </a>
-              <span className="text-black mx-2">|</span>
-              <a href="#" className="text-black hover:text-gray-600 transition-colors underline decoration-2 underline-offset-4">
-                Join Rustless Family
-              </a>
-              <span className="text-black mx-2">|</span>
-              <a href="#" className="text-black hover:text-gray-600 transition-colors underline decoration-2 underline-offset-4">
-                Community Guidelines
-              </a>
-            </div>
-          </div>
-          
-          {/* Third line - Copyright */}
-          <div className="text-base md:text-base font-semibold text-black">
-            © 2025 - Till Forever Rustless-Unlimited
-          </div>
-        </div>
+      <footer className="flex flex-wrap justify-center items-center p-4 md:p-6 text-xs md:text-sm space-x-2 md:space-x-4 relative z-10">
+        <span>© 2026 Rustless</span>
+        <a href="#" className="hover:underline text-black">Terms of Service</a>
+        <a href="#" className="hover:underline text-black">Get Help</a>
+        <a href="#" className="hover:underline text-black">Join Rustless Family</a>
+        <a href="#" className="hover:underline text-black">Community Guidelines</a>
       </footer>
     </div>
   );
