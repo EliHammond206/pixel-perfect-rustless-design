@@ -152,95 +152,99 @@ const Index = () => {
           />
         </div>
 
-        {/* Floating Photos - Mobile Layout using exact iPhone 14 Pro coordinates */}
-        <div className="block md:hidden">
-          {/* Using exact coordinates from iPhone 14 Pro (393x852 screen) */}
-          
-          {/* emoji 45*91 */}
-          <div 
-            className="absolute text-[30px] z-20"
-            style={{ left: '45px', top: '91px' }}
-          >
-            🥰
-          </div>
-          
-          {/* tiktok picture 65*113 (rotated 9 degree) */}
-          <FloatingPhoto
-            src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
-            size="mobile-tiktok"
-            style={{ left: '65px', top: '113px', transform: 'rotate(9deg)' }}
-            className=""
-            isRectangular={true}
-          />
-
-          {/* tiktok pictures 235*59 (rotated negative 9 degree) */}
-          <FloatingPhoto
-            src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
-            size="mobile-tiktok"
-            style={{ left: '235px', top: '59px', transform: 'rotate(-9deg)' }}
-            className=""
-            isRectangular={true}
-          />
-          
-          {/* circled picture 263*210 */}
-          <FloatingPhoto
-            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
-            size="mobile-round"
-            style={{ left: '263px', top: '210px' }}
-            className=""
-          />
-
-          {/* big circled image 45*653 */}
-          <FloatingPhoto
-            src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
-            size="mobile-large-round"
-            style={{ left: '45px', top: '653px' }}
-            className=""
-          />
-          
-          {/* emoji 159*668 */}
-          <div 
-            className="absolute text-[30px] z-20"
-            style={{ left: '159px', top: '668px' }}
-          >
-            😮‍💨
-          </div>
-          
-          {/* circle 263*648 */}
-          <FloatingPhoto
-            src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
-            size="mobile-round"
-            style={{ left: '263px', top: '648px' }}
-            className=""
-          />
-          
-          {/* circle 213*766 */}
-          <FloatingPhoto
-            src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
-            size="mobile-round"
-            style={{ left: '213px', top: '766px' }}
-            className=""
-          />
-        </div>
-
-        {/* Main Content - "live it your way with buttons 0 - 310" */}
-        <div className="text-center relative z-10 block md:hidden" style={{ top: '310px', position: 'absolute', left: '0', right: '0' }}>
-          <h1 className="text-4xl font-bold text-white leading-tight mb-6">
-            <div className="mb-1">Live It</div>
-            <div className="mb-1">Your Way</div>
-            <div className="text-3xl">
-              <DynamicHashtag />
+        {/* Mobile Layout - Restructured for proper flow */}
+        <div className="block md:hidden w-full">
+          {/* Top section with photos - relative positioning */}
+          <div className="relative h-64 mb-8">
+            {/* emoji 🥰 */}
+            <div 
+              className="absolute text-[30px] z-20"
+              style={{ left: '45px', top: '20px' }}
+            >
+              🥰
             </div>
-          </h1>
+            
+            {/* tiktok picture (rotated 9 degree) */}
+            <FloatingPhoto
+              src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
+              size="mobile-tiktok"
+              style={{ left: '65px', top: '42px', transform: 'rotate(9deg)' }}
+              className=""
+              isRectangular={true}
+            />
 
-          {/* App Store Buttons */}
-          <div className="flex justify-center gap-4 mt-8">
-            <button className="w-[60px] h-[45px] bg-white text-black rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
-              <img src="/lovable-uploads/7c463ba4-3f87-404b-b05b-7b3d1c5fc3e3.png" alt="Apple" className="w-5 h-5" />
-            </button>
-            <button className="w-[60px] h-[45px] bg-white text-black rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
-              <img src="/lovable-uploads/a5ee20c4-051c-473f-9f29-59a36c62163e.png" alt="Android" className="w-5 h-5" />
-            </button>
+            {/* tiktok pictures (rotated negative 9 degree) */}
+            <FloatingPhoto
+              src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
+              size="mobile-tiktok"
+              style={{ left: '235px', top: '0px', transform: 'rotate(-9deg)' }}
+              className=""
+              isRectangular={true}
+            />
+            
+            {/* circled picture */}
+            <FloatingPhoto
+              src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+              size="mobile-round"
+              style={{ left: '263px', top: '140px' }}
+              className=""
+            />
+          </div>
+
+          {/* Main Content - "Live It Your Way" with buttons */}
+          <div className="text-center relative z-10 mb-12">
+            <h1 className="text-4xl font-bold text-white leading-tight mb-6">
+              <div className="mb-1">Live It</div>
+              <div className="mb-1">Your Way</div>
+              <div className="text-3xl">
+                <DynamicHashtag />
+              </div>
+            </h1>
+
+            {/* App Store Buttons */}
+            <div className="flex justify-center gap-4 mt-8">
+              <button className="w-[60px] h-[45px] bg-white text-black rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                <img src="/lovable-uploads/7c463ba4-3f87-404b-b05b-7b3d1c5fc3e3.png" alt="Apple" className="w-5 h-5" />
+              </button>
+              <button className="w-[60px] h-[45px] bg-white text-black rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                <img src="/lovable-uploads/a5ee20c4-051c-473f-9f29-59a36c62163e.png" alt="Android" className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+
+          {/* Bottom section with remaining photos */}
+          <div className="relative h-48">
+            {/* big circled image */}
+            <FloatingPhoto
+              src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+              size="mobile-large-round"
+              style={{ left: '45px', top: '0px' }}
+              className=""
+            />
+            
+            {/* emoji 😮‍💨 */}
+            <div 
+              className="absolute text-[30px] z-20"
+              style={{ left: '159px', top: '15px' }}
+            >
+              😮‍💨
+            </div>
+            
+            {/* circle */}
+            <FloatingPhoto
+              src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
+              size="mobile-round"
+              style={{ left: '263px', top: '0px' }}
+              className=""
+            />
+            
+            {/* circle */}
+            <FloatingPhoto
+              src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
+              size="mobile-round"
+              style={{ left: '213px', top: '100px' }}
+              className=""
+            />
           </div>
         </div>
 
@@ -262,7 +266,7 @@ const Index = () => {
             <button className="w-[60px] h-[45px] md:w-[88px] md:h-[65px] bg-white text-black rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
               <img src="/lovable-uploads/a5ee20c4-051c-473f-9f29-59a36c62163e.png" alt="Android" className="w-5 h-5 md:w-8 md:h-8" />
             </button>
-          </div>
+            </div>
         </div>
       </div>
 
