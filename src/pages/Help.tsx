@@ -35,6 +35,32 @@ const Help = () => {
               answer: "We typically respond to support requests within 2-4 hours during business hours, and within 24 hours for all other times."
             }
           ]
+        },
+        {
+          title: "getting started",
+          questions: [
+            {
+              question: "How can we help you today?",
+              answer: "We're here to help you get the most out of Rustless. Browse through our help sections or contact our support team directly for personalized assistance."
+            },
+            {
+              question: "What support options are available?",
+              answer: "We offer multiple support channels including in-app help, email support, and our comprehensive help center. Our team is available 24/7 to assist you."
+            }
+          ]
+        },
+        {
+          title: "basic features",
+          questions: [
+            {
+              question: "How quickly can I expect a response?",
+              answer: "We typically respond to support requests within 2-4 hours during business hours, and within 24 hours for all other times."
+            },
+            {
+              question: "What support options are available?",
+              answer: "We offer multiple support channels including in-app help, email support, and our comprehensive help center. Our team is available 24/7 to assist you."
+            }
+          ]
         }
       ]
     },
@@ -44,20 +70,42 @@ const Help = () => {
           title: "moderation",
           questions: [
             {
+              question: "What is and isn't allowed on Rustless?",
+              answer: "Our Community Guidelines and Terms of Service provide an overview of behaviors and content that are and are not permitted on Rustless. In general, Rustless is a place for you to have fun, be kind, and make connections; we recommend keeping your communications positive and lighthearted to uplift your Rustless community."
+            },
+            {
+              question: "Can I block message senders on Rustless?",
+              answer: "Yes; to block an individual, just tap the Report button (▲), report the message, and tap 'Block user'. The message will be deleted from your inbox and the user will be forbidden from sending you any further messages."
+            },
+            {
+              question: "How does content moderation work on Rustless?",
+              answer: "We use a combination of AI-powered moderation and human review to ensure content meets our community guidelines. Messages are scanned for inappropriate content before delivery."
+            }
+          ]
+        },
+        {
+          title: "reporting",
+          questions: [
+            {
+              question: "What is and isn't allowed on Rustless?",
+              answer: "Our Community Guidelines and Terms of Service provide an overview of behaviors and content that are and are not permitted on Rustless. In general, Rustless is a place for you to have fun, be kind, and make connections; we recommend keeping your communications positive and lighthearted to uplift your Rustless community."
+            },
+            {
+              question: "Can I block message senders on Rustless?",
+              answer: "Yes; to block an individual, just tap the Report button (▲), report the message, and tap 'Block user'. The message will be deleted from your inbox and the user will be forbidden from sending you any further messages."
+            }
+          ]
+        },
+        {
+          title: "content guidelines",
+          questions: [
+            {
               question: "How does content moderation work on Rustless?",
               answer: "We use a combination of AI-powered moderation and human review to ensure content meets our community guidelines. Messages are scanned for inappropriate content before delivery."
             },
             {
               question: "What happens when content is flagged?",
               answer: "Flagged content is reviewed by our moderation team. Depending on the severity, actions may include content removal, user warnings, or account restrictions."
-            },
-            {
-              question: "Can I appeal a moderation decision?",
-              answer: "Yes, you can appeal any moderation decision by contacting our support team with details about your case. We'll review the decision and respond within 48 hours."
-            },
-            {
-              question: "How do you handle false positives in moderation?",
-              answer: "Our moderation system is continuously improved to reduce false positives. If your content was incorrectly flagged, please contact support for immediate review."
             }
           ]
         }
@@ -88,7 +136,12 @@ const Help = () => {
             {
               question: "What types of content should I report?",
               answer: "Report any content that violates our community guidelines, including harassment, spam, inappropriate images, or threatening behavior."
-            },
+            }
+          ]
+        },
+        {
+          title: "after reporting",
+          questions: [
             {
               question: "What happens after I submit a report?",
               answer: "Reports are reviewed by our moderation team within 24 hours. We'll take appropriate action and may follow up with you if additional information is needed."
@@ -113,7 +166,12 @@ const Help = () => {
             {
               question: "I forgot my password. How can I reset it?",
               answer: "Use the 'Forgot Password' link on the login screen. We'll send a reset link to your registered email address."
-            },
+            }
+          ]
+        },
+        {
+          title: "profile settings",
+          questions: [
             {
               question: "How do I delete my account?",
               answer: "You can delete your account from the Settings menu in the app. This action is permanent and cannot be undone."
@@ -121,6 +179,19 @@ const Help = () => {
             {
               question: "Can I change my username?",
               answer: "Usernames can be changed once every 30 days from your profile settings. Choose carefully as frequent changes may confuse your connections."
+            }
+          ]
+        },
+        {
+          title: "privacy & security",
+          questions: [
+            {
+              question: "How do I create a Rustless account?",
+              answer: "Download the Rustless app and follow the signup process. You'll need a valid email address and phone number for verification."
+            },
+            {
+              question: "I forgot my password. How can I reset it?",
+              answer: "Use the 'Forgot Password' link on the login screen. We'll send a reset link to your registered email address."
             }
           ]
         }
@@ -138,7 +209,12 @@ const Help = () => {
             {
               question: "Messages aren't sending. How can I fix this?",
               answer: "Check your internet connection and app permissions. Try switching between WiFi and mobile data to isolate the issue."
-            },
+            }
+          ]
+        },
+        {
+          title: "notifications",
+          questions: [
             {
               question: "I'm not receiving notifications. What's wrong?",
               answer: "Ensure notifications are enabled in your device settings and within the Rustless app. Check if Do Not Disturb mode is active."
@@ -146,6 +222,19 @@ const Help = () => {
             {
               question: "The app is running slowly. How can I improve performance?",
               answer: "Clear the app cache, close other running apps, and ensure you have sufficient storage space on your device."
+            }
+          ]
+        },
+        {
+          title: "connectivity",
+          questions: [
+            {
+              question: "Messages aren't sending. How can I fix this?",
+              answer: "Check your internet connection and app permissions. Try switching between WiFi and mobile data to isolate the issue."
+            },
+            {
+              question: "The app is crashing. What should I do?",
+              answer: "Try restarting the app and your device. If issues persist, check for app updates or contact support with your device details."
             }
           ]
         }
@@ -163,7 +252,12 @@ const Help = () => {
             {
               question: "How do I cancel my subscription?",
               answer: "Cancel your subscription through your app store (iOS App Store or Google Play Store) or contact our billing support team."
-            },
+            }
+          ]
+        },
+        {
+          title: "payments",
+          questions: [
             {
               question: "I was charged incorrectly. How do I get a refund?",
               answer: "Contact our billing support team with your transaction details. We'll review your case and process refunds for eligible charges."
@@ -171,6 +265,19 @@ const Help = () => {
             {
               question: "When will my subscription renew?",
               answer: "Subscription renewal dates are shown in the app settings under 'Subscription'. You'll also receive reminder notifications before renewal."
+            }
+          ]
+        },
+        {
+          title: "subscriptions",
+          questions: [
+            {
+              question: "How much does Rustless cost?",
+              answer: "Rustless offers both free and premium plans. Check our pricing page in the app for current subscription options and features."
+            },
+            {
+              question: "How do I cancel my subscription?",
+              answer: "Cancel your subscription through your app store (iOS App Store or Google Play Store) or contact our billing support team."
             }
           ]
         }
