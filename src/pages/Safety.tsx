@@ -1,10 +1,11 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Plus, X } from 'lucide-react';
 
 const Safety = () => {
   const [activeSection, setActiveSection] = useState('approach');
-  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [openFAQ, setOpenFAQ] = useState<number | null>(1);
 
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
@@ -19,69 +20,7 @@ const Safety = () => {
     { id: 'contact', label: 'contact us' }
   ];
 
-  const safetyQuestions = [
-    {
-      category: "moderation",
-      questions: [
-        {
-          question: "How does Rustless moderate content?",
-          answer: "We take any cases of bullying, hate, or violence very seriously. Our Community Team monitors user reports and support tickets 24/7 to ensure the safety and integrity of our platform and our users."
-        },
-        {
-          question: "What technology does Rustless use for content moderation?",
-          answer: "Rustless leverages Hive Moderation's automated moderation solution as the first line of defense to scan messages for inappropriate content. Hive employs cutting-edge deep learning technology to help safeguard our virtual space and filter out potentially harmful language before it hits users' inboxes."
-        },
-        {
-          question: "How does the AI moderation system work?",
-          answer: "Hive's advanced algorithm detects the semantic meaning of emojis, and its web scraper pulls specific examples of contextual emoji use. This evolving technology helps to keep us on trend, deciphering slang and helping ensure Rustless users are complying with our Community Guidelines."
-        },
-        {
-          question: "What happens when content violates guidelines?",
-          answer: "By combining human expertise and advanced technology, we've created a content moderation system that's both effective and able to understand and adapt to modern human behavior. Our Community Team and Hive Moderation work together to review and take action on objectionable content."
-        }
-      ]
-    },
-    {
-      category: "reporting",
-      questions: [
-        {
-          question: "How do I report inappropriate content?",
-          answer: "When you receive a message on Rustless that you find inappropriate, offensive, or harmful, you can report it directly within the app. Simply locate the message, tap on the Report button (⚠), select your Report reason, and tap 'Tell Rustless Team.'"
-        },
-        {
-          question: "What happens after I report a message?",
-          answer: "Our moderation team carefully assesses each reported message against the app's Community Guidelines and Terms of Service. They take into account the content of the message, its potential impact on the recipient, and any relevant context surrounding it."
-        },
-        {
-          question: "What actions are taken against violators?",
-          answer: "If the reported message is found to violate Rustless's Community Guidelines, appropriate action will be taken. This can range from blocking the sender to permanently banning them from the platform."
-        },
-        {
-          question: "Why should I report harmful messages?",
-          answer: "By reporting messages that you deem harmful, you play a crucial role in maintaining a safe and respectful environment on Rustless. Your actions help protect yourself and other users from harassment, bullying, and other forms of online abuse."
-        }
-      ]
-    },
-    {
-      category: "safety features",
-      questions: [
-        {
-          question: "What safety tools are available on Rustless?",
-          answer: "Rustless has built an extensive ecosystem of security tools, safety infrastructure, community guidelines, and user policies. You can pause your link at any time, hide specific words from your messages, block specific users, and report unwanted behavior."
-        },
-        {
-          question: "How can I control my Rustless experience?",
-          answer: "You can further control your Rustless experience by pausing your link at any time, hiding specific words from your messages, blocking specific users, and reporting unwanted behavior."
-        },
-        {
-          question: "Is there 24/7 support available?",
-          answer: "Yes! Our Community Team works around the clock to monitor user reports and support tickets, providing the Rustless community with 24/7 help and guidance. No concern is too small for us."
-        }
-      ]
-    }
-  ];
-
-  const generalFAQs = [
+  const faqItems = [
     {
       question: "What is and isn't allowed on Rustless?",
       answer: "Our Community Guidelines and Terms of Service provide an overview of behaviors and content that are and are not permitted on Rustless. In general, Rustless is a place for you to have fun, be kind, and make connections; we recommend keeping your communications positive and lighthearted to uplift your Rustless community."
@@ -149,52 +88,29 @@ const Safety = () => {
           {activeSection === 'approach' && (
             <div>
               <h2 className="text-3xl md:text-5xl font-bold mb-6">our approach to safety</h2>
-              <div className="space-y-4 text-lg md:text-xl font-bold leading-relaxed mb-8">
+              <div className="space-y-4 text-lg md:text-xl font-bold leading-relaxed">
                 <p>At Rustless, safety is our highest priority. We made Rustless as a place where you can foster meaningful and authentic connections with your friends, and we are committed to cultivating a community rooted in kindness and understanding. We take our responsibility to protect the community seriously, and we are constantly improving our safety features to stay up-to-date with an ever-changing online world.</p>
                 <p>Rustless has built an extensive ecosystem of security tools, safety infrastructure, community guidelines, and user policies that make us a leading voice amongst our peers when it comes to user safety. You can also further control your Rustless experience by pausing your link at any time, hiding specific words from your messages, blocking specific users, and reporting unwanted behavior.</p>
                 <p>In addition to these features, our Community Team works around the clock to monitor user reports and support tickets, providing the Rustless community with 24/7 help and guidance. No concern is too small for us; reach out to <a href="mailto:help@rustlessapp.com" className="text-black underline">help@rustlessapp.com</a> with any questions. We're happy to help!</p>
+                <p>Additionally, Rustless leverages Hive Moderation's automated moderation solution as the first line of defense to scan messages for inappropriate content.</p>
+                <p>Continue reading our Safety Center to learn more about these resources for a safe and fun experience on Rustless.</p>
+                
+                <h3 className="text-2xl md:text-4xl font-bold mt-10 mb-4">moderation</h3>
+                <p>We take any cases of bullying, hate, or violence very seriously. Our Community Team monitors user reports and support tickets 24/7 to ensure the safety and integrity of our platform and our users.</p>
+                <p>Rustless leverages Hive Moderation's automated moderation solution as the first line of defense to scan messages for inappropriate content. Hive employs cutting-edge deep learning technology to help safeguard our virtual space and filter out potentially harmful language before it hits users' inboxes. Its advanced algorithm detects the semantic meaning of emojis, and its web scraper pulls specific examples of contextual emoji use. This evolving technology helps to keep us on trend, deciphering slang and helping ensure Rustless users are complying with our Community Guidelines.</p>
+                <p>By combining human expertise and advanced technology, we've created a content moderation system that's both effective and able to understand and adapt to modern human behavior. Our Community Team brings their real-world experience and understanding to the process, while Hive Moderation's complex AI algorithms provide invaluable insights and support.</p>
+                <p>Together, our Community Team and Hive Moderation act as a safety shield for the Rustless community, constantly reviewing our platform for objectionable content and taking action.</p>
+                <p>We understand that content moderation is a delicate balance between protecting our community and preserving our users' freedom of expression. Our Community Team and Hive Moderation work diligently to strike this balance, ensuring that our platform remains a place where diverse voices can thrive while maintaining a respectful and inclusive environment, free of any forms of hate or abuse.</p>
+                
+                <h3 className="text-2xl md:text-4xl font-bold mt-10 mb-4">reporting</h3>
+                <p>When you receive a message on Rustless that you find inappropriate, offensive, or harmful, you can report it directly within the app. Simply locate the message, tap on the Report button (⚠), select your Report reason, and tap "Tell Rustless Team." This will flag the message for further review.</p>
+                <p>Our moderation team carefully assesses each reported message against the app's Community Guidelines and Terms of Service. They take into account the content of the message, its potential impact on the recipient, and any relevant context surrounding it.</p>
+                <p>If the reported message is found to violate Rustless's Community Guidelines, appropriate action will be taken. This can range from blocking the sender to permanently banning them from the platform.</p>
+                <p>By reporting messages that you deem harmful, you play a crucial role in maintaining a safe and respectful environment on Rustless. Your actions help protect yourself and other users from harassment, bullying, and other forms of online abuse. Don't hesitate to report any message that you feel deserves reporting.</p>
               </div>
-              
-              {/* Q&A Sections by Category */}
-              {safetyQuestions.map((category, categoryIndex) => (
-                <div key={category.category} className="mb-10">
-                  <h3 className="text-2xl md:text-4xl font-bold mb-6 capitalize">{category.category}</h3>
-                  <div className="space-y-4">
-                    {category.questions.map((item, questionIndex) => {
-                      const globalIndex = categoryIndex * 100 + questionIndex; // Create unique index
-                      return (
-                        <div
-                          key={globalIndex}
-                          className={`border border-gray-200 rounded-lg p-4 bg-gray-50 ${
-                            openFAQ === globalIndex ? 'bg-gray-100' : ''
-                          }`}
-                        >
-                          <div
-                            className="flex items-center gap-2 cursor-pointer font-bold text-lg md:text-xl"
-                            onClick={() => toggleFAQ(globalIndex)}
-                          >
-                            {openFAQ === globalIndex ? (
-                              <X className="w-6 h-6 flex-shrink-0" />
-                            ) : (
-                              <Plus className="w-6 h-6 flex-shrink-0" />
-                            )}
-                            <span>Q: {item.question}</span>
-                          </div>
-                          {openFAQ === globalIndex && (
-                            <div className="mt-2 text-lg md:text-xl font-bold ml-8">
-                              A: {item.answer}
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              ))}
             </div>
           )}
 
-          {/* Other sections with placeholder content */}
           {activeSection === 'guide' && (
             <div>
               <h2 className="text-3xl md:text-5xl font-bold mb-6">our guide to online safety</h2>
@@ -240,38 +156,35 @@ const Safety = () => {
             </div>
           )}
 
-          {/* General FAQ Section */}
+          {/* FAQ Section */}
           <div className="mt-12">
-            <h2 className="text-xl md:text-2xl font-bold mb-6">general faq</h2>
+            <h2 className="text-xl md:text-2xl font-bold mb-6">faq</h2>
             <div className="space-y-4">
-              {generalFAQs.map((item, index) => {
-                const faqIndex = 1000 + index; // Different range for general FAQs
-                return (
+              {faqItems.map((item, index) => (
+                <div
+                  key={index}
+                  className={`border border-gray-200 rounded-lg p-4 bg-gray-50 ${
+                    openFAQ === index ? 'bg-gray-100' : ''
+                  }`}
+                >
                   <div
-                    key={faqIndex}
-                    className={`border border-gray-200 rounded-lg p-4 bg-gray-50 ${
-                      openFAQ === faqIndex ? 'bg-gray-100' : ''
-                    }`}
+                    className="flex items-center gap-2 cursor-pointer font-bold text-lg md:text-xl"
+                    onClick={() => toggleFAQ(index)}
                   >
-                    <div
-                      className="flex items-center gap-2 cursor-pointer font-bold text-lg md:text-xl"
-                      onClick={() => toggleFAQ(faqIndex)}
-                    >
-                      {openFAQ === faqIndex ? (
-                        <X className="w-6 h-6 flex-shrink-0" />
-                      ) : (
-                        <Plus className="w-6 h-6 flex-shrink-0" />
-                      )}
-                      <span>Q: {item.question}</span>
-                    </div>
-                    {openFAQ === faqIndex && (
-                      <div className="mt-2 text-lg md:text-xl font-bold ml-8">
-                        A: {item.answer}
-                      </div>
+                    {openFAQ === index ? (
+                      <X className="w-6 h-6 flex-shrink-0" />
+                    ) : (
+                      <Plus className="w-6 h-6 flex-shrink-0" />
                     )}
+                    <span>Q: {item.question}</span>
                   </div>
-                );
-              })}
+                  {openFAQ === index && (
+                    <div className="mt-2 text-lg md:text-xl font-bold ml-8">
+                      A: {item.answer}
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </div>
