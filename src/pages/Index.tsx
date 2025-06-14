@@ -1,4 +1,3 @@
-
 import React from 'react';
 import DynamicHashtag from '../components/DynamicHashtag';
 import FloatingPhoto from '../components/FloatingPhoto';
@@ -11,9 +10,8 @@ const Index = () => {
         <h1 className="text-xl md:text-2xl font-bold text-black">Rustless</h1>
         <div className="flex items-center space-x-2 md:space-x-4">
           <a href="#" className="text-black text-base md:text-base align-middle font-medium hover:scale-105 transition-transform duration-300 ease-in-out flex items-center">
-            <span className="hidden md:inline">Partner With Us</span>
-            <span className="md:hidden">For Partners</span>
-            <span className="ml-1 text-sm">👋</span>
+            <span>Partner With Us</span>
+            <span className="ml-1 text-xs">👋</span>
           </a>
           <button className="bg-black text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-base md:text-base font-medium">
             Get The App
@@ -147,12 +145,12 @@ const Index = () => {
           />
         </div>
 
-        {/* Mobile Layout - Better balanced spacing and fixed iPhone 14 Plus positioning */}
+        {/* Mobile Layout - Fixed positioning for photos above text */}
         <div className="block md:hidden w-full max-w-sm mx-auto">
           <div className="relative h-44 mb-6">
             <div 
               className="absolute text-[30px] z-20"
-              style={{ left: '30px', top: '10px' }}
+              style={{ left: '60px', top: '10px' }}
             >
               🥰
             </div>
@@ -160,7 +158,7 @@ const Index = () => {
             <FloatingPhoto
               src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
               size="mobile-tiktok"
-              style={{ left: '60px', top: '35px', transform: 'rotate(15deg)' }}
+              style={{ left: '90px', top: '35px', transform: 'rotate(15deg)' }}
               className=""
               isRectangular={true}
             />
@@ -168,7 +166,7 @@ const Index = () => {
             <FloatingPhoto
               src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
               size="mobile-tiktok"
-              style={{ left: '180px', top: '5px', transform: 'rotate(-15deg)' }}
+              style={{ left: '150px', top: '5px', transform: 'rotate(-15deg)' }}
               className=""
               isRectangular={true}
             />
@@ -176,7 +174,7 @@ const Index = () => {
             <FloatingPhoto
               src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
               size="mobile-round"
-              style={{ left: '200px', top: '120px' }}
+              style={{ left: '170px', top: '120px' }}
               className=""
             />
           </div>
@@ -191,7 +189,7 @@ const Index = () => {
             </h1>
 
             {/* App Store Buttons - Mobile (slightly larger gap) */}
-            <div className="flex justify-center gap-4 mt-6">
+            <div className="flex justify-center gap-6 mt-6">
               <button className="w-[60px] h-[45px] bg-black text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-7 h-7">
                   <path d="M 15.967 9.072 C 15.967 9.072 15.608 7.492 17.011 5.644 C 18.587 3.567 20.778 3.555 20.778 3.555 C 20.778 3.555 21.105 5.51 19.536 7.389 C 17.866 9.403 15.967 9.072 15.967 9.072 Z M 22.543 16.271 C 22.543 13.052 25.136 11.728 25.136 11.728 C 25.136 11.728 23.808 9.328 20.439 9.328 C 18.48 9.328 16.975 10.443 16.164 10.443 C 15.218 10.443 13.811 9.395 11.991 9.395 C 9.201 9.395 6.222 11.897 6.222 16.665 C 6.222 21.511 9.741 27.544 12.527 27.544 C 13.5 27.544 14.993 26.563 16.499 26.563 C 17.976 26.563 19.064 27.508 20.466 27.508 C 23.516 27.508 25.778 21.149 25.778 21.149 C 25.778 21.149 22.543 19.9 22.543 16.271 Z" fill="white"/>
@@ -250,7 +248,7 @@ const Index = () => {
           </h1>
 
           {/* App Store Buttons - Desktop/Tablet (slightly larger gap) */}
-          <div className="flex justify-center gap-4 mt-6 sm:mt-8">
+          <div className="flex justify-center gap-6 mt-6 sm:mt-8">
             <button className="w-[60px] h-[45px] md:w-[88px] md:h-[65px] bg-black text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-7 h-7 md:w-10 md:h-10">
                 <path d="M 15.967 9.072 C 15.967 9.072 15.608 7.492 17.011 5.644 C 18.587 3.567 20.778 3.555 20.778 3.555 C 20.778 3.555 21.105 5.51 19.536 7.389 C 17.866 9.403 15.967 9.072 15.967 9.072 Z M 22.543 16.271 C 22.543 13.052 25.136 11.728 25.136 11.728 C 25.136 11.728 23.808 9.328 20.439 9.328 C 18.48 9.328 16.975 10.443 16.164 10.443 C 15.218 10.443 13.811 9.395 11.991 9.395 C 9.201 9.395 6.222 11.897 6.222 16.665 C 6.222 21.511 9.741 27.544 12.527 27.544 C 13.5 27.544 14.993 26.563 16.499 26.563 C 17.976 26.563 19.064 27.508 20.466 27.508 C 23.516 27.508 25.778 21.149 25.778 21.149 C 25.778 21.149 22.543 19.9 22.543 16.271 Z" fill="white"/>
@@ -302,13 +300,13 @@ const Index = () => {
         
         {/* Second Line - Navigation Links */}
         <div className="flex flex-wrap justify-center items-center gap-2 md:gap-3 text-base font-medium">
-          <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Safety</a>
+          <a href="/safety" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Safety</a>
           <span className="text-gray-400">|</span>
           <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Help</a>
           <span className="text-gray-400">|</span>
           <a href="#" className="hover:opacity-70 flex items-center text-black">
             <span className="underline underline-offset-4 decoration-1">Join Us</span>
-            <span className="ml-1 text-sm">👋</span>
+            <span className="ml-1 text-xs">👋</span>
           </a>
           <span className="text-gray-400">|</span>
           <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Guidelines</a>
