@@ -303,7 +303,7 @@ const PartnerWithUs = () => {
 
       {/* Your Success Our Top Priority Section */}
       <section className="py-12 md:py-20 px-4 md:px-8 bg-white relative overflow-hidden">
-        {/* Background floating photos for this section */}
+        {/* Background floating photos for this section - Desktop */}
         <div className="hidden lg:block">
           <FloatingPhoto
             src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
@@ -316,6 +316,40 @@ const PartnerWithUs = () => {
             src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
             size="desktop-round"
             style={{ right: '10%', top: '30%' }}
+            className=""
+          />
+        </div>
+
+        {/* Background floating photos - Tablet */}
+        <div className="hidden md:block lg:hidden">
+          <FloatingPhoto
+            src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+            size="tablet-round"
+            style={{ left: '10%', top: '20%' }}
+            className=""
+          />
+          
+          <FloatingPhoto
+            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+            size="tablet-round"
+            style={{ right: '10%', top: '30%' }}
+            className=""
+          />
+        </div>
+
+        {/* Background floating photos - Mobile */}
+        <div className="block md:hidden">
+          <FloatingPhoto
+            src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+            size="mobile-round"
+            style={{ left: '10%', top: '10%' }}
+            className=""
+          />
+          
+          <FloatingPhoto
+            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+            size="mobile-round"
+            style={{ right: '10%', top: '15%' }}
             className=""
           />
         </div>
@@ -415,7 +449,7 @@ const PartnerWithUs = () => {
         </div>
         
         <div className="flex flex-wrap justify-center items-center gap-2 md:gap-3 text-base font-medium">
-          <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Safety</a>
+          <Link to="/safety" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Safety</Link>
           <span className="text-gray-400">|</span>
           <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Help</a>
           <span className="text-gray-400">|</span>
