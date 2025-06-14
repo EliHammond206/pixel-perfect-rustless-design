@@ -10,10 +10,14 @@ const Index = () => {
       <header className="flex justify-between items-center p-4 md:p-4 relative z-20">
         <h1 className="text-xl md:text-2xl font-bold text-black">Rustless</h1>
         <div className="flex items-center space-x-2 md:space-x-4">
-          <a href="#" className="text-black text-base md:text-base align-middle font-medium hover:scale-105 transition-transform duration-300 ease-in-out">
+          <a href="#" className="text-black text-base md:text-base align-middle font-medium hover:scale-105 transition-transform duration-300 ease-in-out flex items-center">
             <span className="hidden md:inline">Advertise with Rustless</span>
             <span className="md:hidden">Ads</span>
-            <span className="bg-red-500 text-white text-[10px] px-1.5 py-0.5 rounded ml-1 font-medium leading-none">New</span>
+            <img 
+              src="/lovable-uploads/8922f240-d23a-4728-a292-4c9f5b3e3103.png"
+              alt="New"
+              className="ml-1 h-4 w-auto"
+            />
           </a>
           <button className="bg-black text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-base md:text-base font-medium">
             Get The App
@@ -293,20 +297,19 @@ const Index = () => {
 
       {/* New Footer Design */}
       <footer className="text-center p-6 md:p-8 relative z-10 space-y-3">
-        {/* First Line - Where You Matter ❤️ */}
+        {/* First Line - Where You Matter <> */}
         <div className="text-lg md:text-xl font-medium text-black">
-          Where You Matter ❤️
+          Where You Matter &lt;&gt;
         </div>
         
         {/* Second Line - Navigation Links */}
-        <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 text-base font-medium">
+        <div className="flex flex-wrap justify-center items-center gap-2 md:gap-3 text-base font-medium">
           <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Safety</a>
           <span className="text-gray-400">|</span>
           <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Help</a>
           <span className="text-gray-400">|</span>
-          <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1 inline-flex items-center gap-1">
+          <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">
             Join Us
-            <span className="bg-red-500 text-white text-[10px] px-1.5 py-0.5 rounded font-medium leading-none">Hot</span>
           </a>
           <span className="text-gray-400">|</span>
           <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Guidelines</a>
