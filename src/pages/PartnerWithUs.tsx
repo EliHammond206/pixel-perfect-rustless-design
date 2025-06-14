@@ -195,8 +195,8 @@ const PartnerWithUs = () => {
 
             {/* Business Button - Mobile */}
             <div className="flex justify-center mt-6">
-              <button className="bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:opacity-80 transition-opacity max-w-xs">
-                Go To Rustless For Business - Change The Way You Money
+              <button className="bg-black text-white px-4 py-2 rounded-full text-sm font-medium hover:opacity-80 transition-opacity">
+                Start Now ↗
               </button>
             </div>
           </div>
@@ -247,15 +247,101 @@ const PartnerWithUs = () => {
 
           {/* Business Button - Desktop/Tablet */}
           <div className="flex justify-center mt-6 sm:mt-8">
-            <button className="bg-black text-white px-8 py-4 md:px-12 md:py-6 rounded-full text-lg md:text-xl font-medium hover:opacity-80 transition-opacity max-w-2xl">
-              Go To Rustless For Business - Change The Way You Money
+            <button className="bg-black text-white px-6 py-3 rounded-full text-lg font-medium hover:opacity-80 transition-opacity">
+              Start Now ↗
             </button>
           </div>
         </div>
       </div>
 
+      {/* We Speak Your Language Section */}
+      <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-12 md:mb-16">
+            We Speak<br />Your Language
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {/* Perk 1 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">🌍</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">50M</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                active users worldwide, ready to discover your business.
+              </p>
+            </div>
+
+            {/* Perk 2 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">🧢</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">80%</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                of Rustless users are 18-35, your prime target audience.
+              </p>
+            </div>
+
+            {/* Perk 3 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">⚡️</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">90%</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                of daily active users engage with business content.
+              </p>
+            </div>
+
+            {/* Perk 4 */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">🔔</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">75%</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                of users act on notifications within 5 minutes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Your Success Our Top Priority Section */}
+      <section className="py-12 md:py-20 px-4 md:px-8 bg-white relative overflow-hidden">
+        {/* Background floating photos for this section */}
+        <div className="hidden lg:block">
+          <FloatingPhoto
+            src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+            size="desktop-round"
+            style={{ left: '10%', top: '20%', opacity: '0.3' }}
+            className=""
+          />
+          
+          <FloatingPhoto
+            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+            size="desktop-round"
+            style={{ right: '10%', top: '30%', opacity: '0.3' }}
+            className=""
+          />
+        </div>
+
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold text-black leading-tight mb-6 md:mb-8">
+            <div className="mb-2">Your Success</div>
+            <div className="mb-2">Our Top Priority</div>
+            <div className="text-3xl md:text-6xl lg:text-7xl text-black">
+              #You Can Do It!
+            </div>
+          </h2>
+          
+          <p className="text-lg md:text-xl text-gray-700 mb-8 md:mb-10 max-w-2xl mx-auto">
+            Join thousands of businesses that have transformed their reach and engagement through Rustless. 
+            We provide the tools, you bring the vision.
+          </p>
+          
+          <button className="bg-black text-white px-8 py-4 rounded-full text-lg font-medium hover:opacity-80 transition-opacity">
+            Start Now ↗
+          </button>
+        </div>
+      </section>
+
       {/* Mentions Section */}
-      <section className="text-center py-2 md:py-8 relative z-10 mt-0 sm:mt-4 md:mt-6">
+      <section className="text-center py-8 md:py-12 relative z-10 bg-white">
         <h2 className="text-xl md:text-2xl font-bold text-black mb-4 md:mb-6">
           As Soon On
         </h2>
@@ -283,7 +369,7 @@ const PartnerWithUs = () => {
       </section>
 
       {/* Footer */}
-      <footer className="text-center p-6 md:p-8 relative z-10 space-y-3">
+      <footer className="text-center p-6 md:p-8 relative z-10 space-y-3 bg-white">
         <div className="text-lg md:text-xl font-medium text-black">
           Where You Matter ❤︎
         </div>
