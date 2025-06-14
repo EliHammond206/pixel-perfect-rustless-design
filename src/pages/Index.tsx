@@ -1,4 +1,3 @@
-
 import React from 'react';
 import DynamicHashtag from '../components/DynamicHashtag';
 import FloatingPhoto from '../components/FloatingPhoto';
@@ -11,9 +10,8 @@ const Index = () => {
         <h1 className="text-xl md:text-2xl font-bold text-black">Rustless</h1>
         <div className="flex items-center space-x-2 md:space-x-4">
           <a href="#" className="text-black text-base md:text-base align-middle font-medium hover:scale-105 transition-transform duration-300 ease-in-out flex items-center">
-            <span className="hidden md:inline">Partner With Us</span>
-            <span className="md:hidden">👋</span>
-            <span className="ml-1 text-base hidden md:inline">👋</span>
+            <span>Partner With Us</span>
+            <span className="ml-1 text-sm">👋</span>
           </a>
           <button className="bg-black text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-base md:text-base font-medium">
             Get The App
@@ -35,7 +33,7 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
             size="desktop-tiktok"
-            style={{ left: '8%', top: '35%', transform: 'rotate(9deg)' }}
+            style={{ left: '8%', top: '35%', transform: 'rotate(15deg)' }}
             className=""
             isRectangular={true}
             rotation="left"
@@ -72,7 +70,7 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
             size="desktop-tiktok"
-            style={{ left: '78%', top: '40%', transform: 'rotate(-9deg)' }}
+            style={{ left: '78%', top: '40%', transform: 'rotate(-15deg)' }}
             className=""
             isRectangular={true}
           />
@@ -97,7 +95,7 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
             size="tablet-tiktok"
-            style={{ left: '8%', top: '35%', transform: 'rotate(9deg)' }}
+            style={{ left: '8%', top: '35%', transform: 'rotate(15deg)' }}
             className=""
             isRectangular={true}
             rotation="left"
@@ -134,7 +132,7 @@ const Index = () => {
           <FloatingPhoto
             src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
             size="tablet-tiktok"
-            style={{ left: '78%', top: '40%', transform: 'rotate(-9deg)' }}
+            style={{ left: '78%', top: '40%', transform: 'rotate(-15deg)' }}
             className=""
             isRectangular={true}
           />
@@ -160,7 +158,7 @@ const Index = () => {
             <FloatingPhoto
               src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
               size="mobile-tiktok"
-              style={{ left: '40px', top: '35px', transform: 'rotate(9deg)' }}
+              style={{ left: '40px', top: '35px', transform: 'rotate(15deg)' }}
               className=""
               isRectangular={true}
             />
@@ -168,7 +166,7 @@ const Index = () => {
             <FloatingPhoto
               src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
               size="mobile-tiktok"
-              style={{ left: '200px', top: '5px', transform: 'rotate(-9deg)' }}
+              style={{ left: '200px', top: '5px', transform: 'rotate(-15deg)' }}
               className=""
               isRectangular={true}
             />
@@ -206,7 +204,7 @@ const Index = () => {
           </div>
 
           {/* Bottom section with remaining photos - Fixed positioning for iPhone 14 Plus */}
-          <div className="relative h-32 mb-6 flex justify-center">
+          <div className="relative h-32 mb-2 flex justify-center">
             <div className="relative w-full max-w-[280px]">
               <FloatingPhoto
                 src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
@@ -266,7 +264,7 @@ const Index = () => {
       </div>
 
       {/* Mentions Section - Reduced spacing on mobile */}
-      <section className="text-center py-4 md:py-8 relative z-10 mt-2 sm:mt-4 md:mt-6">
+      <section className="text-center py-2 md:py-8 relative z-10 mt-0 sm:mt-4 md:mt-6">
         <h2 className="text-xl md:text-2xl font-bold text-black mb-4 md:mb-6">
           As Soon On
         </h2>
@@ -306,8 +304,8 @@ const Index = () => {
           <span className="text-gray-400">|</span>
           <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Help</a>
           <span className="text-gray-400">|</span>
-          <a href="#" className="hover:opacity-70 flex items-center text-black underline underline-offset-4 decoration-1">
-            Join Us 👋
+          <a href="#" className="hover:opacity-70 flex items-center text-black">
+            Join Us <span className="ml-1 text-sm">👋</span>
           </a>
           <span className="text-gray-400">|</span>
           <a href="#" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Guidelines</a>
