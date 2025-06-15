@@ -356,54 +356,49 @@ const JoinUs = () => {
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold text-black leading-tight mb-6 md:mb-8">
-            <div className="mb-2">We've Implemented</div>
-            <div className="mb-2">Maximum Measures</div>
-            <div className="mb-2">To Keep You Safe</div>
-            <div className="mb-4">As Much As We Can</div>
-            <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px]">
-              #Unprecendented
-            </div>
+            <div className="mb-2">Your Success</div>
+            <div className="mb-2">Our Top Priority</div>
           </h2>
         </div>
       </section>
 
-      {/* Updated Feature Boxes Section */}
+      {/* Duplicated We Speak Your Language Boxes Section */}
       <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {/* Feature 1 - E2EE */}
+            {/* Perk 1 */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🔒</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">E2EE</div>
+              <div className="text-4xl md:text-5xl mb-4">🌍</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">50M</div>
               <p className="text-gray-700 text-sm md:text-base">
-                End-to-end encrypted messages that only you and your recipient can read.
+                active users worldwide, ready to discover your business.
               </p>
             </div>
 
-            {/* Feature 2 - Crustless Communication */}
+            {/* Perk 2 */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🌊</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Crustless</div>
+              <div className="text-4xl md:text-5xl mb-4">🧢</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">80%</div>
               <p className="text-gray-700 text-sm md:text-base">
-                Seamless communication without barriers or unnecessary layers.
+                of Rustless users are 18-35, your prime target audience.
               </p>
             </div>
 
-            {/* Feature 3 - Decentralized */}
+            {/* Perk 3 */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🌐</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Decentralised</div>
+              <div className="text-4xl md:text-5xl mb-4">⚡️</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">90%</div>
               <p className="text-gray-700 text-sm md:text-base">
-                No single point of control or failure in our distributed network.
+                of daily active users engage with business content.
               </p>
             </div>
 
-            {/* Feature 4 - Vote Power */}
+            {/* Perk 4 */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🗳️</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">10%</div>
+              <div className="text-4xl md:text-5xl mb-4">🔔</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">75%</div>
               <p className="text-gray-700 text-sm md:text-base">
-                Vote power in platform decisions and community governance.
+                of users act on notifications within 5 minutes.
               </p>
             </div>
           </div>
@@ -415,15 +410,6 @@ const JoinUs = () => {
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] font-bold text-black">
             #You Can Do It!
-          </h2>
-        </div>
-      </section>
-
-      {/* New Gallery Title Section */}
-      <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black leading-tight">
-            A Hello From Your Government
           </h2>
         </div>
       </section>
