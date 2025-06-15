@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import DynamicHashtag from '../components/DynamicHashtag';
@@ -324,11 +325,11 @@ const Guidelines = () => {
                       className="cursor-pointer transition-transform duration-300 hover:scale-105 group"
                       onClick={() => handleImageClick(index)}
                     >
-                      <div className="relative overflow-hidden rounded-2xl">
+                      <div className="relative overflow-hidden rounded-2xl aspect-square">
                         <img 
                           src={image.src}
                           alt={image.title}
-                          className="w-full h-64 md:h-80 object-cover"
+                          className="w-full h-full object-cover"
                         />
                         {/* Hover overlay with only title */}
                         <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
@@ -353,7 +354,7 @@ const Guidelines = () => {
                 <Carousel className="w-full h-full">
                   <CarouselContent className="h-full">
                     {galleryImages.map((image, index) => (
-                      <CarouselItem key={index} className="h-full flex items-center justify-center">
+                      <CarouselItem key={index} className={`h-full flex items-center justify-center ${index === selectedImageIndex ? 'block' : 'hidden'}`}>
                         <div className="relative w-full h-full flex items-center justify-center">
                           <img 
                             src={image.src}
@@ -484,7 +485,7 @@ const Guidelines = () => {
               <div className="text-4xl md:text-5xl mb-4">🔔</div>
               <div className="text-2xl md:text-3xl font-bold text-black mb-2">75%</div>
               <p className="text-gray-700 text-sm md:text-base">
-                of users act on notifications within 5 minutes.
+                of daily active users engage with business content.
               </p>
             </div>
           </div>
