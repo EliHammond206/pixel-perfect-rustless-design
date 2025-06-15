@@ -253,7 +253,7 @@ const JoinUs = () => {
         </div>
       </div>
 
-      {/* We Speak Your Language Section */}
+      {/* We Speak Your Language Section - Updated with Coastal Media features */}
       <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-12 md:mb-16">
@@ -261,46 +261,46 @@ const JoinUs = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {/* Perk 1 - E2EE Messages */}
+            {/* Perk 1 - Advanced Media Sharing */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🔐</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">E2EE</div>
+              <div className="text-4xl md:text-5xl mb-4">📸</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Media Hub</div>
               <p className="text-gray-700 text-sm md:text-base">
-                End-to-end encrypted messages ensuring your private conversations stay private.
+                Advanced photo and video sharing with enhanced quality and seamless integration.
               </p>
             </div>
 
-            {/* Perk 2 - Passport Verification */}
+            {/* Perk 2 - Location Discovery */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🛂</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Verified</div>
+              <div className="text-4xl md:text-5xl mb-4">🌍</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Discovery</div>
               <p className="text-gray-700 text-sm md:text-base">
-                Passport verification system for authentic user profiles and enhanced trust.
+                Location-based content discovery to connect with people and experiences near you.
               </p>
             </div>
 
-            {/* Perk 3 - 18+ Content */}
+            {/* Perk 3 - Social Features */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🔞</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">18+</div>
+              <div className="text-4xl md:text-5xl mb-4">🤝</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Social</div>
               <p className="text-gray-700 text-sm md:text-base">
-                Age-verified adult content areas with proper restrictions and controls.
+                Rich social features including groups, events, and community building tools.
               </p>
             </div>
 
-            {/* Perk 4 - Coastal Media Features */}
+            {/* Perk 4 - Creator Tools */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🌊</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Coastal</div>
+              <div className="text-4xl md:text-5xl mb-4">🎬</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Creator</div>
               <p className="text-gray-700 text-sm md:text-base">
-                Advanced media sharing with location-based discovery and social features.
+                Professional creator tools with monetization options and audience analytics.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Security Measures Section */}
+      {/* Security Measures Section - Updated messaging */}
       <section className="py-12 md:py-20 px-4 md:px-8 bg-white relative overflow-hidden">
         {/* Background floating photos for this section - Desktop */}
         <div className="hidden lg:block">
@@ -355,12 +355,12 @@ const JoinUs = () => {
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-3xl md:text-6xl lg:text-7xl font-bold text-black leading-tight mb-4 md:mb-6">
-            <div className="mb-2">We have implemented</div>
-            <div className="mb-2">unprecedented maximum</div>
-            <div className="mb-2">security measures that was</div>
-            <div className="mb-4">never seen before.</div>
+            <div className="mb-2">Trust & Safety</div>
+            <div className="mb-2">is our top priority.</div>
+            <div className="mb-2">We're building the most</div>
+            <div className="mb-4">secure platform ever.</div>
             <div className="text-2xl md:text-5xl lg:text-6xl text-black">
-              #Unprecedented
+              #TrustFirst
             </div>
           </h2>
         </div>
@@ -370,60 +370,63 @@ const JoinUs = () => {
       <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {/* Feature 1 - E2EE Messages */}
+            {/* Feature 1 - Privacy Protection */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
               <div className="text-4xl md:text-5xl mb-4">🔐</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">E2EE</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Privacy</div>
               <p className="text-gray-700 text-sm md:text-base">
-                Military-grade end-to-end encryption for all communications and media sharing.
+                Your data is protected with industry-leading privacy controls and encryption.
               </p>
             </div>
 
-            {/* Feature 2 - Passport Verification */}
+            {/* Feature 2 - User Verification */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🛂</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">ID Verified</div>
+              <div className="text-4xl md:text-5xl mb-4">✅</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Verified</div>
               <p className="text-gray-700 text-sm md:text-base">
-                Government-grade passport and ID verification for maximum user authenticity.
+                Optional verification system to help you connect with authentic users.
               </p>
             </div>
 
-            {/* Feature 3 - 18+ Content Control */}
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🔞</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Age Control</div>
-              <p className="text-gray-700 text-sm md:text-base">
-                Strict 18+ verification with biometric age confirmation technology.
-              </p>
-            </div>
-
-            {/* Feature 4 - Advanced Security */}
+            {/* Feature 3 - Safe Environment */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
               <div className="text-4xl md:text-5xl mb-4">🛡️</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Secured</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Safe Space</div>
               <p className="text-gray-700 text-sm md:text-base">
-                Multi-layer security protocols with real-time threat detection and prevention.
+                Comprehensive safety features and community guidelines to protect everyone.
+              </p>
+            </div>
+
+            {/* Feature 4 - Content Moderation */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">👥</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Moderated</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                AI-powered content moderation combined with human oversight for quality assurance.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Government Compliance Section */}
+      {/* Community Guidelines Section - Updated with subtitle */}
       <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black mb-4">
-              Government-Demanded Moderation Measures
+              Community Standards & Guidelines
             </h2>
-            <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-              Our platform implements all moderation measures required by governments worldwide to ensure compliance and user safety.
+            <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+              See how we're building a positive and inclusive community for everyone
             </p>
           </div>
           
-          {/* Scrollable Gallery would go here - keeping existing gallery code */}
+          {/* Scrollable Gallery */}
           <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
-            {/* Gallery images will be added here */}
+            {/* Placeholder for gallery images - keeping existing structure */}
+            <div className="text-center text-gray-500 py-8 flex-shrink-0 w-72">
+              <p>Community guidelines gallery coming soon...</p>
+            </div>
           </div>
         </div>
       </section>
