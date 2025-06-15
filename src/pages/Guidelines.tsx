@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import DynamicHashtag from '../components/DynamicHashtag';
@@ -379,27 +380,31 @@ const ContentReportingSection = () => {
 
   return (
     <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-3xl mx-auto flex flex-col items-center">
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-6 md:mb-8">
           Report Content That<br />Violates Our Guidelines
         </h2>
-        
-        {/* Visual section with 2 text blocks and iPhone mockup (centered on mobile, grid for desktop) */}
-        <div className="flex flex-col md:grid md:grid-cols-3 items-center gap-8 md:gap-10 max-w-4xl mx-auto mb-6 md:mb-8">
-          {/* First text block */}
-          <div className="md:col-span-1 text-center md:text-right text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
+
+        <div className="w-full flex flex-col items-center gap-6 md:gap-8 mb-6 md:mb-8">
+          {/* Top text */}
+          <div className="w-full text-center text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
             When you encounter content that violates our community guidelines, reporting it helps us maintain a safe environment for everyone. You can report harassment, spam, hate speech, misinformation, inappropriate content, or anything that makes you feel unsafe on our platform.
           </div>
-          {/* iPhone mockup */}
-          <div className="w-full md:col-span-1 flex justify-center">
-            <IphoneMockup />
+          {/* iPhone image (visual reference as on Join Us page) */}
+          <div className="flex justify-center w-full">
+            <img
+              src="/lovable-uploads/54ada20b-50bf-400d-84a3-26f203963e29.png"
+              alt="Example iPhone report screen"
+              className="mx-auto w-[225px] h-auto md:w-[270px] rounded-[34px] shadow-lg border-4 border-white"
+              draggable={false}
+            />
           </div>
-          {/* Second text block */}
-          <div className="md:col-span-1 text-center md:text-left text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
+          {/* Bottom text */}
+          <div className="w-full text-center text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
             Simply tap the three dots menu on any post or profile, select "Report," choose the violation type, and provide additional context if needed. Our moderation team reviews every report within 24 hours and takes appropriate action, from content removal to account restrictions. We'll notify you of the outcome and thank you for helping keep Rustless safe.
           </div>
         </div>
-        
+
         {/* New Title Before Gallery - Same consistent gap */}
         <div className="text-center mb-6 md:mb-8">
           <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black">
