@@ -876,10 +876,8 @@ const JoinUs = () => {
       <ContentReportingSection />
       {/* SECOND DUPLICATE: Social Network Fines Section */}
       <SocialNetworkFinesSection />
-      {/* MOVED TO END: Third Safety Measures Section - For moderation stats */}
-      <ThirdSafetyMeasuresSection />
-      {/* MOVED TO END: Moderation Statistics Section */}
-      <ModerationStatsSection />
+      {/* REMOVED: Third Safety Measures Section - (#Stay Safe, "And we're saying..." section) */}
+      {/* REMOVED: Moderation Statistics Section (quartile stats, 4-box stats) */}
       {/* You Can Do It Section */}
       <YouCanDoItSection />
       {/* Mentions Section */}
