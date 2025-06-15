@@ -4,6 +4,7 @@ import DynamicHashtag from '../components/DynamicHashtag';
 import FloatingPhoto from '../components/FloatingPhoto';
 import ImageModal from '../components/ImageModal';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
+import ContentReportingVisualSection from '../components/ContentReportingVisualSection';
 
 const HeroSection = () => (
   <div className="flex-1 flex flex-col justify-center items-center relative px-4 py-4 sm:py-6 md:py-8">
@@ -392,7 +393,10 @@ const ContentReportingSection = () => {
             Simply tap the three dots menu on any post or profile, select "Report," choose the violation type, and provide additional context if needed. Our moderation team reviews every report within 24 hours and takes appropriate action, from content removal to account restrictions. We'll notify you of the outcome and thank you for helping keep Rustless safe.
           </p>
         </div>
-        
+
+        {/* --- NEW VISUAL SECTION GOES HERE --- */}
+        <ContentReportingVisualSection />
+
         {/* New Title Before Gallery - Same consistent gap */}
         <div className="text-center mb-6 md:mb-8">
           <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black">
