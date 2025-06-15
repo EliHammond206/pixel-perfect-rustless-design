@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import DynamicHashtag from '../components/DynamicHashtag';
@@ -380,28 +379,26 @@ const ContentReportingSection = () => {
   return (
     <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
+        {/* Section Title: Updated */}
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-6 md:mb-8">
-          Report Content That<br />Violates Our Guidelines
+          #Designers #Devs and just #Good People
         </h2>
-        
-        {/* Explanatory Text - Same consistent gap */}
+        {/* Description Text: Updated with job application instructions */}
         <div className="max-w-4xl mx-auto text-center mb-6 md:mb-8">
           <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6 font-semibold">
-            When you encounter content that violates our community guidelines, reporting it helps us maintain a safe environment for everyone. You can report harassment, spam, hate speech, misinformation, inappropriate content, or anything that makes you feel unsafe on our platform.
+            Want to join Rustless? Applying is easy! From your account, just navigate to <span className="font-bold">Settings</span>, scroll to the <span className="font-bold">Careers & Opportunities</span> section, and tap <span className="font-bold">Apply to Join</span>. Fill out your details, tell us what makes you awesome, and submit your application directly from there. If you stand out or have that special spark, we’ll reach out!
           </p>
           <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
-            Simply tap the three dots menu on any post or profile, select "Report," choose the violation type, and provide additional context if needed. Our moderation team reviews every report within 24 hours and takes appropriate action, from content removal to account restrictions. We'll notify you of the outcome and thank you for helping keep Rustless safe.
+            You don’t need referrals or fancy resumes—show us your passion, creativity, and drive. We’re always looking for Rustless souls: designers, devs, creators, and genuinely good people. If you’re the one, our team will spot your application (and yes, we read every single one). Show us why you belong!
           </p>
         </div>
-        
-        {/* New Title Before Gallery - Same consistent gap */}
+        {/* Subheading: Updated */}
         <div className="text-center mb-6 md:mb-8">
           <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black">
-            Examples of Reportable Content
+            If you are #Rustless - We will find you!
           </h3>
         </div>
-        
-        {/* Scrollable Image Gallery - Placeholder for bad content examples */}
+        {/* Scrollable Image Gallery remains unchanged */}
         <div className="relative">
           <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-5xl mx-auto">
             <CarouselContent className="-ml-2 md:-ml-4">
