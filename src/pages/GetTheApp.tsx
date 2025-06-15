@@ -301,6 +301,29 @@ const BalanceFreeSpeechSection = () => {
           </p>
         </div>
         
+        {/* -- DUPLICATED GALLERY GOES HERE -- */}
+        <div className="relative mb-8">
+          <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-5xl mx-auto">
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {galleryImages.map((image, index) => (
+                <CarouselItem key={`duplicate-${index}`} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="aspect-square">
+                    <img 
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                      onClick={() => handleImageClick(image.src, image.alt)}
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+        {/* -- END DUPLICATE GALLERY -- */}
+
         {/* Updated Title Before Gallery - Changed from #Rustless to security message */}
         <div className="text-center mb-6 md:mb-8">
           <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black leading-tight">
