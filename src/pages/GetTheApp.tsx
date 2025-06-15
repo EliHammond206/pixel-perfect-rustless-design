@@ -605,18 +605,25 @@ const SecondSafetyMeasuresSection = () => (
     <div className="max-w-4xl mx-auto text-center relative z-10">
       <h2 className="font-bold text-black leading-tight mb-6 md:mb-8">
         <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
-          A place where
+          Next part
         </div>
         <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
-          we want to
+          Grab the coffee
         </div>
         <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
-          see you
+          and prepare
         </div>
         <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] mt-2 text-primary font-black tracking-tight inline-block">
-          #Happy
+          #Start Registering
         </div>
       </h2>
+      
+      {/* Added explanatory text paragraph */}
+      <div className="max-w-4xl mx-auto text-center mb-6 md:mb-8 relative z-10">
+        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
+          Ready to join? Download the app, create your account, and become part of the Rustless community where your voice truly matters!
+        </p>
+      </div>
     </div>
   </section>
 );
