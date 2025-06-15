@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import DynamicHashtag from '../components/DynamicHashtag';
 import FloatingPhoto from '../components/FloatingPhoto';
 import ImageModal from '../components/ImageModal';
+import HappyPlaceSection from '../components/HappyPlaceSection';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
 
 const HeroSection = () => (
@@ -383,13 +384,15 @@ const ContentReportingSection = () => {
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-6 md:mb-8">
           #Designers #Devs and just #Good People
         </h2>
+        {/* Insert the 1st Happy section here */}
+        <HappyPlaceSection />
         {/* Description Text: Updated with job application instructions */}
         <div className="max-w-4xl mx-auto text-center mb-6 md:mb-8">
           <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6 font-semibold">
             Want to join Rustless? Applying is easy! From your account, just navigate to <span className="font-bold">Settings</span>, scroll to the <span className="font-bold">Careers & Opportunities</span> section, and tap <span className="font-bold">Apply to Join</span>. Fill out your details, tell us what makes you awesome, and submit your application directly from there. If you stand out or have that special spark, we’ll reach out!
           </p>
-          
-          {/* Add: Subtitle before iPhone mockup */}
+
+          {/* Subtitle before iPhone mockup */}
           <div className="mb-5">
             <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black leading-tight">
               That&apos;s how we do doit!
@@ -405,7 +408,7 @@ const ContentReportingSection = () => {
             />
           </div>
 
-          {/* Add: Subtitle after iPhone mockup */}
+          {/* Subtitle after iPhone mockup */}
           <div className="mb-5">
             <h3 className="font-bold text-black leading-tight text-xl md:text-3xl lg:text-4xl whitespace-pre-line">
               We work 24/7 365 days in a year - your job have no deadline and no beginning! {"\n"}
@@ -417,6 +420,9 @@ const ContentReportingSection = () => {
             You don’t need referrals or fancy resumes—show us your passion, creativity, and drive. We’re always looking for Rustless souls: designers, devs, creators, and genuinely good people. If you’re the one, our team will spot your application (and yes, we read every single one). Show us why you belong!
           </p>
         </div>
+        {/* 2nd Happy section, just below the iPhone+subtitles */}
+        <HappyPlaceSection />
+
         {/* Subheading: Updated */}
         <div className="text-center mb-6 md:mb-8">
           <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black">
@@ -456,78 +462,6 @@ const ContentReportingSection = () => {
     </section>
   );
 };
-
-const SecondSafetyMeasuresSection = () => (
-  <section className="py-8 md:py-12 px-4 md:px-8 bg-white relative overflow-hidden">
-    {/* Background floating photos for this section - Desktop */}
-    <div className="hidden lg:block">
-      <FloatingPhoto
-        src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
-        size="desktop-round"
-        style={{ left: '10%', top: '20%' }}
-        className=""
-      />
-      
-      <FloatingPhoto
-        src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
-        size="desktop-round"
-        style={{ right: '10%', top: '30%' }}
-        className=""
-      />
-    </div>
-
-    {/* Background floating photos - Tablet */}
-    <div className="hidden md:block lg:hidden">
-      <FloatingPhoto
-        src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
-        size="tablet-round"
-        style={{ left: '10%', top: '20%' }}
-        className=""
-      />
-      
-      <FloatingPhoto
-        src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
-        size="tablet-round"
-        style={{ right: '10%', top: '30%' }}
-        className=""
-      />
-    </div>
-
-    {/* Background floating photos - Mobile */}
-    <div className="block md:hidden">
-      <FloatingPhoto
-        src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
-        size="mobile-round"
-        style={{ left: '10%', top: '10%' }}
-        className=""
-      />
-      
-      <FloatingPhoto
-        src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
-        size="mobile-round"
-        style={{ right: '10%', top: '15%' }}
-        className=""
-      />
-    </div>
-
-    <div className="max-w-4xl mx-auto text-center relative z-10">
-      <h2 className="font-bold text-black leading-tight mb-6 md:mb-8">
-        <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
-          A place where
-        </div>
-        <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
-          we want to
-        </div>
-        <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
-          see you
-        </div>
-        <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] mt-2 text-primary font-black tracking-tight inline-block">
-          #Happy
-        </div>
-      </h2>
-    </div>
-  </section>
-);
 
 const SecondSecurityFeaturesSection = () => (
   <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
@@ -660,8 +594,8 @@ const JoinUs = () => {
       <HeroSection />
       {/* Balance Free Speech Section - Original */}
       <BalanceFreeSpeechSection />
-      {/* Second Safety Measures Section - Updated with happy messaging */}
-      <SecondSafetyMeasuresSection />
+      {/* Second Safety Measures Section - Now uses HappyPlaceSection */}
+      <HappyPlaceSection />
       {/* Second Security Features Boxes Section - Updated with shamewall features */}
       <SecondSecurityFeaturesSection />
       {/* FIRST DUPLICATE: Content Reporting Section */}
