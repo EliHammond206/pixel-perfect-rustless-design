@@ -255,15 +255,15 @@ const Guidelines = () => {
         </div>
       </div>
 
-      {/* Balance Free Speech Section */}
-      <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
+      {/* Balance Free Speech Section - Reduced spacing */}
+      <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-8 md:mb-12">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-6 md:mb-8">
             Balance Free Speech<br />With Moderation
           </h2>
           
-          {/* Explanatory Text - Made Bold */}
-          <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
+          {/* Explanatory Text - Same consistent gap */}
+          <div className="max-w-4xl mx-auto text-center mb-6 md:mb-8">
             <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6 font-semibold">
               At Rustless, we believe in creating a space where authentic expression thrives while maintaining a safe and respectful environment for everyone. Our community guidelines are designed to protect free speech while preventing harmful content that could damage our vibrant ecosystem.
             </p>
@@ -272,8 +272,8 @@ const Guidelines = () => {
             </p>
           </div>
           
-          {/* New Title Before Gallery */}
-          <div className="text-center mb-8 md:mb-12">
+          {/* New Title Before Gallery - Same consistent gap */}
+          <div className="text-center mb-6 md:mb-8">
             <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black">
               A Hello From Your Government
             </h3>
@@ -399,8 +399,8 @@ const Guidelines = () => {
         </div>
       </section>
 
-      {/* Updated Safety Measures Section */}
-      <section className="py-12 md:py-20 px-4 md:px-8 bg-white relative overflow-hidden">
+      {/* Updated Safety Measures Section - Reduced spacing */}
+      <section className="py-8 md:py-12 px-4 md:px-8 bg-white relative overflow-hidden">
         {/* Background floating photos for this section - Desktop */}
         <div className="hidden lg:block">
           <FloatingPhoto
@@ -465,8 +465,8 @@ const Guidelines = () => {
         </div>
       </section>
 
-      {/* Updated Security Features Boxes Section */}
-      <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
+      {/* Updated Security Features Boxes Section - Reduced spacing */}
+      <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {/* E2EE Encrypted Messages */}
@@ -508,8 +508,8 @@ const Guidelines = () => {
         </div>
       </section>
 
-      {/* You Can Do It Section */}
-      <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
+      {/* You Can Do It Section - Reduced spacing */}
+      <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] font-bold text-black">
             #You Can Do It!
@@ -517,8 +517,8 @@ const Guidelines = () => {
         </div>
       </section>
 
-      {/* Mentions Section */}
-      <section className="text-center py-8 md:py-12 relative z-10 bg-white">
+      {/* Mentions Section - Reduced spacing */}
+      <section className="text-center py-6 md:py-8 relative z-10 bg-white">
         <h2 className="text-xl md:text-2xl font-bold text-black mb-4 md:mb-6">
           As Soon On
         </h2>
