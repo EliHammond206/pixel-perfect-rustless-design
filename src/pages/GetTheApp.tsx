@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import DynamicHashtag from '../components/DynamicHashtag';
 import FloatingPhoto from '../components/FloatingPhoto';
 import ImageModal from '../components/ImageModal';
+import RegistrationStepsCarousel from '../components/RegistrationStepsCarousel';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
 
 // Hero section from Join Us copied for Download page
@@ -758,6 +759,7 @@ const GetTheApp = () => {
       <HeroSection />
       <BalanceFreeSpeechSection />
       <SecondSafetyMeasuresSection />
+      <RegistrationStepsCarousel />
       <SecondSecurityFeaturesSection />
       <ContentReportingSection />
       <YouCanDoItSection />
