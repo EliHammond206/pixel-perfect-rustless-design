@@ -630,23 +630,15 @@ const SecondSafetyMeasuresSection = () => (
     <div className="max-w-4xl mx-auto text-center relative z-10">
       <h2 className="font-bold text-black leading-tight mb-6 md:mb-8">
         <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
-          Next part
-        </div>
-        <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
-          Grab the coffee
-        </div>
-        <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
-          and prepare
+          Is there's any way out of this?
         </div>
         <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] mt-2 text-primary font-black tracking-tight inline-block">
-          #Start Registering
+          #Nope
         </div>
       </h2>
-      
-      {/* Added explanatory text paragraph */}
       <div className="max-w-4xl mx-auto text-center mb-6 md:mb-8 relative z-10">
         <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
-          Ready to join? Download the app, create your account, and become part of the Rustless community where your voice truly matters!
+          We won't pay billions in fines because of you (cause below in that gallery we will upload pictures of fines to discord etc for that they allowed people under 18 on their social networks)
         </p>
       </div>
     </div>
