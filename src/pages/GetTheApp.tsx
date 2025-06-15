@@ -286,17 +286,15 @@ const BalanceFreeSpeechSection = () => {
   return (
     <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
+        {/* Title updated */}
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-6 md:mb-8">
-          Whoever you are<br />wherever you are
+          First of All, Download the app
         </h2>
         
-        {/* Explanatory Text - Updated! */}
+        {/* Explanatory Text - Updated to a single short paragraph */}
         <div className="max-w-4xl mx-auto text-center mb-6 md:mb-8">
           <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6 font-semibold">
-            At Rustless, your happiness comes first—and we prove it with action. Join us and get access to exclusive perks: free Uber rides anywhere, global flights on us, competitive salaries in the millions, powerful networking opportunities, best-in-class wellness support, and career advancement only true industry disruptors can offer. We invest in our people because we want you to thrive and belong.
-          </p>
-          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
-            Whether you’re a creator, leader, innovator, dreamer, or anything in between, we want to see you shine here. We don't just say we care, we put resources behind your ambitions, your happiness, and your journey—wherever you come from and wherever you’re going. Don’t settle for less—join Rustless and build the life you deserve.
+            You won't be able to use your account, register, browse etc from our browser, for security reasons and to prevent stealings of accounts and botted views etc, you can join us only from downloaded app from the official store!
           </p>
         </div>
         
