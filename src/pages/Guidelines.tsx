@@ -4,7 +4,7 @@ import DynamicHashtag from '../components/DynamicHashtag';
 import FloatingPhoto from '../components/FloatingPhoto';
 import ImageModal from '../components/ImageModal';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
-import ContentReportingVisualSection from '../components/ContentReportingVisualSection';
+import GuidelinesReportVisualSection from "../components/GuidelinesReportVisualSection";
 
 const HeroSection = () => (
   <div className="flex-1 flex flex-col justify-center items-center relative px-4 py-4 sm:py-6 md:py-8">
@@ -394,11 +394,11 @@ const ContentReportingSection = () => {
           </p>
         </div>
 
-        {/* --- NEW VISUAL SECTION GOES HERE --- */}
-        <ContentReportingVisualSection />
+        {/* Add design section from Join Us (pictures + iPhone + text below) */}
+        <GuidelinesReportVisualSection />
 
         {/* New Title Before Gallery - Same consistent gap */}
-        <div className="text-center mb-6 md:mb-8">
+        <div className="text-center mb-6 md:mb-8 mt-12">
           <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black">
             Examples of Reportable Content
           </h3>
