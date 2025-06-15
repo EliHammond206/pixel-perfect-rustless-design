@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import DynamicHashtag from '../components/DynamicHashtag';
 import FloatingPhoto from '../components/FloatingPhoto';
@@ -819,6 +819,145 @@ const SecondSecurityFeaturesSection = () => (
   </section>
 );
 
+const ThirdSafetyMeasuresSection = () => (
+  <section className="py-8 md:py-12 px-4 md:px-8 bg-white relative overflow-hidden">
+    {/* Background floating photos for this section - Desktop */}
+    <div className="hidden lg:block">
+      <FloatingPhoto
+        src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+        size="desktop-round"
+        style={{ left: '10%', top: '20%' }}
+        className=""
+      />
+      
+      <FloatingPhoto
+        src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+        size="desktop-round"
+        style={{ right: '10%', top: '30%' }}
+        className=""
+      />
+    </div>
+
+    {/* Background floating photos - Tablet */}
+    <div className="hidden md:block lg:hidden">
+      <FloatingPhoto
+        src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+        size="tablet-round"
+        style={{ left: '10%', top: '20%' }}
+        className=""
+      />
+      
+      <FloatingPhoto
+        src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+        size="tablet-round"
+        style={{ right: '10%', top: '30%' }}
+        className=""
+      />
+    </div>
+
+    {/* Background floating photos - Mobile */}
+    <div className="block md:hidden">
+      <FloatingPhoto
+        src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+        size="mobile-round"
+        style={{ left: '10%', top: '10%' }}
+        className=""
+      />
+      
+      <FloatingPhoto
+        src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+        size="mobile-round"
+        style={{ right: '10%', top: '15%' }}
+        className=""
+      />
+    </div>
+
+    <div className="max-w-4xl mx-auto text-center relative z-10">
+      <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold text-black leading-tight mb-6 md:mb-8">
+        <div className="mb-2">And we're saying taht we've</div>
+        <div className="mb-2">done everything possible</div>
+        <div className="mb-2">to keep you on our</div>
+        <div className="mb-2">platform safe - we mean it!</div>
+        <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] mt-4">
+          #Stay Safe
+        </div>
+      </h2>
+    </div>
+  </section>
+);
+
+const ModerationStatsSection = () => {
+  const [selectedQuartile, setSelectedQuartile] = useState('Q4 2024');
+  
+  const quartiles = ['Q1 2024', 'Q2 2024', 'Q3 2024', 'Q4 2024'];
+
+  return (
+    <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
+      <div className="max-w-6xl mx-auto">
+        {/* Quartile Selector and Subtitle */}
+        <div className="text-center mb-6 md:mb-8">
+          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-4 font-semibold">
+            You can watch our stats from moderated content for the past quartile here (and on this boxes actually stats, how much moderated content and regard what we deleted)
+          </p>
+          
+          <div className="flex justify-center items-center gap-2 mb-4">
+            <span className="text-lg font-medium text-black">View stats for:</span>
+            <select 
+              value={selectedQuartile}
+              onChange={(e) => setSelectedQuartile(e.target.value)}
+              className="bg-white border border-gray-300 rounded-lg px-4 py-2 text-lg font-medium text-black focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+            >
+              {quartiles.map((quartile) => (
+                <option key={quartile} value={quartile}>
+                  {quartile}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          {/* Spam Removed */}
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+            <div className="text-4xl md:text-5xl mb-4">🚫</div>
+            <div className="text-2xl md:text-3xl font-bold text-black mb-2">2,847</div>
+            <p className="text-gray-700 text-sm md:text-base">
+              Spam posts removed and accounts suspended for violations.
+            </p>
+          </div>
+
+          {/* Harassment Stopped */}
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+            <div className="text-4xl md:text-5xl mb-4">🛡️</div>
+            <div className="text-2xl md:text-3xl font-bold text-black mb-2">1,293</div>
+            <p className="text-gray-700 text-sm md:text-base">
+              Harassment cases resolved and users protected from toxic behavior.
+            </p>
+          </div>
+
+          {/* Fake Accounts Detected */}
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+            <div className="text-4xl md:text-5xl mb-4">🤖</div>
+            <div className="text-2xl md:text-3xl font-bold text-black mb-2">592</div>
+            <p className="text-gray-700 text-sm md:text-base">
+              Fake accounts and bots detected and permanently banned.
+            </p>
+          </div>
+
+          {/* Content Flagged */}
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+            <div className="text-4xl md:text-5xl mb-4">⚠️</div>
+            <div className="text-2xl md:text-3xl font-bold text-black mb-2">4,721</div>
+            <p className="text-gray-700 text-sm md:text-base">
+              Inappropriate content flagged and reviewed by our moderation team.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const YouCanDoItSection = () => (
   <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
     <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -920,6 +1059,12 @@ const Guidelines = () => {
 
       {/* Second Security Features Boxes Section - Updated with shamewall features */}
       <SecondSecurityFeaturesSection />
+
+      {/* NEW: Third Safety Measures Section - For moderation stats */}
+      <ThirdSafetyMeasuresSection />
+
+      {/* NEW: Moderation Statistics Section */}
+      <ModerationStatsSection />
 
       {/* FIRST DUPLICATE: Content Reporting Section */}
       <ContentReportingSection />
