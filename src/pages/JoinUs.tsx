@@ -435,13 +435,13 @@ const ContentReportingSection = () => {
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <h2 className="font-bold text-black leading-tight mb-6 md:mb-8">
           <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
-            No Resume, No Cv
+            We score High
           </div>
           <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
-            No Lettcode
+            With truly
           </div>
           <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] mt-2 text-primary font-black tracking-tight inline-block">
-            #Forever
+            #Rustless
           </div>
         </h2>
       </div>
