@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import DynamicHashtag from '../components/DynamicHashtag';
 import FloatingPhoto from '../components/FloatingPhoto';
+import ImageModal from '../components/ImageModal';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
 
 const HeroSection = () => (
@@ -235,368 +236,453 @@ const HeroSection = () => (
   </div>
 );
 
-const BalanceFreeSpeechSection = () => (
-  <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
-    <div className="max-w-6xl mx-auto">
-      <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-6 md:mb-8">
-        Balance Free Speech<br />With Moderation
-      </h2>
-      
-      {/* Explanatory Text - Same consistent gap */}
-      <div className="max-w-4xl mx-auto text-center mb-6 md:mb-8">
-        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6 font-semibold">
-          At Rustless, we believe in creating a space where authentic expression thrives while maintaining a safe and respectful environment for everyone. Our community guidelines are designed to protect free speech while preventing harmful content that could damage our vibrant ecosystem.
-        </p>
-        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
-          We use a combination of AI-powered moderation tools and human review to ensure content meets our standards. Our approach focuses on transparency, fairness, and giving creators the freedom to express themselves within reasonable boundaries that protect our community.
-        </p>
-      </div>
-      
-      {/* New Title Before Gallery - Same consistent gap */}
-      <div className="text-center mb-6 md:mb-8">
-        <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black">
-          A Hello From Your Government
-        </h3>
-      </div>
-      
-      {/* Scrollable Image Gallery */}
-      <div className="relative">
-        <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-5xl mx-auto">
-          <CarouselContent className="-ml-2 md:-ml-4">
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
-                  alt="Community member"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
-                  alt="Community safety"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
-                  alt="Community moderation"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
-                  alt="Community growth"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
-                  alt="Community expression"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
-                  alt="Community engagement"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=400&fit=crop"
-                  alt="Community nature"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop"
-                  alt="Community pets"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&h=400&fit=crop"
-                  alt="Community wildlife"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=400&h=400&fit=crop"
-                  alt="Community landscape"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="https://images.unsplash.com/photo-1469474038136-46273834b3fb?w=400&h=400&fit=crop"
-                  alt="Community inspiration"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="https://images.unsplash.com/photo-1506744038136-46273f02e42e?w=400&h=400&fit=crop"
-                  alt="Community peace"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-      </div>
-    </div>
-  </section>
-);
+const BalanceFreeSpeechSection = () => {
+  const [modalImage, setModalImage] = useState<{src: string, alt: string} | null>(null);
 
-const ContentReportingSection = () => (
-  <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
-    <div className="max-w-6xl mx-auto">
-      <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-6 md:mb-8">
-        Report Content That<br />Violates Our Guidelines
-      </h2>
-      
-      {/* Explanatory Text - Same consistent gap */}
-      <div className="max-w-4xl mx-auto text-center mb-6 md:mb-8">
-        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6 font-semibold">
-          When you encounter content that violates our community guidelines, reporting it helps us maintain a safe environment for everyone. You can report harassment, spam, hate speech, misinformation, inappropriate content, or anything that makes you feel unsafe on our platform.
-        </p>
-        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
-          Simply tap the three dots menu on any post or profile, select "Report," choose the violation type, and provide additional context if needed. Our moderation team reviews every report within 24 hours and takes appropriate action, from content removal to account restrictions. We'll notify you of the outcome and thank you for helping keep Rustless safe.
-        </p>
-      </div>
-      
-      {/* New Title Before Gallery - Same consistent gap */}
-      <div className="text-center mb-6 md:mb-8">
-        <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black">
-          Examples of Reportable Content
-        </h3>
-      </div>
-      
-      {/* Scrollable Image Gallery - Placeholder for bad content examples */}
-      <div className="relative">
-        <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-5xl mx-auto">
-          <CarouselContent className="-ml-2 md:-ml-4">
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
-                  alt="Reportable content example"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
-                  alt="Harassment example"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
-                  alt="Spam content example"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
-                  alt="Misinformation example"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
-                  alt="Inappropriate content example"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
-                  alt="Hate speech example"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=400&fit=crop"
-                  alt="Violation example"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop"
-                  alt="Community violation"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-      </div>
-    </div>
-  </section>
-);
+  const handleImageClick = (src: string, alt: string) => {
+    setModalImage({ src, alt });
+  };
 
-const SocialNetworkFinesSection = () => (
-  <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
-    <div className="max-w-6xl mx-auto">
-      <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-6 md:mb-8">
-        Why We Take Moderation<br />Seriously: Industry Fines
-      </h2>
-      
-      {/* Explanatory Text - Same consistent gap */}
-      <div className="max-w-4xl mx-auto text-center mb-6 md:mb-8">
-        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6 font-semibold">
-          Major social media platforms have faced billions in fines for inadequate content moderation. Meta has been fined over $2 billion by the EU for privacy violations and content issues. TikTok received $368 million in fines for child safety violations. Discord faced penalties for failing to remove harmful content quickly enough.
-        </p>
-        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
-          These regulatory actions show why proactive moderation isn't optional—it's essential for user safety and platform sustainability. At Rustless, we've learned from these industry failures and built robust systems from day one to prevent harmful content and protect our community, ensuring we never face such penalties.
-        </p>
+  const closeModal = () => {
+    setModalImage(null);
+  };
+
+  return (
+    <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-6 md:mb-8">
+          Balance Free Speech<br />With Moderation
+        </h2>
+        
+        {/* Explanatory Text - Same consistent gap */}
+        <div className="max-w-4xl mx-auto text-center mb-6 md:mb-8">
+          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6 font-semibold">
+            At Rustless, we believe in creating a space where authentic expression thrives while maintaining a safe and respectful environment for everyone. Our community guidelines are designed to protect free speech while preventing harmful content that could damage our vibrant ecosystem.
+          </p>
+          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
+            We use a combination of AI-powered moderation tools and human review to ensure content meets our standards. Our approach focuses on transparency, fairness, and giving creators the freedom to express themselves within reasonable boundaries that protect our community.
+          </p>
+        </div>
+        
+        {/* New Title Before Gallery - Same consistent gap */}
+        <div className="text-center mb-6 md:mb-8">
+          <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black">
+            A Hello From Your Government
+          </h3>
+        </div>
+        
+        {/* Scrollable Image Gallery */}
+        <div className="relative">
+          <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-5xl mx-auto">
+            <CarouselContent className="-ml-2 md:-ml-4">
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+                    alt="Community member"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png", "Community member")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+                    alt="Community safety"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png", "Community safety")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
+                    alt="Community moderation"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png", "Community moderation")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
+                    alt="Community growth"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png", "Community growth")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
+                    alt="Community expression"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png", "Community expression")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
+                    alt="Community engagement"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png", "Community engagement")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=400&fit=crop"
+                    alt="Community nature"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=400&fit=crop", "Community nature")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop"
+                    alt="Community pets"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop", "Community pets")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&h=400&fit=crop"
+                    alt="Community wildlife"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&h=400&fit=crop", "Community wildlife")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=400&h=400&fit=crop"
+                    alt="Community landscape"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=400&h=400&fit=crop", "Community landscape")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="https://images.unsplash.com/photo-1469474038136-46273834b3fb?w=400&h=400&fit=crop"
+                    alt="Community inspiration"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("https://images.unsplash.com/photo-1469474038136-46273834b3fb?w=400&h=400&fit=crop", "Community inspiration")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="https://images.unsplash.com/photo-1506744038136-46273f02e42e?w=400&h=400&fit=crop"
+                    alt="Community peace"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("https://images.unsplash.com/photo-1506744038136-46273f02e42e?w=400&h=400&fit=crop", "Community peace")}
+                  />
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+
+        <ImageModal
+          src={modalImage?.src || ''}
+          alt={modalImage?.alt || ''}
+          isOpen={!!modalImage}
+          onClose={closeModal}
+        />
       </div>
-      
-      {/* New Title Before Gallery - Same consistent gap */}
-      <div className="text-center mb-6 md:mb-8">
-        <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black">
-          News Headlines About Platform Failures
-        </h3>
+    </section>
+  );
+};
+
+const ContentReportingSection = () => {
+  const [modalImage, setModalImage] = useState<{src: string, alt: string} | null>(null);
+
+  const handleImageClick = (src: string, alt: string) => {
+    setModalImage({ src, alt });
+  };
+
+  const closeModal = () => {
+    setModalImage(null);
+  };
+
+  return (
+    <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-6 md:mb-8">
+          Report Content That<br />Violates Our Guidelines
+        </h2>
+        
+        {/* Explanatory Text - Same consistent gap */}
+        <div className="max-w-4xl mx-auto text-center mb-6 md:mb-8">
+          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6 font-semibold">
+            When you encounter content that violates our community guidelines, reporting it helps us maintain a safe environment for everyone. You can report harassment, spam, hate speech, misinformation, inappropriate content, or anything that makes you feel unsafe on our platform.
+          </p>
+          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
+            Simply tap the three dots menu on any post or profile, select "Report," choose the violation type, and provide additional context if needed. Our moderation team reviews every report within 24 hours and takes appropriate action, from content removal to account restrictions. We'll notify you of the outcome and thank you for helping keep Rustless safe.
+          </p>
+        </div>
+        
+        {/* New Title Before Gallery - Same consistent gap */}
+        <div className="text-center mb-6 md:mb-8">
+          <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black">
+            Examples of Reportable Content
+          </h3>
+        </div>
+        
+        {/* Scrollable Image Gallery - Placeholder for bad content examples */}
+        <div className="relative">
+          <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-5xl mx-auto">
+            <CarouselContent className="-ml-2 md:-ml-4">
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+                    alt="Reportable content example"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png", "Reportable content example")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+                    alt="Harassment example"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png", "Harassment example")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
+                    alt="Spam content example"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png", "Spam content example")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
+                    alt="Misinformation example"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png", "Misinformation example")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
+                    alt="Inappropriate content example"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png", "Inappropriate content example")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
+                    alt="Hate speech example"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png", "Hate speech example")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=400&fit=crop"
+                    alt="Violation example"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=400&fit=crop", "Violation example")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop"
+                    alt="Community violation"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop", "Community violation")}
+                  />
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+
+        <ImageModal
+          src={modalImage?.src || ''}
+          alt={modalImage?.alt || ''}
+          isOpen={!!modalImage}
+          onClose={closeModal}
+        />
       </div>
-      
-      {/* Scrollable Image Gallery - Placeholder for news about fines */}
-      <div className="relative">
-        <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-5xl mx-auto">
-          <CarouselContent className="-ml-2 md:-ml-4">
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
-                  alt="Meta fine news"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
-                  alt="TikTok penalty news"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
-                  alt="Discord violation news"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
-                  alt="Instagram fine headlines"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
-                  alt="Social media regulation news"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
-                  alt="Platform accountability news"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=400&fit=crop"
-                  alt="Regulatory action news"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="aspect-square">
-                <img 
-                  src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop"
-                  alt="Tech company fines"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </CarouselItem>
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+    </section>
+  );
+};
+
+const SocialNetworkFinesSection = () => {
+  const [modalImage, setModalImage] = useState<{src: string, alt: string} | null>(null);
+
+  const handleImageClick = (src: string, alt: string) => {
+    setModalImage({ src, alt });
+  };
+
+  const closeModal = () => {
+    setModalImage(null);
+  };
+
+  return (
+    <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-6 md:mb-8">
+          Why We Take Moderation<br />Seriously: Industry Fines
+        </h2>
+        
+        {/* Explanatory Text - Same consistent gap */}
+        <div className="max-w-4xl mx-auto text-center mb-6 md:mb-8">
+          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6 font-semibold">
+            Major social media platforms have faced billions in fines for inadequate content moderation. Meta has been fined over $2 billion by the EU for privacy violations and content issues. TikTok received $368 million in fines for child safety violations. Discord faced penalties for failing to remove harmful content quickly enough.
+          </p>
+          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
+            These regulatory actions show why proactive moderation isn't optional—it's essential for user safety and platform sustainability. At Rustless, we've learned from these industry failures and built robust systems from day one to prevent harmful content and protect our community, ensuring we never face such penalties.
+          </p>
+        </div>
+        
+        {/* New Title Before Gallery - Same consistent gap */}
+        <div className="text-center mb-6 md:mb-8">
+          <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black">
+            News Headlines About Platform Failures
+          </h3>
+        </div>
+        
+        {/* Scrollable Image Gallery - Placeholder for news about fines */}
+        <div className="relative">
+          <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-5xl mx-auto">
+            <CarouselContent className="-ml-2 md:-ml-4">
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+                    alt="Meta fine news"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png", "Meta fine news")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+                    alt="TikTok penalty news"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png", "TikTok penalty news")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
+                    alt="Discord violation news"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png", "Discord violation news")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
+                    alt="Instagram fine headlines"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png", "Instagram fine headlines")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
+                    alt="Social media regulation news"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png", "Social media regulation news")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
+                    alt="Platform accountability news"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png", "Platform accountability news")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=400&fit=crop"
+                    alt="Regulatory action news"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=400&fit=crop", "Regulatory action news")}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="aspect-square">
+                  <img 
+                    src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop"
+                    alt="Tech company fines"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => handleImageClick("https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop", "Tech company fines")}
+                  />
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+
+        <ImageModal
+          src={modalImage?.src || ''}
+          alt={modalImage?.alt || ''}
+          isOpen={!!modalImage}
+          onClose={closeModal}
+        />
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 const SafetyMeasuresSection = () => (
   <section className="py-8 md:py-12 px-4 md:px-8 bg-white relative overflow-hidden">
@@ -899,7 +985,7 @@ const ModerationStatsSection = () => {
             You can watch our stats from moderated content for the past quartile here (and on this boxes actually stats, how much moderated content and regard what we deleted)
           </p>
           
-          <div className="flex justify-center items-center gap-2 mb-4">
+          <div className="flex justify-center items-center gap-2 md:gap-3 text-base font-medium">
             <span className="text-lg font-medium text-black">View stats for:</span>
             <select 
               value={selectedQuartile}
