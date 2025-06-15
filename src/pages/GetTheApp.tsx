@@ -419,6 +419,29 @@ const ContentReportingSection = () => {
             Want to join Rustless? Applying is easy! From your account, just navigate to <span className="font-bold">Settings</span>, scroll to the <span className="font-bold">Careers & Opportunities</span> section, and tap <span className="font-bold">Apply to Join</span>. Fill out your details, tell us what makes you awesome, and submit your application directly from there. If you stand out or have that special spark, we’ll reach out!
           </p>
 
+          {/* --- ADDED: New Squared Gallery (Carousel) --- */}
+          <div className="relative mb-8">
+            <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-5xl mx-auto">
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {galleryImages.map((image, index) => (
+                  <CarouselItem key={`copy-gallery-${index}`} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                    <div className="aspect-square">
+                      <img 
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                        onClick={() => handleImageClick(image.src, image.alt)}
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
+          {/* --- END NEW GALLERY --- */}
+
           <section className="py-8 md:py-12 px-4 md:px-8 bg-white relative overflow-hidden">
             <div className="hidden lg:block">
               <FloatingPhoto
