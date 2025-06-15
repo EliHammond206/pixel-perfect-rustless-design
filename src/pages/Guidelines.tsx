@@ -517,6 +517,115 @@ const Guidelines = () => {
         </div>
       </section>
 
+      {/* Second Safety Measures Section - Duplicated */}
+      <section className="py-8 md:py-12 px-4 md:px-8 bg-white relative overflow-hidden">
+        {/* Background floating photos for this section - Desktop */}
+        <div className="hidden lg:block">
+          <FloatingPhoto
+            src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+            size="desktop-round"
+            style={{ left: '10%', top: '20%' }}
+            className=""
+          />
+          
+          <FloatingPhoto
+            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+            size="desktop-round"
+            style={{ right: '10%', top: '30%' }}
+            className=""
+          />
+        </div>
+
+        {/* Background floating photos - Tablet */}
+        <div className="hidden md:block lg:hidden">
+          <FloatingPhoto
+            src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+            size="tablet-round"
+            style={{ left: '10%', top: '20%' }}
+            className=""
+          />
+          
+          <FloatingPhoto
+            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+            size="tablet-round"
+            style={{ right: '10%', top: '30%' }}
+            className=""
+          />
+        </div>
+
+        {/* Background floating photos - Mobile */}
+        <div className="block md:hidden">
+          <FloatingPhoto
+            src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+            size="mobile-round"
+            style={{ left: '10%', top: '10%' }}
+            className=""
+          />
+          
+          <FloatingPhoto
+            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+            size="mobile-round"
+            style={{ right: '10%', top: '15%' }}
+            className=""
+          />
+        </div>
+
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold text-black leading-tight mb-6 md:mb-8">
+            <div className="mb-2">We've Implemented</div>
+            <div className="mb-2">Maximum Measures</div>
+            <div className="mb-2">To Keep You Safe</div>
+            <div className="mb-2">As Much As We Can</div>
+            <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] mt-4">
+              #Unprecedented
+            </div>
+          </h2>
+        </div>
+      </section>
+
+      {/* Second Security Features Boxes Section - Duplicated */}
+      <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {/* E2EE Encrypted Messages */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">🔐</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">E2EE</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                End-to-end encrypted messages. Only you and recipient can read them.
+              </p>
+            </div>
+
+            {/* Crustless Communication */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">🦀</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Crustless</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                Communication without shells or barriers, pure and direct connection.
+              </p>
+            </div>
+
+            {/* Decentralized */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">🌐</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Decentralized</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                No single point of control. Your data stays distributed and secure.
+              </p>
+            </div>
+
+            {/* Vote Power */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+              <div className="text-4xl md:text-5xl mb-4">🗳️</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">10% Vote</div>
+              <p className="text-gray-700 text-sm md:text-base">
+                Every member gets 10% voting power in community decisions and governance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Mentions Section - Reduced spacing */}
       <section className="text-center py-6 md:py-8 relative z-10 bg-white">
         <h2 className="text-xl md:text-2xl font-bold text-black mb-4 md:mb-6">
