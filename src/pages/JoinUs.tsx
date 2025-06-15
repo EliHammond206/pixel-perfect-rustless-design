@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import DynamicHashtag from '../components/DynamicHashtag';
@@ -488,9 +489,17 @@ const SecondSafetyMeasuresSection = () => (
     </div>
 
     <div className="max-w-4xl mx-auto text-center relative z-10">
-      <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold text-black leading-tight mb-6 md:mb-8">
-        <div className="mb-2">A place we want to see you</div>
-        <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] mt-4">
+      <h2 className="font-bold text-black leading-tight mb-6 md:mb-8">
+        <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
+          A place where
+        </div>
+        <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
+          we want to
+        </div>
+        <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
+          see you
+        </div>
+        <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] mt-2 text-primary font-black tracking-tight inline-block">
           #Happy
         </div>
       </h2>
@@ -502,39 +511,39 @@ const SecondSecurityFeaturesSection = () => (
   <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
     <div className="max-w-6xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-        {/* Bored Views */}
+        {/* Free Flights */}
         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-          <div className="text-4xl md:text-5xl mb-4">😴</div>
-          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Bored Views</div>
+          <div className="text-4xl md:text-5xl mb-4">✈️</div>
+          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Free Global Flights</div>
           <p className="text-gray-700 text-sm md:text-base">
-            No more mindless scrolling through unengaging content that wastes your time.
+            Get fully paid international flights—explore the world on us as you build your dream career.
           </p>
         </div>
 
-        {/* Fake Comments */}
+        {/* Free Uber Rides */}
         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-          <div className="text-4xl md:text-5xl mb-4">💬</div>
-          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Fake Comments</div>
+          <div className="text-4xl md:text-5xl mb-4">🚗</div>
+          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Unlimited Uber Rides</div>
           <p className="text-gray-700 text-sm md:text-base">
-            Authentic conversations only. No bot-generated or purchased engagement.
+            Enjoy free rides, everywhere. We make your daily commute, events, and adventures safe and easy.
           </p>
         </div>
 
-        {/* Fake Overnight Influencers */}
+        {/* Wellness + High Salary */}
         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-          <div className="text-4xl md:text-5xl mb-4">⭐</div>
-          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Fake Influencers</div>
+          <div className="text-4xl md:text-5xl mb-4">💸</div>
+          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Wellness & Salary</div>
           <p className="text-gray-700 text-sm md:text-base">
-            Real creators with genuine followings, not manufactured overnight celebrities.
+            Million-dollar+ salaries. 24/7 wellness support. Because your happiness and health are everything to us.
           </p>
         </div>
 
-        {/* Toxic Culture */}
+        {/* More Perks: Meals, Devices, Network */}
         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-          <div className="text-4xl md:text-5xl mb-4">🚫</div>
-          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Toxic Culture</div>
+          <div className="text-4xl md:text-5xl mb-4">🎉</div>
+          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Epic Perks & Community</div>
           <p className="text-gray-700 text-sm md:text-base">
-            Building a positive community free from harassment and negative behavior.
+            Free gourmet meals, the latest devices, world-class mentors, and a global network who truly believe you matter.
           </p>
         </div>
       </div>
