@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from './ui/carousel';
 import ImageModal from './ImageModal';
@@ -185,31 +184,7 @@ const RegistrationStepsCarousel = () => {
 
         {/* Wallet Tutorial Section */}
         <div className="mt-12 md:mt-16">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black mb-6 md:mb-8">
-              <div>How to Connect Your Wallet</div>
-              <div className="text-primary font-black">#Step by Step</div>
-            </h2>
-            
-            <div className="max-w-4xl mx-auto">
-              <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold mb-6">
-                Follow these simple steps to download a compatible wallet and connect it to your Rustless account for age verification.
-              </p>
-              
-              <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-left">
-                <h3 className="text-lg md:text-xl font-bold text-black mb-4">What Information Do We Access?</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• <strong>Age verification data only</strong> - We only access information needed to confirm you're over 18</li>
-                  <li>• <strong>No financial information</strong> - We cannot see your wallet balance or transaction history</li>
-                  <li>• <strong>No personal details</strong> - Your name, address, and other personal data remain private</li>
-                  <li>• <strong>Temporary access</strong> - Connection is only active during verification process</li>
-                  <li>• <strong>Encrypted & secure</strong> - All data transmission is fully encrypted and protected</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Wallet Tutorial Carousel */}
+          
           <div className="relative">
             <Carousel opts={{ align: "center", loop: true }} className="w-full max-w-5xl mx-auto">
               <CarouselContent className="-ml-2 md:-ml-4">
