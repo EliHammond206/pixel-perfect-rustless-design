@@ -69,17 +69,6 @@ const RegistrationStepsCarousel = () => {
   return (
     <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-6 md:mb-8">
-          <div>Registration Made</div>
-          <div className="text-primary font-black">#Simple</div>
-        </h2>
-        
-        <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12">
-          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
-            Getting started with Rustless is incredibly easy. Follow these simple steps to join our community and start sharing your voice with the world.
-          </p>
-        </div>
-
         {/* iPhone Mockups Carousel */}
         <div className="relative">
           <Carousel opts={{ align: "center", loop: true }} className="w-full max-w-5xl mx-auto">
@@ -120,13 +109,6 @@ const RegistrationStepsCarousel = () => {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-8 md:mt-12">
-          <button className="bg-black text-white px-8 py-4 rounded-full text-lg font-medium hover:opacity-80 transition-opacity">
-            Start Your Journey
-          </button>
         </div>
 
         <ImageModal
