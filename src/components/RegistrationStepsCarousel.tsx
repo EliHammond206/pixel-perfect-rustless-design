@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from './ui/carousel';
 import ImageModal from './ImageModal';
@@ -177,25 +178,24 @@ const RegistrationStepsCarousel: React.FC<RegistrationStepsCarouselProps> = ({ c
           </Carousel>
         </div>
 
-        {/* Title and Text Below Carousel */}
+        {/* Removed section:
         <div className="text-center mt-8 md:mt-12">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black mb-6 md:mb-8">
             <div>Now once you registered and created</div>
             <div>your account you've 5 days to</div>
             <div>connect your wallet to</div>
             <div className="text-primary font-black">#Prove Your Age</div>
-          </h2>
-          
+          </h2>     
           <div className="max-w-4xl mx-auto">
             <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
-              We require age verification to ensure a safe environment for all users and comply with global regulations. By connecting your wallet, we can verify your age securely without storing sensitive personal information. This process protects minors and creates a trusted community where everyone can share their voice safely.
+              We require age verification to ensure a safe environment for all users and comply with global regulations. ...
             </p>
           </div>
         </div>
+        */}
 
         {/* Wallet Tutorial Section */}
         <div className="mt-12 md:mt-16">
-          
           <div className="relative">
             <Carousel opts={{ align: "center", loop: true }} className="w-full max-w-5xl mx-auto">
               <CarouselContent className="-ml-2 md:-ml-4">
