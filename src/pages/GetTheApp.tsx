@@ -763,7 +763,9 @@ const GetTheApp = () => {
       <RegistrationStepsCarousel />
       {/* Inserted start registering section below RegistrationStepsCarousel */}
       <StartRegisteringSection />
-      <SecondSecurityFeaturesSection />
+      {/* Removed SecondSecurityFeaturesSection (the four boxes) and replaced it with a second gallery of iPhone mockups */}
+      <RegistrationStepsCarousel />
+      {/* End of replacement */}
       <ContentReportingSection />
       <YouCanDoItSection />
       <MentionsSection />
