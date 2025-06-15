@@ -169,7 +169,8 @@ const HeroSection = () => (
         <h1 className="text-4xl font-bold text-black leading-tight mb-4">
           <div className="mb-1">Welcome To</div>
           <div className="mb-1">The Family</div>
-          <div className="text-3xl">
+          {/* Increase hashtag size on mobile */}
+          <div className="text-4xl font-black mt-1">
             <DynamicHashtag isWhiteTheme={true} />
           </div>
         </h1>
@@ -221,7 +222,8 @@ const HeroSection = () => (
       <h1 className="text-4xl md:text-7xl lg:text-8xl xl:text-[96px] font-bold text-black leading-tight mb-4 sm:mb-6">
         <div className="mb-1">Welcome To</div>
         <div className="mb-1">The Family</div>
-        <div className="text-3xl">
+        {/* Larger hashtag size for desktop/tablet */}
+        <div className="text-5xl md:text-7xl font-black mt-2">
           <DynamicHashtag isWhiteTheme={true} />
         </div>
       </h1>
@@ -382,8 +384,7 @@ const ContentReportingSection = () => {
   return (
     <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        {/* =========== HAPPY SECTION BEFORE IPHONE ============= */}
-        <HappySection />
+        {/* REMOVED: <HappySection /> that was here before the heading */}
         {/* ================== TITLE =========================== */}
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-6 md:mb-8">
           #Designers #Devs and just #Good People
@@ -394,7 +395,7 @@ const ContentReportingSection = () => {
             Want to join Rustless? Applying is easy! From your account, just navigate to <span className="font-bold">Settings</span>, scroll to the <span className="font-bold">Careers & Opportunities</span> section, and tap <span className="font-bold">Apply to Join</span>. Fill out your details, tell us what makes you awesome, and submit your application directly from there. If you stand out or have that special spark, we’ll reach out!
           </p>
 
-          {/* === HAPPY SECTION inserted just before iPhone mockup === */}
+          {/* === HAPPY SECTION before iPhone mockup (kept) === */}
           <HappySection />
 
           <div className="flex justify-center my-6">
@@ -406,7 +407,7 @@ const ContentReportingSection = () => {
             />
           </div>
 
-          {/* === HAPPY SECTION inserted just after iPhone mockup === */}
+          {/* === HAPPY SECTION after iPhone mockup (kept) === */}
           <HappySection />
 
           <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
