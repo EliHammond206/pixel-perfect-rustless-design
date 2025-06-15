@@ -541,7 +541,6 @@ const SafetyMeasuresSection = () => (
         style={{ left: '10%', top: '20%' }}
         className=""
       />
-      
       <FloatingPhoto
         src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
         size="desktop-round"
@@ -549,7 +548,6 @@ const SafetyMeasuresSection = () => (
         className=""
       />
     </div>
-
     {/* Background floating photos - Tablet */}
     <div className="hidden md:block lg:hidden">
       <FloatingPhoto
@@ -558,7 +556,6 @@ const SafetyMeasuresSection = () => (
         style={{ left: '10%', top: '20%' }}
         className=""
       />
-      
       <FloatingPhoto
         src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
         size="tablet-round"
@@ -566,7 +563,6 @@ const SafetyMeasuresSection = () => (
         className=""
       />
     </div>
-
     {/* Background floating photos - Mobile */}
     <div className="block md:hidden">
       <FloatingPhoto
@@ -575,7 +571,6 @@ const SafetyMeasuresSection = () => (
         style={{ left: '10%', top: '10%' }}
         className=""
       />
-      
       <FloatingPhoto
         src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
         size="mobile-round"
@@ -592,19 +587,19 @@ const SafetyMeasuresSection = () => (
         </div>
       </h2>
     </div>
-    {/* NEW - Perks Boxes */}
+    {/* PER USER REQUEST -- keep original box grid, just update their content! */}
     <div className="max-w-6xl mx-auto mt-10">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
         {/* Free Global Travel */}
-        <div className="bg-indigo-50 border border-indigo-200 rounded-2xl p-6 md:p-8 text-center shadow">
+        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
           <div className="text-4xl md:text-5xl mb-4">✈️</div>
           <div className="text-2xl md:text-3xl font-bold text-black mb-2">Free Global Travel</div>
           <p className="text-gray-700 text-sm md:text-base">
             Unlimited free flights and Uber rides—on us, wherever your journey takes you.
           </p>
         </div>
-        {/* Newest Devices */}
-        <div className="bg-pink-50 border border-pink-200 rounded-2xl p-6 md:p-8 text-center shadow">
+        {/* Latest Devices */}
+        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
           <div className="text-4xl md:text-5xl mb-4">📱</div>
           <div className="text-2xl md:text-3xl font-bold text-black mb-2">Latest Devices</div>
           <p className="text-gray-700 text-sm md:text-base">
@@ -612,7 +607,7 @@ const SafetyMeasuresSection = () => (
           </p>
         </div>
         {/* Full Freedom */}
-        <div className="bg-green-50 border border-green-200 rounded-2xl p-6 md:p-8 text-center shadow">
+        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
           <div className="text-4xl md:text-5xl mb-4">🕊️</div>
           <div className="text-2xl md:text-3xl font-bold text-black mb-2">Full Freedom</div>
           <p className="text-gray-700 text-sm md:text-base">
@@ -620,7 +615,7 @@ const SafetyMeasuresSection = () => (
           </p>
         </div>
         {/* Gourmet Meals */}
-        <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-6 md:p-8 text-center shadow">
+        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
           <div className="text-4xl md:text-5xl mb-4">🍽️</div>
           <div className="text-2xl md:text-3xl font-bold text-black mb-2">Gourmet Meals</div>
           <p className="text-gray-700 text-sm md:text-base">
