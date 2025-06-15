@@ -237,14 +237,46 @@ const HeroSection = () => (
 );
 
 const BalanceFreeSpeechSection = () => {
-  const [modalImage, setModalImage] = useState<{src: string, alt: string} | null>(null);
+  const [modalState, setModalState] = useState<{
+    isOpen: boolean;
+    currentIndex: number;
+    images: Array<{ src: string; alt: string }>;
+  }>({
+    isOpen: false,
+    currentIndex: 0,
+    images: []
+  });
+
+  const galleryImages = [
+    { src: "/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png", alt: "Community member" },
+    { src: "/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png", alt: "Community safety" },
+    { src: "/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png", alt: "Community moderation" },
+    { src: "/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png", alt: "Community growth" },
+    { src: "/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png", alt: "Community expression" },
+    { src: "/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png", alt: "Community engagement" },
+    { src: "https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=400&fit=crop", alt: "Community nature" },
+    { src: "https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop", alt: "Community pets" },
+    { src: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&h=400&fit=crop", alt: "Community wildlife" },
+    { src: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=400&h=400&fit=crop", alt: "Community landscape" },
+    { src: "https://images.unsplash.com/photo-1469474038136-46273834b3fb?w=400&h=400&fit=crop", alt: "Community inspiration" },
+    { src: "https://images.unsplash.com/photo-1506744038136-46273f02e42e?w=400&h=400&fit=crop", alt: "Community peace" }
+  ];
 
   const handleImageClick = (src: string, alt: string) => {
-    setModalImage({ src, alt });
+    const imageIndex = galleryImages.findIndex(img => img.src === src);
+    setModalState({
+      isOpen: true,
+      currentIndex: imageIndex,
+      images: galleryImages
+    });
   };
 
   const closeModal = () => {
-    setModalImage(null);
+    setModalState(prev => ({ ...prev, isOpen: false }));
+  };
+
+  const handleNavigate = (index: number) => {
+    setModalState(prev => ({ ...prev, currentIndex: index }));
   };
 
   return (
@@ -275,126 +307,18 @@ const BalanceFreeSpeechSection = () => {
         <div className="relative">
           <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-5xl mx-auto">
             <CarouselContent className="-ml-2 md:-ml-4">
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
-                    alt="Community member"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png", "Community member")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
-                    alt="Community safety"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png", "Community safety")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
-                    alt="Community moderation"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png", "Community moderation")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
-                    alt="Community growth"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png", "Community growth")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
-                    alt="Community expression"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png", "Community expression")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
-                    alt="Community engagement"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png", "Community engagement")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=400&fit=crop"
-                    alt="Community nature"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=400&fit=crop", "Community nature")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop"
-                    alt="Community pets"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop", "Community pets")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&h=400&fit=crop"
-                    alt="Community wildlife"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&h=400&fit=crop", "Community wildlife")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=400&h=400&fit=crop"
-                    alt="Community landscape"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=400&h=400&fit=crop", "Community landscape")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="https://images.unsplash.com/photo-1469474038136-46273834b3fb?w=400&h=400&fit=crop"
-                    alt="Community inspiration"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("https://images.unsplash.com/photo-1469474038136-46273834b3fb?w=400&h=400&fit=crop", "Community inspiration")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="https://images.unsplash.com/photo-1506744038136-46273f02e42e?w=400&h=400&fit=crop"
-                    alt="Community peace"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("https://images.unsplash.com/photo-1506744038136-46273f02e42e?w=400&h=400&fit=crop", "Community peace")}
-                  />
-                </div>
-              </CarouselItem>
+              {galleryImages.map((image, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="aspect-square">
+                    <img 
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                      onClick={() => handleImageClick(image.src, image.alt)}
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
@@ -402,10 +326,11 @@ const BalanceFreeSpeechSection = () => {
         </div>
 
         <ImageModal
-          src={modalImage?.src || ''}
-          alt={modalImage?.alt || ''}
-          isOpen={!!modalImage}
+          images={modalState.images}
+          currentIndex={modalState.currentIndex}
+          isOpen={modalState.isOpen}
           onClose={closeModal}
+          onNavigate={handleNavigate}
         />
       </div>
     </section>
@@ -413,14 +338,42 @@ const BalanceFreeSpeechSection = () => {
 };
 
 const ContentReportingSection = () => {
-  const [modalImage, setModalImage] = useState<{src: string, alt: string} | null>(null);
+  const [modalState, setModalState] = useState<{
+    isOpen: boolean;
+    currentIndex: number;
+    images: Array<{ src: string; alt: string }>;
+  }>({
+    isOpen: false,
+    currentIndex: 0,
+    images: []
+  });
+
+  const galleryImages = [
+    { src: "/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png", alt: "Reportable content example" },
+    { src: "/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png", alt: "Harassment example" },
+    { src: "/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png", alt: "Spam content example" },
+    { src: "/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png", alt: "Misinformation example" },
+    { src: "/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png", alt: "Inappropriate content example" },
+    { src: "/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png", alt: "Hate speech example" },
+    { src: "https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=400&fit=crop", alt: "Violation example" },
+    { src: "https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop", alt: "Community violation" }
+  ];
 
   const handleImageClick = (src: string, alt: string) => {
-    setModalImage({ src, alt });
+    const imageIndex = galleryImages.findIndex(img => img.src === src);
+    setModalState({
+      isOpen: true,
+      currentIndex: imageIndex,
+      images: galleryImages
+    });
   };
 
   const closeModal = () => {
-    setModalImage(null);
+    setModalState(prev => ({ ...prev, isOpen: false }));
+  };
+
+  const handleNavigate = (index: number) => {
+    setModalState(prev => ({ ...prev, currentIndex: index }));
   };
 
   return (
@@ -451,86 +404,18 @@ const ContentReportingSection = () => {
         <div className="relative">
           <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-5xl mx-auto">
             <CarouselContent className="-ml-2 md:-ml-4">
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
-                    alt="Reportable content example"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png", "Reportable content example")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
-                    alt="Harassment example"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png", "Harassment example")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
-                    alt="Spam content example"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png", "Spam content example")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
-                    alt="Misinformation example"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png", "Misinformation example")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
-                    alt="Inappropriate content example"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png", "Inappropriate content example")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
-                    alt="Hate speech example"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png", "Hate speech example")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=400&fit=crop"
-                    alt="Violation example"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=400&fit=crop", "Violation example")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop"
-                    alt="Community violation"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop", "Community violation")}
-                  />
-                </div>
-              </CarouselItem>
+              {galleryImages.map((image, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="aspect-square">
+                    <img 
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                      onClick={() => handleImageClick(image.src, image.alt)}
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
@@ -538,10 +423,11 @@ const ContentReportingSection = () => {
         </div>
 
         <ImageModal
-          src={modalImage?.src || ''}
-          alt={modalImage?.alt || ''}
-          isOpen={!!modalImage}
+          images={modalState.images}
+          currentIndex={modalState.currentIndex}
+          isOpen={modalState.isOpen}
           onClose={closeModal}
+          onNavigate={handleNavigate}
         />
       </div>
     </section>
@@ -549,14 +435,42 @@ const ContentReportingSection = () => {
 };
 
 const SocialNetworkFinesSection = () => {
-  const [modalImage, setModalImage] = useState<{src: string, alt: string} | null>(null);
+  const [modalState, setModalState] = useState<{
+    isOpen: boolean;
+    currentIndex: number;
+    images: Array<{ src: string; alt: string }>;
+  }>({
+    isOpen: false,
+    currentIndex: 0,
+    images: []
+  });
+
+  const galleryImages = [
+    { src: "/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png", alt: "Meta fine news" },
+    { src: "/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png", alt: "TikTok penalty news" },
+    { src: "/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png", alt: "Discord violation news" },
+    { src: "/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png", alt: "Instagram fine headlines" },
+    { src: "/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png", alt: "Social media regulation news" },
+    { src: "/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png", alt: "Platform accountability news" },
+    { src: "https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=400&fit=crop", alt: "Regulatory action news" },
+    { src: "https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop", alt: "Tech company fines" }
+  ];
 
   const handleImageClick = (src: string, alt: string) => {
-    setModalImage({ src, alt });
+    const imageIndex = galleryImages.findIndex(img => img.src === src);
+    setModalState({
+      isOpen: true,
+      currentIndex: imageIndex,
+      images: galleryImages
+    });
   };
 
   const closeModal = () => {
-    setModalImage(null);
+    setModalState(prev => ({ ...prev, isOpen: false }));
+  };
+
+  const handleNavigate = (index: number) => {
+    setModalState(prev => ({ ...prev, currentIndex: index }));
   };
 
   return (
@@ -587,86 +501,18 @@ const SocialNetworkFinesSection = () => {
         <div className="relative">
           <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-5xl mx-auto">
             <CarouselContent className="-ml-2 md:-ml-4">
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
-                    alt="Meta fine news"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png", "Meta fine news")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
-                    alt="TikTok penalty news"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png", "TikTok penalty news")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
-                    alt="Discord violation news"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png", "Discord violation news")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
-                    alt="Instagram fine headlines"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png", "Instagram fine headlines")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
-                    alt="Social media regulation news"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png", "Social media regulation news")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
-                    alt="Platform accountability news"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png", "Platform accountability news")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=400&fit=crop"
-                    alt="Regulatory action news"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=400&fit=crop", "Regulatory action news")}
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="aspect-square">
-                  <img 
-                    src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop"
-                    alt="Tech company fines"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop", "Tech company fines")}
-                  />
-                </div>
-              </CarouselItem>
+              {galleryImages.map((image, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="aspect-square">
+                    <img 
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                      onClick={() => handleImageClick(image.src, image.alt)}
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
@@ -674,10 +520,11 @@ const SocialNetworkFinesSection = () => {
         </div>
 
         <ImageModal
-          src={modalImage?.src || ''}
-          alt={modalImage?.alt || ''}
-          isOpen={!!modalImage}
+          images={modalState.images}
+          currentIndex={modalState.currentIndex}
+          isOpen={modalState.isOpen}
           onClose={closeModal}
+          onNavigate={handleNavigate}
         />
       </div>
     </section>
