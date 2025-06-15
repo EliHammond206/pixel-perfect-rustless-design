@@ -10,7 +10,7 @@ const StartRegisteringIntroSection: React.FC = () => (
         <div>Grab the coffee</div>
         <div>and prepare</div>
         <span className="text-primary font-black mt-2 block">
-          <DynamicHashtag text="#Start Registering" />
+          <DynamicHashtag />
         </span>
       </h2>
       <p className="text-xl md:text-2xl text-gray-700 font-semibold mt-4">
@@ -21,4 +21,3 @@ const StartRegisteringIntroSection: React.FC = () => (
 );
 
 export default StartRegisteringIntroSection;
-
