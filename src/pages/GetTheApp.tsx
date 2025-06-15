@@ -242,6 +242,14 @@ const HeroSection = () => (
 
 // All other sections copied from Join Us
 
+const companyNames = [
+  "Meta",
+  "Telegram",
+  "Instagram",
+  "TikTok",
+  "Snapchat"
+];
+
 const BalanceFreeSpeechSection = () => {
   const [modalState, setModalState] = useState<{
     isOpen: boolean;
@@ -288,6 +296,10 @@ const BalanceFreeSpeechSection = () => {
   return (
     <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
+        {/* ADDED: iPhone mockups gallery WITH company names, at the very top */}
+        <div className="mb-12">
+          <RegistrationStepsCarousel companies={companyNames} />
+        </div>
         {/* Title updated to two lines */}
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-6 md:mb-8">
           <div>First of All,</div>
@@ -767,6 +779,7 @@ const GetTheApp = () => {
         </div>
       </header>
       <HeroSection />
+      {/* -- BalanceFreeSpeechSection is where we ADDED the gallery above the security text -- */}
       <BalanceFreeSpeechSection />
       <SecondSafetyMeasuresSection />
       <RegistrationStepsCarousel />
