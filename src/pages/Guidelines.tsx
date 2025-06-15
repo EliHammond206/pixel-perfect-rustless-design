@@ -4,6 +4,7 @@ import DynamicHashtag from '../components/DynamicHashtag';
 import FloatingPhoto from '../components/FloatingPhoto';
 import ImageModal from '../components/ImageModal';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
+import IphoneMockup from '../components/IphoneMockup';
 
 const HeroSection = () => (
   <div className="flex-1 flex flex-col justify-center items-center relative px-4 py-4 sm:py-6 md:py-8">
@@ -383,14 +384,20 @@ const ContentReportingSection = () => {
           Report Content That<br />Violates Our Guidelines
         </h2>
         
-        {/* Explanatory Text - Same consistent gap */}
-        <div className="max-w-4xl mx-auto text-center mb-6 md:mb-8">
-          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6 font-semibold">
+        {/* Visual section with 2 text blocks and iPhone mockup (centered on mobile, grid for desktop) */}
+        <div className="flex flex-col md:grid md:grid-cols-3 items-center gap-8 md:gap-10 max-w-4xl mx-auto mb-6 md:mb-8">
+          {/* First text block */}
+          <div className="md:col-span-1 text-center md:text-right text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
             When you encounter content that violates our community guidelines, reporting it helps us maintain a safe environment for everyone. You can report harassment, spam, hate speech, misinformation, inappropriate content, or anything that makes you feel unsafe on our platform.
-          </p>
-          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
+          </div>
+          {/* iPhone mockup */}
+          <div className="w-full md:col-span-1 flex justify-center">
+            <IphoneMockup />
+          </div>
+          {/* Second text block */}
+          <div className="md:col-span-1 text-center md:text-left text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
             Simply tap the three dots menu on any post or profile, select "Report," choose the violation type, and provide additional context if needed. Our moderation team reviews every report within 24 hours and takes appropriate action, from content removal to account restrictions. We'll notify you of the outcome and thank you for helping keep Rustless safe.
-          </p>
+          </div>
         </div>
         
         {/* New Title Before Gallery - Same consistent gap */}
