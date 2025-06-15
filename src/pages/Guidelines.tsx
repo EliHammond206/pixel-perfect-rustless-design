@@ -497,6 +497,10 @@ const SocialNetworkFinesSection = () => {
           <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6 font-semibold">
             Major social media platforms have faced billions in fines for inadequate content moderation. Meta has been fined over $2 billion by the EU for privacy violations and content issues. TikTok received $368 million in fines for child safety violations. Discord faced penalties for failing to remove harmful content quickly enough.
           </p>
+          {/* iPhone Mockup inserted between the two paragraphs, matching Join Us page style */}
+          <div className="flex justify-center my-6 md:my-10">
+            <IphoneMockup />
+          </div>
           <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
             These regulatory actions show why proactive moderation isn't optional—it's essential for user safety and platform sustainability. At Rustless, we've learned from these industry failures and built robust systems from day one to prevent harmful content and protect our community, ensuring we never face such penalties.
           </p>
