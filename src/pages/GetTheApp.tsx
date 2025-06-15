@@ -6,7 +6,6 @@ import ImageModal from '../components/ImageModal';
 import RegistrationStepsCarousel from '../components/RegistrationStepsCarousel';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
 import StartRegisteringSection from '../components/StartRegisteringSection';
-import SocialNetworkDataGallery from "../components/SocialNetworkDataGallery";
 
 // Hero section from Join Us copied for Download page
 const HeroSection = () => (
@@ -631,6 +630,114 @@ const SecondSafetyMeasuresSection = () => (
   </section>
 );
 
+const SecondSecurityFeaturesSection = () => (
+  <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
+    <div className="max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        {/* Flights */}
+        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+          <div className="text-4xl md:text-5xl mb-4">✈️</div>
+          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Flights</div>
+          <p className="text-gray-700 text-sm md:text-base">
+            Get fully paid international flights—explore the world on us as you build your dream career.
+          </p>
+        </div>
+
+        {/* Uber */}
+        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+          <div className="text-4xl md:text-5xl mb-4">🚗</div>
+          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Uber</div>
+          <p className="text-gray-700 text-sm md:text-base">
+            Enjoy free rides, everywhere. We make your daily commute, events, and adventures safe and easy.
+          </p>
+        </div>
+
+        {/* Wellness */}
+        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+          <div className="text-4xl md:text-5xl mb-4">💸</div>
+          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Wellness</div>
+          <p className="text-gray-700 text-sm md:text-base">
+            Million-dollar+ salaries. 24/7 wellness support. Because your happiness and health are everything to us.
+          </p>
+        </div>
+
+        {/* Perks */}
+        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
+          <div className="text-4xl md:text-5xl mb-4">🎉</div>
+          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Perks</div>
+          <p className="text-gray-700 text-sm md:text-base">
+            Free gourmet meals, the latest devices, world-class mentors, and a global network who truly believe you matter.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+const YouCanDoItSection = () => (
+  <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
+    <div className="max-w-4xl mx-auto text-center relative z-10">
+      <h2 className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] font-bold text-black">
+        #You Can Do It!
+      </h2>
+    </div>
+  </section>
+);
+
+const MentionsSection = () => (
+  <section className="text-center py-6 md:py-8 relative z-10 bg-white">
+    <h2 className="text-xl md:text-2xl font-bold text-black mb-4 md:mb-6">
+      As Soon On
+    </h2>
+    <div className="flex justify-center items-center gap-4 md:gap-8 lg:gap-12 flex-wrap px-6 md:px-12">
+      {[
+        { img: '/lovable-uploads/c0cd4508-0f48-4ece-86ba-c5e2d5c361ab.png', alt: 'Forbes' },
+        { img: '/lovable-uploads/dd483b2f-3008-46a0-9d42-5e99462c5167.png', alt: 'Fox News' },
+        { img: '/lovable-uploads/3d71d499-f6f5-48cd-9695-6046673adeed.png', alt: 'NPR' },
+        { img: '/lovable-uploads/96739e19-11c7-4ca8-b8c5-6b86e6eeb10c.png', alt: 'The Telegraph' },
+        { img: '/lovable-uploads/cdf18690-f2a5-4b51-8828-5b0e7165f261.png', alt: 'Mashable' },
+        { img: '/lovable-uploads/30d21f25-d0c7-4849-ab2e-1b5905512506.png', alt: 'NBC News' },
+        { img: '/lovable-uploads/777cea27-78c5-42a0-930e-c563e4fcfbb4.png', alt: 'New York Post' },
+        { img: '/lovable-uploads/b8e5cc35-6185-4a41-b830-369e5f25c2c0.png', alt: 'The Washington Post' },
+        { img: '/lovable-uploads/147745ae-af17-480b-aefa-8e105ce4fa2a.png', alt: 'The Drum' }
+      ].map((logo, index) => (
+        <div key={index} className="flex items-center">
+          <img 
+            src={logo.img} 
+            alt={logo.alt}
+            className="h-6 md:h-8 w-auto object-contain opacity-90 contrast-125 brightness-110"
+          />
+        </div>
+      ))}
+    </div>
+  </section>
+);
+
+const Footer = () => (
+  <footer className="text-center p-6 md:p-8 space-y-3 bg-white border-t border-gray-100">
+    <div className="text-lg md:text-xl font-medium text-black">
+      Where You Matter ❤︎
+    </div>
+    
+    <div className="flex flex-wrap justify-center items-center gap-2 md:gap-3 text-base font-medium">
+      <Link to="/safety" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Safety</Link>
+      <span className="text-gray-400">|</span>
+      <Link to="/help" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Help</Link>
+      <span className="text-gray-400">|</span>
+      <Link to="/join-us" className="hover:opacity-70 flex items-center text-black">
+        <span className="underline underline-offset-4 decoration-1">Join Us</span>
+        <span className="ml-1 text-sm">👋</span>
+      </Link>
+      <span className="text-gray-400">|</span>
+      <Link to="/guidelines" className="hover:opacity-70 text-black underline underline-offset-4 decoration-1">Guidelines</Link>
+    </div>
+    
+    <div className="text-base font-medium text-black">
+      2025 - till forever Rustless/Unlimited
+    </div>
+  </footer>
+);
+
 const GetTheApp = () => {
   return (
     <div className="bg-white text-black flex flex-col min-h-screen relative overflow-hidden">
@@ -656,8 +763,7 @@ const GetTheApp = () => {
       <RegistrationStepsCarousel />
       {/* Inserted start registering section below RegistrationStepsCarousel */}
       <StartRegisteringSection />
-      {/* REMOVE old SecondSecurityFeaturesSection, REPLACE with SocialNetworkDataGallery */}
-      <SocialNetworkDataGallery />
+      <SecondSecurityFeaturesSection />
       <ContentReportingSection />
       <YouCanDoItSection />
       <MentionsSection />
