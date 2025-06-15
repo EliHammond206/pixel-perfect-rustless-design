@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import DynamicHashtag from '../components/DynamicHashtag';
@@ -262,46 +261,46 @@ const JoinUs = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {/* Perk 1 */}
+            {/* Perk 1 - E2EE Messages */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🌍</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">50M</div>
+              <div className="text-4xl md:text-5xl mb-4">🔐</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">E2EE</div>
               <p className="text-gray-700 text-sm md:text-base">
-                active users worldwide, ready to discover your business.
+                End-to-end encrypted messages ensuring your private conversations stay private.
               </p>
             </div>
 
-            {/* Perk 2 */}
+            {/* Perk 2 - Passport Verification */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🧢</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">80%</div>
+              <div className="text-4xl md:text-5xl mb-4">🛂</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Verified</div>
               <p className="text-gray-700 text-sm md:text-base">
-                of Rustless users are 18-35, your prime target audience.
+                Passport verification system for authentic user profiles and enhanced trust.
               </p>
             </div>
 
-            {/* Perk 3 */}
+            {/* Perk 3 - 18+ Content */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">⚡️</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">90%</div>
+              <div className="text-4xl md:text-5xl mb-4">🔞</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">18+</div>
               <p className="text-gray-700 text-sm md:text-base">
-                of daily active users engage with business content.
+                Age-verified adult content areas with proper restrictions and controls.
               </p>
             </div>
 
-            {/* Perk 4 */}
+            {/* Perk 4 - Coastal Media Features */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🔔</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">75%</div>
+              <div className="text-4xl md:text-5xl mb-4">🌊</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Coastal</div>
               <p className="text-gray-700 text-sm md:text-base">
-                of users act on notifications within 5 minutes.
+                Advanced media sharing with location-based discovery and social features.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Your Success Our Top Priority Section */}
+      {/* Security Measures Section */}
       <section className="py-12 md:py-20 px-4 md:px-8 bg-white relative overflow-hidden">
         {/* Background floating photos for this section - Desktop */}
         <div className="hidden lg:block">
@@ -355,52 +354,76 @@ const JoinUs = () => {
         </div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold text-black leading-tight mb-6 md:mb-8">
-            <div className="mb-2">Your Success</div>
-            <div className="mb-2">Our Top Priority</div>
+          <h2 className="text-3xl md:text-6xl lg:text-7xl font-bold text-black leading-tight mb-4 md:mb-6">
+            <div className="mb-2">We have implemented</div>
+            <div className="mb-2">unprecedented maximum</div>
+            <div className="mb-2">security measures that was</div>
+            <div className="mb-4">never seen before.</div>
+            <div className="text-2xl md:text-5xl lg:text-6xl text-black">
+              #Unprecedented
+            </div>
           </h2>
         </div>
       </section>
 
-      {/* Duplicated We Speak Your Language Boxes Section */}
+      {/* Updated Security Features Section */}
       <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {/* Perk 1 */}
+            {/* Feature 1 - E2EE Messages */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🌍</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">50M</div>
+              <div className="text-4xl md:text-5xl mb-4">🔐</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">E2EE</div>
               <p className="text-gray-700 text-sm md:text-base">
-                active users worldwide, ready to discover your business.
+                Military-grade end-to-end encryption for all communications and media sharing.
               </p>
             </div>
 
-            {/* Perk 2 */}
+            {/* Feature 2 - Passport Verification */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🧢</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">80%</div>
+              <div className="text-4xl md:text-5xl mb-4">🛂</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">ID Verified</div>
               <p className="text-gray-700 text-sm md:text-base">
-                of Rustless users are 18-35, your prime target audience.
+                Government-grade passport and ID verification for maximum user authenticity.
               </p>
             </div>
 
-            {/* Perk 3 */}
+            {/* Feature 3 - 18+ Content Control */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">⚡️</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">90%</div>
+              <div className="text-4xl md:text-5xl mb-4">🔞</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Age Control</div>
               <p className="text-gray-700 text-sm md:text-base">
-                of daily active users engage with business content.
+                Strict 18+ verification with biometric age confirmation technology.
               </p>
             </div>
 
-            {/* Perk 4 */}
+            {/* Feature 4 - Advanced Security */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🔔</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">75%</div>
+              <div className="text-4xl md:text-5xl mb-4">🛡️</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Secured</div>
               <p className="text-gray-700 text-sm md:text-base">
-                of users act on notifications within 5 minutes.
+                Multi-layer security protocols with real-time threat detection and prevention.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Government Compliance Section */}
+      <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black mb-4">
+              Government-Demanded Moderation Measures
+            </h2>
+            <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+              Our platform implements all moderation measures required by governments worldwide to ensure compliance and user safety.
+            </p>
+          </div>
+          
+          {/* Scrollable Gallery would go here - keeping existing gallery code */}
+          <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+            {/* Gallery images will be added here */}
           </div>
         </div>
       </section>
