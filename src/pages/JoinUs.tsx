@@ -388,6 +388,16 @@ const ContentReportingSection = () => {
           <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6 font-semibold">
             Want to join Rustless? Applying is easy! From your account, just navigate to <span className="font-bold">Settings</span>, scroll to the <span className="font-bold">Careers & Opportunities</span> section, and tap <span className="font-bold">Apply to Join</span>. Fill out your details, tell us what makes you awesome, and submit your application directly from there. If you stand out or have that special spark, we’ll reach out!
           </p>
+
+          <div className="flex justify-center my-6">
+            <img
+              src="/lovable-uploads/d9a9df94-5f46-4adc-a01d-0bc88ae0ae68.png"
+              alt="How to apply on Rustless app – iPhone screenshot"
+              className="w-52 sm:w-64 md:w-72 rounded-2xl shadow-xl border border-gray-200"
+              style={{ maxWidth: '100%', height: 'auto' }}
+            />
+          </div>
+
           <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
             You don’t need referrals or fancy resumes—show us your passion, creativity, and drive. We’re always looking for Rustless souls: designers, devs, creators, and genuinely good people. If you’re the one, our team will spot your application (and yes, we read every single one). Show us why you belong!
           </p>
