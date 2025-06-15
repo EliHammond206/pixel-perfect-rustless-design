@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import DynamicHashtag from '../components/DynamicHashtag';
 import FloatingPhoto from '../components/FloatingPhoto';
-import { HoverCard, HoverCardContent, HoverCardTrigger } from '../components/ui/hover-card';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
 
 const Guidelines = () => {
   return (
@@ -272,91 +271,122 @@ const Guidelines = () => {
             </p>
           </div>
           
-          {/* Image Gallery with Hover Effects */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-            {/* Image 1 */}
-            <HoverCard>
-              <HoverCardTrigger asChild>
-                <div className="cursor-pointer transition-transform duration-300 hover:scale-105">
-                  <img 
-                    src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
-                    alt="Community member"
-                    className="w-full h-48 md:h-64 object-cover rounded-2xl shadow-lg"
-                  />
-                </div>
-              </HoverCardTrigger>
-              <HoverCardContent className="w-80">
-                <div className="space-y-2">
-                  <h4 className="text-sm font-semibold">Authentic Expression</h4>
-                  <p className="text-sm text-muted-foreground">
-                    We encourage genuine self-expression while maintaining respect for our diverse community.
-                  </p>
-                </div>
-              </HoverCardContent>
-            </HoverCard>
-
-            {/* Image 2 */}
-            <HoverCard>
-              <HoverCardTrigger asChild>
-                <div className="cursor-pointer transition-transform duration-300 hover:scale-105">
-                  <img 
-                    src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
-                    alt="Community safety"
-                    className="w-full h-48 md:h-64 object-cover rounded-2xl shadow-lg"
-                  />
-                </div>
-              </HoverCardTrigger>
-              <HoverCardContent className="w-80">
-                <div className="space-y-2">
-                  <h4 className="text-sm font-semibold">Safe Environment</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Creating a secure space where everyone can participate without fear of harassment or harm.
-                  </p>
-                </div>
-              </HoverCardContent>
-            </HoverCard>
-
-            {/* Image 3 */}
-            <HoverCard>
-              <HoverCardTrigger asChild>
-                <div className="cursor-pointer transition-transform duration-300 hover:scale-105">
-                  <img 
-                    src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
-                    alt="Community moderation"
-                    className="w-full h-48 md:h-64 object-cover rounded-2xl shadow-lg"
-                  />
-                </div>
-              </HoverCardTrigger>
-              <HoverCardContent className="w-80">
-                <div className="space-y-2">
-                  <h4 className="text-sm font-semibold">Fair Moderation</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Transparent and consistent content moderation that balances freedom with responsibility.
-                  </p>
-                </div>
-              </HoverCardContent>
-            </HoverCard>
-
-            {/* Image 4 */}
-            <HoverCard>
-              <HoverCardTrigger asChild>
-                <div className="cursor-pointer transition-transform duration-300 hover:scale-105">
-                  <img 
-                    src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
-                    alt="Community growth"
-                    className="w-full h-48 md:h-64 object-cover rounded-2xl shadow-lg"
-                  />
-                </div>
-              </HoverCardTrigger>
-              <HoverCardContent className="w-80">
-                <div className="space-y-2">
-                  <h4 className="text-sm font-semibold">Community Growth</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Supporting healthy community growth through clear guidelines and positive engagement.
-                  </p>
-                </div>
-              </HoverCardContent>
-            </HoverCard>
+          {/* Scrollable Image Gallery */}
+          <div className="relative">
+            <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-5xl mx-auto">
+              <CarouselContent className="-ml-2 md:-ml-4">
+                <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="aspect-square">
+                    <img 
+                      src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+                      alt="Community member"
+                      className="w-full h-full object-cover rounded-2xl shadow-lg"
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="aspect-square">
+                    <img 
+                      src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+                      alt="Community safety"
+                      className="w-full h-full object-cover rounded-2xl shadow-lg"
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="aspect-square">
+                    <img 
+                      src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
+                      alt="Community moderation"
+                      className="w-full h-full object-cover rounded-2xl shadow-lg"
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="aspect-square">
+                    <img 
+                      src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
+                      alt="Community growth"
+                      className="w-full h-full object-cover rounded-2xl shadow-lg"
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="aspect-square">
+                    <img 
+                      src="/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png"
+                      alt="Community expression"
+                      className="w-full h-full object-cover rounded-2xl shadow-lg"
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="aspect-square">
+                    <img 
+                      src="/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png"
+                      alt="Community engagement"
+                      className="w-full h-full object-cover rounded-2xl shadow-lg"
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="aspect-square">
+                    <img 
+                      src="https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=400&fit=crop"
+                      alt="Community nature"
+                      className="w-full h-full object-cover rounded-2xl shadow-lg"
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="aspect-square">
+                    <img 
+                      src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop"
+                      alt="Community pets"
+                      className="w-full h-full object-cover rounded-2xl shadow-lg"
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="aspect-square">
+                    <img 
+                      src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&h=400&fit=crop"
+                      alt="Community wildlife"
+                      className="w-full h-full object-cover rounded-2xl shadow-lg"
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="aspect-square">
+                    <img 
+                      src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=400&h=400&fit=crop"
+                      alt="Community landscape"
+                      className="w-full h-full object-cover rounded-2xl shadow-lg"
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="aspect-square">
+                    <img 
+                      src="https://images.unsplash.com/photo-1469474038136-46273834b3fb?w=400&h=400&fit=crop"
+                      alt="Community inspiration"
+                      className="w-full h-full object-cover rounded-2xl shadow-lg"
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="aspect-square">
+                    <img 
+                      src="https://images.unsplash.com/photo-1506744038136-46273f02e42e?w=400&h=400&fit=crop"
+                      alt="Community peace"
+                      className="w-full h-full object-cover rounded-2xl shadow-lg"
+                    />
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
       </section>
