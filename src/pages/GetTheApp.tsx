@@ -739,6 +739,15 @@ const Footer = () => (
 );
 
 const GetTheApp = () => {
+  // Define the company names for the second (gallery) carousel.
+  const companyNames = [
+    "Meta",
+    "Telegram",
+    "Instagram",
+    "TikTok",
+    "Snapchat"
+  ];
+
   return (
     <div className="bg-white text-black flex flex-col min-h-screen relative overflow-hidden">
       {/* Header */}
@@ -763,8 +772,8 @@ const GetTheApp = () => {
       <RegistrationStepsCarousel />
       {/* Inserted start registering section below RegistrationStepsCarousel */}
       <StartRegisteringSection />
-      {/* Removed SecondSecurityFeaturesSection (the four boxes) and replaced it with a second gallery of iPhone mockups */}
-      <RegistrationStepsCarousel />
+      {/* Second gallery of iPhone mockups: pass companies prop */}
+      <RegistrationStepsCarousel companies={companyNames} />
       {/* End of replacement */}
       <ContentReportingSection />
       <YouCanDoItSection />
