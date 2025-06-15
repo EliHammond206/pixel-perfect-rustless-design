@@ -752,42 +752,42 @@ const GetTheApp = () => {
     images: []
   });
 
-  // Replace step numbers with company names
-  const companyNames = [
-    "Meta",
-    "Instagram",
-    "Facebook",
-    "WhatsApp",
-    "Messenger"
+  // Company logo image sources for the gallery (use order to match steps)
+  const companyLogos = [
+    "/lovable-uploads/702ceede-6a53-4806-9336-159f43adf0fb.png", // Meta
+    "/lovable-uploads/2381a1a7-2813-44a9-9fe8-19e647fde23d.png", // TikTok (stand-in for Instagram)
+    "/lovable-uploads/2381a1a7-2813-44a9-9fe8-19e647fde23d.png", // TikTok (placeholder for Facebook)
+    "/lovable-uploads/702ceede-6a53-4806-9336-159f43adf0fb.png", // Meta (placeholder for Messenger)
+    "/lovable-uploads/815240e0-1a22-49ba-9207-3b136561e7aa.png"  // Snapchat (placeholder for WhatsApp)
   ];
 
   const registrationSteps = [
     {
-      company: companyNames[0],
+      // Meta
       title: "Download Rustless",
       description: "Get the app from the App Store or Google Play",
       image: "/lovable-uploads/2aecef10-0caf-4702-8872-8e6db88e12d9.png"
     },
     {
-      company: companyNames[1],
+      // Instagram (Using TikTok logo for now)
       title: "Create Account",
       description: "Sign up with your email or phone number",
       image: "/lovable-uploads/2aecef10-0caf-4702-8872-8e6db88e12d9.png"
     },
     {
-      company: companyNames[2],
+      // Facebook (Using TikTok logo for now)
       title: "Verify Identity",
       description: "Complete our simple verification process",
       image: "/lovable-uploads/2aecef10-0caf-4702-8872-8e6db88e12d9.png"
     },
     {
-      company: companyNames[3],
+      // Messenger (Using Meta logo for now)
       title: "Set Up Profile",
       description: "Add your photo and basic information",
       image: "/lovable-uploads/2aecef10-0caf-4702-8872-8e6db88e12d9.png"
     },
     {
-      company: companyNames[4],
+      // WhatsApp (Using Snapchat logo for now)
       title: "Join Community",
       description: "Start connecting and sharing your voice",
       image: "/lovable-uploads/2aecef10-0caf-4702-8872-8e6db88e12d9.png"
@@ -847,11 +847,16 @@ const GetTheApp = () => {
                 {registrationSteps.map((step, index) => (
                   <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                     <div className="flex flex-col items-center text-center space-y-4">
-                      {/* Company Name Badge (replacing step number) */}
-                      <div className="bg-black text-white rounded-full px-4 py-2 flex items-center justify-center text-sm font-bold mb-2">
-                        {step.company}
+                      {/* Company Logo above iPhone mockup */}
+                      <div className="flex justify-center mb-2 mt-1">
+                        <img
+                          src={companyLogos[index]}
+                          alt={`Company logo for step ${index + 1}`}
+                          className="h-10 md:h-12 max-w-[120px] md:max-w-[160px] object-contain"
+                          draggable={false}
+                        />
                       </div>
-                      
+
                       {/* iPhone Mockup */}
                       <div 
                         className="relative cursor-pointer hover:scale-105 transition-transform duration-300"
@@ -859,7 +864,7 @@ const GetTheApp = () => {
                       >
                         <img 
                           src={step.image}
-                          alt={`${step.title} - Registration Step ${step.company}`}
+                          alt={`${step.title} - Registration Step ${index + 1}`}
                           className="w-48 h-auto mx-auto rounded-3xl shadow-lg"
                         />
                       </div>
