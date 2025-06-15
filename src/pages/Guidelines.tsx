@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import DynamicHashtag from '../components/DynamicHashtag';
@@ -322,7 +321,7 @@ const Guidelines = () => {
                 {galleryImages.map((image, index) => (
                   <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/4">
                     <div 
-                      className="cursor-pointer transition-transform duration-300 hover:scale-105 group"
+                      className="cursor-pointer"
                       onClick={() => handleImageClick(index)}
                     >
                       <div className="relative overflow-hidden rounded-2xl aspect-square">
@@ -331,12 +330,6 @@ const Guidelines = () => {
                           alt={image.title}
                           className="w-full h-full object-cover"
                         />
-                        {/* Hover overlay with only title */}
-                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
-                          <h4 className="text-white text-lg md:text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-4">
-                            {image.title}
-                          </h4>
-                        </div>
                       </div>
                     </div>
                   </CarouselItem>
