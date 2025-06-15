@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import DynamicHashtag from '../components/DynamicHashtag';
@@ -508,16 +507,7 @@ const Guidelines = () => {
         </div>
       </section>
 
-      {/* You Can Do It Section - Reduced spacing */}
-      <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] font-bold text-black">
-            #You Can Do It!
-          </h2>
-        </div>
-      </section>
-
-      {/* Second Safety Measures Section - Duplicated */}
+      {/* Second Safety Measures Section - Updated with shamewall messaging */}
       <section className="py-8 md:py-12 px-4 md:px-8 bg-white relative overflow-hidden">
         {/* Background floating photos for this section - Desktop */}
         <div className="hidden lg:block">
@@ -572,57 +562,64 @@ const Guidelines = () => {
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold text-black leading-tight mb-6 md:mb-8">
-            <div className="mb-2">We've Implemented</div>
-            <div className="mb-2">Maximum Measures</div>
-            <div className="mb-2">To Keep You Safe</div>
-            <div className="mb-2">As Much As We Can</div>
+            <div className="mb-2">We've done everything to ensure</div>
+            <div className="mb-2">taht you will never see</div>
             <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] mt-4">
-              #Unprecedented
+              #shamewall
             </div>
           </h2>
         </div>
       </section>
 
-      {/* Second Security Features Boxes Section - Duplicated */}
+      {/* Second Security Features Boxes Section - Updated with shamewall features */}
       <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {/* E2EE Encrypted Messages */}
+            {/* Bored Views */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🔐</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">E2EE</div>
+              <div className="text-4xl md:text-5xl mb-4">😴</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Bored Views</div>
               <p className="text-gray-700 text-sm md:text-base">
-                End-to-end encrypted messages. Only you and recipient can read them.
+                No more mindless scrolling through unengaging content that wastes your time.
               </p>
             </div>
 
-            {/* Crustless Communication */}
+            {/* Fake Comments */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🦀</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Crustless</div>
+              <div className="text-4xl md:text-5xl mb-4">💬</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Fake Comments</div>
               <p className="text-gray-700 text-sm md:text-base">
-                Communication without shells or barriers, pure and direct connection.
+                Authentic conversations only. No bot-generated or purchased engagement.
               </p>
             </div>
 
-            {/* Decentralized */}
+            {/* Fake Overnight Influencers */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🌐</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Decentralized</div>
+              <div className="text-4xl md:text-5xl mb-4">⭐</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Fake Influencers</div>
               <p className="text-gray-700 text-sm md:text-base">
-                No single point of control. Your data stays distributed and secure.
+                Real creators with genuine followings, not manufactured overnight celebrities.
               </p>
             </div>
 
-            {/* Vote Power */}
+            {/* Toxic Culture */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-4xl md:text-5xl mb-4">🗳️</div>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-2">10% Vote</div>
+              <div className="text-4xl md:text-5xl mb-4">🚫</div>
+              <div className="text-2xl md:text-3xl font-bold text-black mb-2">Toxic Culture</div>
               <p className="text-gray-700 text-sm md:text-base">
-                Every member gets 10% voting power in community decisions and governance.
+                Building a positive community free from harassment and negative behavior.
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* You Can Do It Section - Reduced spacing */}
+      <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h2 className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] font-bold text-black">
+            #You Can Do It!
+          </h2>
         </div>
       </section>
 
