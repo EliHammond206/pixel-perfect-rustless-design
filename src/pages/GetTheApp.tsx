@@ -6,7 +6,6 @@ import ImageModal from '../components/ImageModal';
 import RegistrationStepsCarousel from '../components/RegistrationStepsCarousel';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
 import StartRegisteringSection from '../components/StartRegisteringSection';
-import StartRegisteringIntroSection from '../components/StartRegisteringIntroSection';
 
 // Hero section from Join Us copied for Download page
 const HeroSection = () => (
@@ -301,30 +300,7 @@ const BalanceFreeSpeechSection = () => {
             You won't be able to use your account, register, browse etc from our browser, for security reasons and to prevent stealings of accounts and botted views etc, you can join us only from downloaded app from the official store!
           </p>
         </div>
-
-        {/* ---- Duplicated SQUARED GALLERY inserted here ---- */}
-        <div className="relative mb-8">
-          <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-5xl mx-auto">
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {galleryImages.map((image, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                  <div className="aspect-square">
-                    <img 
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-full object-cover rounded-2xl shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() => handleImageClick(image.src, image.alt)}
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-        </div>
-        {/* ---- End duplicated gallery ---- */}
-
+        
         {/* Updated Title Before Gallery - Changed from #Rustless to security message */}
         <div className="text-center mb-6 md:mb-8">
           <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black leading-tight">
@@ -631,15 +607,23 @@ const SecondSafetyMeasuresSection = () => (
     <div className="max-w-4xl mx-auto text-center relative z-10">
       <h2 className="font-bold text-black leading-tight mb-6 md:mb-8">
         <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
-          Is there's any way out of this?
+          Next part
+        </div>
+        <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
+          Grab the coffee
+        </div>
+        <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
+          and prepare
         </div>
         <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] mt-2 text-primary font-black tracking-tight inline-block">
-          #Nope
+          #Start Registering
         </div>
       </h2>
+      
+      {/* Added explanatory text paragraph */}
       <div className="max-w-4xl mx-auto text-center mb-6 md:mb-8 relative z-10">
         <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
-          We won't pay billions in fines because of you (cause below in that gallery we will upload pictures of fines to discord etc for that they allowed people under 18 on their social networks)
+          Ready to join? Download the app, create your account, and become part of the Rustless community where your voice truly matters!
         </p>
       </div>
     </div>
@@ -755,15 +739,6 @@ const Footer = () => (
 );
 
 const GetTheApp = () => {
-  // Define the company names for the second (gallery) carousel.
-  const companyNames = [
-    "Meta",
-    "Telegram",
-    "Instagram",
-    "TikTok",
-    "Snapchat"
-  ];
-
   return (
     <div className="bg-white text-black flex flex-col min-h-screen relative overflow-hidden">
       {/* Header */}
@@ -785,16 +760,10 @@ const GetTheApp = () => {
       <HeroSection />
       <BalanceFreeSpeechSection />
       <SecondSafetyMeasuresSection />
-
-      {/* Restored missing intro section before the manual tutorial */}
-      <StartRegisteringIntroSection />
-
       <RegistrationStepsCarousel />
       {/* Inserted start registering section below RegistrationStepsCarousel */}
       <StartRegisteringSection />
-      {/* Second gallery of iPhone mockups: pass companies prop */}
-      <RegistrationStepsCarousel companies={companyNames} />
-      {/* End of replacement */}
+      <SecondSecurityFeaturesSection />
       <ContentReportingSection />
       <YouCanDoItSection />
       <MentionsSection />
