@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import DynamicHashtag from '../components/DynamicHashtag';
@@ -266,73 +267,6 @@ const GetTheApp = () => {
           </div>
         </div>
       </div>
-
-      {/* Your Success Our Top Priority Section */}
-      <section className="py-12 md:py-20 px-4 md:px-8 bg-white relative overflow-hidden">
-        {/* Background floating photos for this section - Desktop */}
-        <div className="hidden lg:block">
-          <FloatingPhoto
-            src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
-            size="desktop-round"
-            style={{ left: '10%', top: '20%' }}
-            className=""
-          />
-          
-          <FloatingPhoto
-            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
-            size="desktop-round"
-            style={{ right: '10%', top: '30%' }}
-            className=""
-          />
-        </div>
-
-        {/* Background floating photos - Tablet */}
-        <div className="hidden md:block lg:hidden">
-          <FloatingPhoto
-            src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
-            size="tablet-round"
-            style={{ left: '10%', top: '20%' }}
-            className=""
-          />
-          
-          <FloatingPhoto
-            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
-            size="tablet-round"
-            style={{ right: '10%', top: '30%' }}
-            className=""
-          />
-        </div>
-
-        {/* Background floating photos - Mobile */}
-        <div className="block md:hidden">
-          <FloatingPhoto
-            src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
-            size="mobile-round"
-            style={{ left: '10%', top: '10%' }}
-            className=""
-          />
-          
-          <FloatingPhoto
-            src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
-            size="mobile-round"
-            style={{ right: '10%', top: '15%' }}
-            className=""
-          />
-        </div>
-
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold text-black leading-tight mb-6 md:mb-8">
-            <div className="mb-2">Your Success</div>
-            <div className="mb-2">Our Top Priority</div>
-          </h2>
-          
-          <div className="max-w-3xl mx-auto space-y-4 text-lg md:text-xl lg:text-[22px] font-medium leading-relaxed text-black">
-            <p>At Rustless, your success is what drives us every single day. We've built our platform with one clear mission: to give you the tools, support, and community you need to thrive and achieve your goals.</p>
-            <p>Whether you're building your personal brand, growing your business, or simply connecting with like-minded individuals, we're here to make sure you have everything you need to succeed. Our dedicated team works around the clock to provide you with cutting-edge features, reliable support, and a safe environment where your creativity can flourish.</p>
-            <p>Your journey matters to us, and we're committed to being your partner every step of the way. Together, we'll help you turn your vision into reality and celebrate every milestone along the path to success.</p>
-          </div>
-        </div>
-      </section>
 
       {/* Mentions Section */}
       <section className="text-center py-2 md:py-8 relative z-10 mt-0 sm:mt-4 md:mt-6">
