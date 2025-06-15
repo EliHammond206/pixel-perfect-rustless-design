@@ -395,8 +395,16 @@ const ContentReportingSection = () => {
             Want to join Rustless? Applying is easy! From your account, just navigate to <span className="font-bold">Settings</span>, scroll to the <span className="font-bold">Careers & Opportunities</span> section, and tap <span className="font-bold">Apply to Join</span>. Fill out your details, tell us what makes you awesome, and submit your application directly from there. If you stand out or have that special spark, we’ll reach out!
           </p>
 
-          {/* === HAPPY SECTION before iPhone mockup (kept) === */}
-          <HappySection />
+          {/* === UPDATED: Custom messaging before iPhone mockup === */}
+          <div className="my-5">
+            <div className="text-3xl md:text-5xl font-black mb-1 text-black">
+              Only for truly Rustless.<br />
+              That's how we
+            </div>
+            <div className="text-3xl md:text-6xl font-black text-primary tracking-tight mt-2">
+              #Do It
+            </div>
+          </div>
 
           <div className="flex justify-center my-6">
             <img
@@ -407,8 +415,16 @@ const ContentReportingSection = () => {
             />
           </div>
 
-          {/* === HAPPY SECTION after iPhone mockup (kept) === */}
-          <HappySection />
+          {/* === UPDATED: Custom messaging after iPhone mockup === */}
+          <div className="my-5">
+            <div className="text-2xl md:text-4xl font-black text-black mb-1 leading-tight whitespace-pre-line">
+              No Resume, No CV,<br />
+              No 3 circles of LeetCode
+            </div>
+            <div className="text-2xl md:text-5xl font-black text-primary tracking-tight mt-2">
+              #Forever
+            </div>
+          </div>
 
           <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
             You don’t need referrals or fancy resumes—show us your passion, creativity, and drive. We’re always looking for Rustless souls: designers, devs, creators, and genuinely good people. If you’re the one, our team will spot your application (and yes, we read every single one). Show us why you belong!
@@ -510,16 +526,13 @@ const SecondSafetyMeasuresSection = () => (
     <div className="max-w-4xl mx-auto text-center relative z-10">
       <h2 className="font-bold text-black leading-tight mb-6 md:mb-8">
         <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
-          A place where
+          Only for truly Rustless.
         </div>
         <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
-          we want to
-        </div>
-        <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
-          see you
+          That's how we
         </div>
         <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] mt-2 text-primary font-black tracking-tight inline-block">
-          #Happy
+          #Do It
         </div>
       </h2>
     </div>
