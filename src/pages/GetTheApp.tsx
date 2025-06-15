@@ -798,7 +798,7 @@ const GetTheApp = () => {
       <StartRegisteringSection />
       {/* Second gallery of iPhone mockups: pass companies prop */}
       <RegistrationStepsCarousel companies={companyNames} />
-      {/* End of replacement */}
+      {/* Removed duplicated wallet verification section and wallet tutorial carousel below company gallery as requested */}
       <ContentReportingSection />
       <YouCanDoItSection />
       <MentionsSection />
