@@ -792,13 +792,12 @@ const GetTheApp = () => {
       <HeroSection />
       <BalanceFreeSpeechSection />
       <SecondSafetyMeasuresSection />
-      {/* Keep FIRST carousel of steps; this one shows generic registration steps */}
       <RegistrationStepsCarousel />
       {/* Inserted start registering section below RegistrationStepsCarousel */}
       <StartRegisteringSection />
       {/* Second gallery of iPhone mockups: pass companies prop */}
       <RegistrationStepsCarousel companies={companyNames} />
-      {/* Removed duplicated wallet verification section and wallet tutorial carousel below company gallery as requested */}
+      {/* End of replacement */}
       <ContentReportingSection />
       <YouCanDoItSection />
       <MentionsSection />
