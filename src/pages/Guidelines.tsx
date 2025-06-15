@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import DynamicHashtag from '../components/DynamicHashtag';
@@ -320,25 +319,22 @@ const Guidelines = () => {
             <Carousel className="w-full">
               <CarouselContent className="-ml-2 md:-ml-4">
                 {galleryImages.map((image, index) => (
-                  <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/4">
                     <div 
-                      className="cursor-pointer transition-transform duration-300 hover:scale-105"
+                      className="cursor-pointer transition-transform duration-300 hover:scale-105 group"
                       onClick={() => handleImageClick(index)}
                     >
-                      <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                      <div className="relative overflow-hidden rounded-2xl">
                         <img 
                           src={image.src}
                           alt={image.title}
                           className="w-full h-64 md:h-80 object-cover"
                         />
-                        {/* Dark overlay for text readability */}
-                        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-                        {/* Text overlay */}
-                        <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
-                          <h4 className="text-white text-lg md:text-xl font-bold mb-2">{image.title}</h4>
-                          <p className="text-white text-sm md:text-base opacity-90 leading-relaxed">
-                            {image.description}
-                          </p>
+                        {/* Hover overlay with only title */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                          <h4 className="text-white text-lg md:text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-4">
+                            {image.title}
+                          </h4>
                         </div>
                       </div>
                     </div>
