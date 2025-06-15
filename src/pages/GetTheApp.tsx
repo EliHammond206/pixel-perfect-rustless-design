@@ -792,6 +792,7 @@ const GetTheApp = () => {
       <HeroSection />
       <BalanceFreeSpeechSection />
       <SecondSafetyMeasuresSection />
+      {/* Keep FIRST carousel of steps; this one shows generic registration steps */}
       <RegistrationStepsCarousel />
       {/* Inserted start registering section below RegistrationStepsCarousel */}
       <StartRegisteringSection />
