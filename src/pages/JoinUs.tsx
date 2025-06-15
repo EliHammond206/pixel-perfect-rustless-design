@@ -435,13 +435,13 @@ const ContentReportingSection = () => {
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <h2 className="font-bold text-black leading-tight mb-6 md:mb-8">
           <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
-            We score High
+            No Resume, No Cv
           </div>
           <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
-            With truly
+            No Lettcode
           </div>
           <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] mt-2 text-primary font-black tracking-tight inline-block">
-            #Rustless
+            #Forever
           </div>
         </h2>
       </div>
@@ -462,8 +462,18 @@ const ContentReportingSection = () => {
             Want to join Rustless? Applying is easy! From your account, just navigate to <span className="font-bold">Settings</span>, scroll to the <span className="font-bold">Careers & Opportunities</span> section, and tap <span className="font-bold">Apply to Join</span>. Fill out your details, tell us what makes you awesome, and submit your application directly from there. If you stand out or have that special spark, we’ll reach out!
           </p>
 
-          {/* === HAPPY SECTION before iPhone mockup (updated) === */}
-          <HappySection />
+          {/* === TEXT ABOVE IPHONE MOCKUP (updated per request) === */}
+          <div className="font-bold text-black leading-tight mb-6 md:mb-8">
+            <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
+              No Resume, No Cv
+            </div>
+            <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">
+              No Lettcode
+            </div>
+            <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] mt-2 text-primary font-black tracking-tight inline-block">
+              #Forever
+            </div>
+          </div>
 
           <div className="flex justify-center my-6">
             <img
