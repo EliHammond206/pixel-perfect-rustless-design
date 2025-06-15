@@ -6,6 +6,7 @@ import ImageModal from '../components/ImageModal';
 import RegistrationStepsCarousel from '../components/RegistrationStepsCarousel';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
 import StartRegisteringSection from '../components/StartRegisteringSection';
+import StartRegisteringIntroSection from '../components/StartRegisteringIntroSection';
 
 // Hero section from Join Us copied for Download page
 const HeroSection = () => (
@@ -784,6 +785,10 @@ const GetTheApp = () => {
       <HeroSection />
       <BalanceFreeSpeechSection />
       <SecondSafetyMeasuresSection />
+
+      {/* Restored missing intro section before the manual tutorial */}
+      <StartRegisteringIntroSection />
+
       <RegistrationStepsCarousel />
       {/* Inserted start registering section below RegistrationStepsCarousel */}
       <StartRegisteringSection />
