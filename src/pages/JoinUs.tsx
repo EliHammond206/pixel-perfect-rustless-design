@@ -221,7 +221,7 @@ const HeroSection = () => (
       <h1 className="text-4xl md:text-7xl lg:text-8xl xl:text-[96px] font-bold text-black leading-tight mb-4 sm:mb-6">
         <div className="mb-1">Welcome To</div>
         <div className="mb-1">The Family</div>
-        <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px]">
+        <div className="text-3xl">
           <DynamicHashtag isWhiteTheme={true} />
         </div>
       </h1>
@@ -587,7 +587,7 @@ const SafetyMeasuresSection = () => (
         </div>
       </h2>
     </div>
-    {/* PER USER REQUEST -- keep original box grid, just update their content! */}
+    {/* ONLY THE ORIGINAL 4 GRAYSCALE BOXES REMAIN! */}
     <div className="max-w-6xl mx-auto mt-10">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
         {/* Free Global Travel */}
