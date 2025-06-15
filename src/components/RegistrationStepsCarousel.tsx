@@ -14,6 +14,16 @@ const RegistrationStepsCarousel = () => {
     images: []
   });
 
+  const [walletModalState, setWalletModalState] = useState<{
+    isOpen: boolean;
+    currentIndex: number;
+    images: Array<{ src: string; alt: string }>;
+  }>({
+    isOpen: false,
+    currentIndex: 0,
+    images: []
+  });
+
   // Registration steps with iPhone mockups
   const registrationSteps = [
     {
@@ -48,6 +58,34 @@ const RegistrationStepsCarousel = () => {
     }
   ];
 
+  // Wallet tutorial steps
+  const walletTutorialSteps = [
+    {
+      step: 1,
+      title: "Download Wallet App",
+      description: "Install a compatible crypto wallet from your app store",
+      image: "/lovable-uploads/2aecef10-0caf-4702-8872-8e6db88e12d9.png"
+    },
+    {
+      step: 2,
+      title: "Connect to Rustless",
+      description: "Link your wallet to your Rustless account safely",
+      image: "/lovable-uploads/2aecef10-0caf-4702-8872-8e6db88e12d9.png"
+    },
+    {
+      step: 3,
+      title: "Age Verification",
+      description: "Complete the secure age verification process",
+      image: "/lovable-uploads/2aecef10-0caf-4702-8872-8e6db88e12d9.png"
+    },
+    {
+      step: 4,
+      title: "Data Confirmation",
+      description: "Review what information is shared with Rustless",
+      image: "/lovable-uploads/2aecef10-0caf-4702-8872-8e6db88e12d9.png"
+    }
+  ];
+
   const handleImageClick = (src: string, alt: string) => {
     const images = registrationSteps.map(step => ({ src: step.image, alt: step.title }));
     const imageIndex = images.findIndex(img => img.src === src);
@@ -58,12 +96,30 @@ const RegistrationStepsCarousel = () => {
     });
   };
 
+  const handleWalletImageClick = (src: string, alt: string) => {
+    const images = walletTutorialSteps.map(step => ({ src: step.image, alt: step.title }));
+    const imageIndex = images.findIndex(img => img.src === src);
+    setWalletModalState({
+      isOpen: true,
+      currentIndex: imageIndex,
+      images: images
+    });
+  };
+
   const closeModal = () => {
     setModalState(prev => ({ ...prev, isOpen: false }));
   };
 
+  const closeWalletModal = () => {
+    setWalletModalState(prev => ({ ...prev, isOpen: false }));
+  };
+
   const handleNavigate = (index: number) => {
     setModalState(prev => ({ ...prev, currentIndex: index }));
+  };
+
+  const handleWalletNavigate = (index: number) => {
+    setWalletModalState(prev => ({ ...prev, currentIndex: index }));
   };
 
   return (
@@ -114,14 +170,85 @@ const RegistrationStepsCarousel = () => {
         {/* Title and Text Below Carousel */}
         <div className="text-center mt-8 md:mt-12">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black mb-6 md:mb-8">
-            <div>Registration Made</div>
-            <div className="text-primary font-black">#Simple</div>
+            <div>Now once you registered and created</div>
+            <div>your account you've 5 days to</div>
+            <div>connect your wallet to</div>
+            <div className="text-primary font-black">#Prove Your Age</div>
           </h2>
           
           <div className="max-w-4xl mx-auto">
             <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
-              Getting started with Rustless is incredibly easy. Follow these simple steps to join our community and start sharing your voice with the world.
+              We require age verification to ensure a safe environment for all users and comply with global regulations. By connecting your wallet, we can verify your age securely without storing sensitive personal information. This process protects minors and creates a trusted community where everyone can share their voice safely.
             </p>
+          </div>
+        </div>
+
+        {/* Wallet Tutorial Section */}
+        <div className="mt-12 md:mt-16">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black mb-6 md:mb-8">
+              <div>How to Connect Your Wallet</div>
+              <div className="text-primary font-black">#Step by Step</div>
+            </h2>
+            
+            <div className="max-w-4xl mx-auto">
+              <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold mb-6">
+                Follow these simple steps to download a compatible wallet and connect it to your Rustless account for age verification.
+              </p>
+              
+              <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-left">
+                <h3 className="text-lg md:text-xl font-bold text-black mb-4">What Information Do We Access?</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• <strong>Age verification data only</strong> - We only access information needed to confirm you're over 18</li>
+                  <li>• <strong>No financial information</strong> - We cannot see your wallet balance or transaction history</li>
+                  <li>• <strong>No personal details</strong> - Your name, address, and other personal data remain private</li>
+                  <li>• <strong>Temporary access</strong> - Connection is only active during verification process</li>
+                  <li>• <strong>Encrypted & secure</strong> - All data transmission is fully encrypted and protected</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Wallet Tutorial Carousel */}
+          <div className="relative">
+            <Carousel opts={{ align: "center", loop: true }} className="w-full max-w-5xl mx-auto">
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {walletTutorialSteps.map((step, index) => (
+                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                    <div className="flex flex-col items-center text-center space-y-4">
+                      {/* Step Number Badge */}
+                      <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mb-2">
+                        {step.step}
+                      </div>
+                      
+                      {/* iPhone Mockup */}
+                      <div 
+                        className="relative cursor-pointer hover:scale-105 transition-transform duration-300"
+                        onClick={() => handleWalletImageClick(step.image, step.title)}
+                      >
+                        <img 
+                          src={step.image}
+                          alt={`${step.title} - Wallet Step ${step.step}`}
+                          className="w-48 h-auto mx-auto rounded-3xl shadow-lg"
+                        />
+                      </div>
+                      
+                      {/* Step Info */}
+                      <div className="space-y-2 max-w-xs">
+                        <h3 className="text-lg md:text-xl font-bold text-black">
+                          {step.title}
+                        </h3>
+                        <p className="text-gray-600 text-sm md:text-base">
+                          {step.description}
+                        </p>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
 
@@ -131,6 +258,14 @@ const RegistrationStepsCarousel = () => {
           isOpen={modalState.isOpen}
           onClose={closeModal}
           onNavigate={handleNavigate}
+        />
+
+        <ImageModal
+          images={walletModalState.images}
+          currentIndex={walletModalState.currentIndex}
+          isOpen={walletModalState.isOpen}
+          onClose={closeWalletModal}
+          onNavigate={handleWalletNavigate}
         />
       </div>
     </section>
