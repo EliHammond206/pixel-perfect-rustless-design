@@ -168,8 +168,8 @@ const HeroSection = () => (
 
       <div className="text-center relative z-10 mb-8">
         <h1 className="text-4xl font-bold text-black leading-tight mb-4">
-          <div className="mb-1">Welcome To</div>
-          <div className="mb-1">The Family</div>
+          <div className="mb-1">Get Started</div>
+          <div className="mb-1">With Rustless</div>
           {/* Increase hashtag size on mobile */}
           <div className="text-4xl font-black mt-1">
             <DynamicHashtag isWhiteTheme={true} />
@@ -221,8 +221,8 @@ const HeroSection = () => (
     {/* Main Content - Desktop and Tablet */}
     <div className="text-center relative z-10 hidden md:block mt-8 sm:mt-8 md:mt-0">
       <h1 className="text-4xl md:text-7xl lg:text-8xl xl:text-[96px] font-bold text-black leading-tight mb-4 sm:mb-6">
-        <div className="mb-1">Welcome To</div>
-        <div className="mb-1">The Family</div>
+        <div className="mb-1">Get Started</div>
+        <div className="mb-1">With Rustless</div>
         <div className="text-5xl md:text-7xl font-black mt-2">
           <DynamicHashtag isWhiteTheme={true} />
         </div>
