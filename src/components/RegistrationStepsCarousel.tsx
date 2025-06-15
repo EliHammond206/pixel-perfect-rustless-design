@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from './ui/carousel';
 import ImageModal from './ImageModal';
@@ -132,9 +133,27 @@ const RegistrationStepsCarousel: React.FC<RegistrationStepsCarouselProps> = ({ c
         {/* iPhone Mockups Carousel */}
         <div className="relative">
           <Carousel opts={{ align: "center", loop: true }} className="w-full max-w-5xl mx-auto">
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent
+              className={`
+                -ml-2 md:-ml-4
+                flex-nowrap
+                overflow-x-auto
+                scrollbar-hide
+                touch-pan-x
+                [&::-webkit-scrollbar]:hidden
+              `}
+              style={{ touchAction: "pan-x" }}
+            >
               {registrationSteps.map((step, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                <CarouselItem
+                  key={index}
+                  className={`
+                    pl-2 md:pl-4
+                    basis-[90vw] sm:basis-1/2 lg:basis-1/3
+                    max-w-[95vw] sm:max-w-none
+                  `}
+                  style={{ scrollSnapAlign: "center" }}
+                >
                   <div className="flex flex-col items-center text-center space-y-4">
                     {/* Show company name as plain text if provided, else show step number with badge */}
                     {companies && companies[index] ? (
@@ -198,9 +217,27 @@ const RegistrationStepsCarousel: React.FC<RegistrationStepsCarouselProps> = ({ c
           
           <div className="relative">
             <Carousel opts={{ align: "center", loop: true }} className="w-full max-w-5xl mx-auto">
-              <CarouselContent className="-ml-2 md:-ml-4">
+              <CarouselContent
+                className={`
+                  -ml-2 md:-ml-4
+                  flex-nowrap
+                  overflow-x-auto
+                  scrollbar-hide
+                  touch-pan-x
+                  [&::-webkit-scrollbar]:hidden
+                `}
+                style={{ touchAction: "pan-x" }}
+              >
                 {walletTutorialSteps.map((step, index) => (
-                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                  <CarouselItem
+                    key={index}
+                    className={`
+                      pl-2 md:pl-4
+                      basis-[90vw] sm:basis-1/2 lg:basis-1/3
+                      max-w-[95vw] sm:max-w-none
+                    `}
+                    style={{ scrollSnapAlign: "center" }}
+                  >
                     <div className="flex flex-col items-center text-center space-y-4">
                       {/* Step Number Badge */}
                       <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mb-2">
