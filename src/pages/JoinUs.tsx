@@ -388,6 +388,13 @@ const ContentReportingSection = () => {
           <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6 font-semibold">
             Want to join Rustless? Applying is easy! From your account, just navigate to <span className="font-bold">Settings</span>, scroll to the <span className="font-bold">Careers & Opportunities</span> section, and tap <span className="font-bold">Apply to Join</span>. Fill out your details, tell us what makes you awesome, and submit your application directly from there. If you stand out or have that special spark, we’ll reach out!
           </p>
+          
+          {/* Add: Subtitle before iPhone mockup */}
+          <div className="mb-5">
+            <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black leading-tight">
+              That&apos;s how we do doit!
+            </h3>
+          </div>
 
           <div className="flex justify-center my-6">
             <img
@@ -396,6 +403,14 @@ const ContentReportingSection = () => {
               className="w-52 sm:w-64 md:w-72 rounded-2xl shadow-xl border border-gray-200"
               style={{ maxWidth: '100%', height: 'auto' }}
             />
+          </div>
+
+          {/* Add: Subtitle after iPhone mockup */}
+          <div className="mb-5">
+            <h3 className="font-bold text-black leading-tight text-xl md:text-3xl lg:text-4xl whitespace-pre-line">
+              We work 24/7 365 days in a year - your job have no deadline and no beginning! {"\n"}
+              <span className="text-primary text-2xl md:text-4xl lg:text-5xl block mt-1">#Only for Rustless</span>
+            </h3>
           </div>
 
           <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
