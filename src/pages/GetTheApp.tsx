@@ -286,9 +286,10 @@ const BalanceFreeSpeechSection = () => {
   return (
     <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        {/* Title updated */}
+        {/* Title updated to two lines */}
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-6 md:mb-8">
-          First of All, Download the app
+          <div>First of All,</div>
+          <div>Download the app</div>
         </h2>
         
         {/* Explanatory Text - Updated to a single short paragraph */}
@@ -298,10 +299,14 @@ const BalanceFreeSpeechSection = () => {
           </p>
         </div>
         
-        {/* Updated Title Before Gallery */}
+        {/* Updated Title Before Gallery - Changed from #Rustless to security message */}
         <div className="text-center mb-6 md:mb-8">
-          <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black">
-            #Rustless
+          <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black leading-tight">
+            <div>We've implemented</div>
+            <div>all security measures and</div>
+            <div>audited our codes by all</div>
+            <div>possible platforms for you to</div>
+            <div className="text-primary font-black">#Stay Safe</div>
           </h3>
         </div>
         
