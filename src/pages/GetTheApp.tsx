@@ -653,50 +653,6 @@ const SecondSafetyMeasuresSection = () => (
   </section>
 );
 
-const SecondSecurityFeaturesSection = () => (
-  <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
-    <div className="max-w-6xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-        {/* Flights */}
-        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-          <div className="text-4xl md:text-5xl mb-4">✈️</div>
-          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Flights</div>
-          <p className="text-gray-700 text-sm md:text-base">
-            Get fully paid international flights—explore the world on us as you build your dream career.
-          </p>
-        </div>
-
-        {/* Uber */}
-        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-          <div className="text-4xl md:text-5xl mb-4">🚗</div>
-          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Uber</div>
-          <p className="text-gray-700 text-sm md:text-base">
-            Enjoy free rides, everywhere. We make your daily commute, events, and adventures safe and easy.
-          </p>
-        </div>
-
-        {/* Wellness */}
-        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-          <div className="text-4xl md:text-5xl mb-4">💸</div>
-          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Wellness</div>
-          <p className="text-gray-700 text-sm md:text-base">
-            Million-dollar+ salaries. 24/7 wellness support. Because your happiness and health are everything to us.
-          </p>
-        </div>
-
-        {/* Perks */}
-        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center">
-          <div className="text-4xl md:text-5xl mb-4">🎉</div>
-          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Perks</div>
-          <p className="text-gray-700 text-sm md:text-base">
-            Free gourmet meals, the latest devices, world-class mentors, and a global network who truly believe you matter.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
 const YouCanDoItSection = () => (
   <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
     <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -762,6 +718,70 @@ const Footer = () => (
 );
 
 const GetTheApp = () => {
+  // ---- iPhone registration steps carousel state START ----
+  const [iphoneModalState, setIphoneModalState] = useState<{
+    isOpen: boolean;
+    currentIndex: number;
+    images: Array<{ src: string; alt: string }>;
+  }>({
+    isOpen: false,
+    currentIndex: 0,
+    images: []
+  });
+
+  // Same registration steps as RegistrationStepsCarousel, for consistency
+  const registrationSteps = [
+    {
+      step: 1,
+      title: "Download Rustless",
+      description: "Get the app from the App Store or Google Play",
+      image: "/lovable-uploads/2aecef10-0caf-4702-8872-8e6db88e12d9.png"
+    },
+    {
+      step: 2,
+      title: "Create Account",
+      description: "Sign up with your email or phone number",
+      image: "/lovable-uploads/2aecef10-0caf-4702-8872-8e6db88e12d9.png"
+    },
+    {
+      step: 3,
+      title: "Verify Identity",
+      description: "Complete our simple verification process",
+      image: "/lovable-uploads/2aecef10-0caf-4702-8872-8e6db88e12d9.png"
+    },
+    {
+      step: 4,
+      title: "Set Up Profile",
+      description: "Add your photo and basic information",
+      image: "/lovable-uploads/2aecef10-0caf-4702-8872-8e6db88e12d9.png"
+    },
+    {
+      step: 5,
+      title: "Join Community",
+      description: "Start connecting and sharing your voice",
+      image: "/lovable-uploads/2aecef10-0caf-4702-8872-8e6db88e12d9.png"
+    }
+  ];
+
+  const handleIphoneImageClick = (src: string, alt: string) => {
+    const images = registrationSteps.map(step => ({ src: step.image, alt: step.title }));
+    const imageIndex = images.findIndex(img => img.src === src);
+    setIphoneModalState({
+      isOpen: true,
+      currentIndex: imageIndex,
+      images: images
+    });
+  };
+
+  const closeIphoneModal = () => {
+    setIphoneModalState(prev => ({ ...prev, isOpen: false }));
+  };
+
+  const handleIphoneNavigate = (index: number) => {
+    setIphoneModalState(prev => ({ ...prev, currentIndex: index }));
+  };
+  // ---- iPhone registration steps carousel state END ----
+
   return (
     <div className="bg-white text-black flex flex-col min-h-screen relative overflow-hidden">
       {/* Header */}
@@ -786,7 +806,61 @@ const GetTheApp = () => {
       <RegistrationStepsCarousel />
       {/* Inserted start registering section below RegistrationStepsCarousel */}
       <StartRegisteringSection />
-      <SecondSecurityFeaturesSection />
+
+      {/* REPLACE SecondSecurityFeaturesSection WITH iPhone Gallery (carousel only) */}
+      <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="relative">
+            <Carousel opts={{ align: "center", loop: true }} className="w-full max-w-5xl mx-auto">
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {registrationSteps.map((step, index) => (
+                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                    <div className="flex flex-col items-center text-center space-y-4">
+                      {/* Step Number Badge */}
+                      <div className="bg-black text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mb-2">
+                        {step.step}
+                      </div>
+                      
+                      {/* iPhone Mockup */}
+                      <div 
+                        className="relative cursor-pointer hover:scale-105 transition-transform duration-300"
+                        onClick={() => handleIphoneImageClick(step.image, step.title)}
+                      >
+                        <img 
+                          src={step.image}
+                          alt={`${step.title} - Registration Step ${step.step}`}
+                          className="w-48 h-auto mx-auto rounded-3xl shadow-lg"
+                        />
+                      </div>
+                      
+                      {/* Step Info */}
+                      <div className="space-y-2 max-w-xs">
+                        <h3 className="text-lg md:text-xl font-bold text-black">
+                          {step.title}
+                        </h3>
+                        <p className="text-gray-600 text-sm md:text-base">
+                          {step.description}
+                        </p>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
+        </div>
+        <ImageModal
+          images={iphoneModalState.images}
+          currentIndex={iphoneModalState.currentIndex}
+          isOpen={iphoneModalState.isOpen}
+          onClose={closeIphoneModal}
+          onNavigate={handleIphoneNavigate}
+        />
+      </section>
+      {/* -- END iPhone Gallery replace -- */}
+
       <ContentReportingSection />
       <YouCanDoItSection />
       <MentionsSection />
