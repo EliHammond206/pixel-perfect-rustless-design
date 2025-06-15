@@ -221,7 +221,7 @@ const HeroSection = () => (
       <h1 className="text-4xl md:text-7xl lg:text-8xl xl:text-[96px] font-bold text-black leading-tight mb-4 sm:mb-6">
         <div className="mb-1">Welcome To</div>
         <div className="mb-1">The Family</div>
-        <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px]">
+        <div className="text-3xl">
           <DynamicHashtag isWhiteTheme={true} />
         </div>
       </h1>
@@ -586,14 +586,44 @@ const SafetyMeasuresSection = () => (
 
     <div className="max-w-4xl mx-auto text-center relative z-10">
       <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold text-black leading-tight mb-6 md:mb-8">
-        <div className="mb-2">We've Implemented</div>
-        <div className="mb-2">Maximum Measures</div>
-        <div className="mb-2">To Keep You Safe</div>
-        <div className="mb-2">As Much As We Can</div>
-        <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] mt-4">
-          #Unprecedented
-        </div>
+        <div className="mb-2">We've done everything for your growth</div>
+        <div className="mb-2">to make our Rustless</div>
+        <div className="mb-2 text-fuchsia-700">#Happy</div>
       </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mt-8">
+        {/* Free Global Travel */}
+        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center flex flex-col items-center">
+          <div className="text-4xl md:text-5xl mb-4">✈️</div>
+          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Free Global Travel</div>
+          <p className="text-gray-700 text-sm md:text-base">
+            Travel anywhere—flights, hotels, and all expenses covered. See the world on us!
+          </p>
+        </div>
+        {/* Full Meals */}
+        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center flex flex-col items-center">
+          <div className="text-4xl md:text-5xl mb-4">🍽️</div>
+          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Full Meals Every Day</div>
+          <p className="text-gray-700 text-sm md:text-base">
+            Enjoy gourmet meals and snacks at work—breakfast, lunch, dinner, all included.
+          </p>
+        </div>
+        {/* New Devices */}
+        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center flex flex-col items-center">
+          <div className="text-4xl md:text-5xl mb-4">💻</div>
+          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Latest Devices</div>
+          <p className="text-gray-700 text-sm md:text-base">
+            Get new laptops, phones, and the latest tech gear always at your fingertips.
+          </p>
+        </div>
+        {/* Wellness Support */}
+        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 text-center flex flex-col items-center">
+          <div className="text-4xl md:text-5xl mb-4">🧘‍♀️</div>
+          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Wellbeing & Wellness</div>
+          <p className="text-gray-700 text-sm md:text-base">
+            Access to therapy, gym memberships, meditation, and holistic wellness support.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 );
