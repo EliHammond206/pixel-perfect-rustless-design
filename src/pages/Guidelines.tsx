@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import DynamicHashtag from '../components/DynamicHashtag';
@@ -1060,17 +1059,17 @@ const Guidelines = () => {
       {/* Second Security Features Boxes Section - Updated with shamewall features */}
       <SecondSecurityFeaturesSection />
 
-      {/* NEW: Third Safety Measures Section - For moderation stats */}
-      <ThirdSafetyMeasuresSection />
-
-      {/* NEW: Moderation Statistics Section */}
-      <ModerationStatsSection />
-
       {/* FIRST DUPLICATE: Content Reporting Section */}
       <ContentReportingSection />
 
       {/* SECOND DUPLICATE: Social Network Fines Section */}
       <SocialNetworkFinesSection />
+
+      {/* MOVED TO END: Third Safety Measures Section - For moderation stats */}
+      <ThirdSafetyMeasuresSection />
+
+      {/* MOVED TO END: Moderation Statistics Section */}
+      <ModerationStatsSection />
 
       {/* You Can Do It Section */}
       <YouCanDoItSection />
