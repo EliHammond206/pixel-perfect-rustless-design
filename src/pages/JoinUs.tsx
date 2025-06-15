@@ -586,14 +586,48 @@ const SafetyMeasuresSection = () => (
 
     <div className="max-w-4xl mx-auto text-center relative z-10">
       <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold text-black leading-tight mb-6 md:mb-8">
-        <div className="mb-2">We've Implemented</div>
-        <div className="mb-2">Maximum Measures</div>
-        <div className="mb-2">To Keep You Safe</div>
-        <div className="mb-2">As Much As We Can</div>
+        <div className="mb-2">We've done everything for you to be</div>
         <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] mt-4">
-          #Unprecedented
+          #Happy
         </div>
       </h2>
+    </div>
+    {/* NEW - Perks Boxes */}
+    <div className="max-w-6xl mx-auto mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        {/* Free Global Travel */}
+        <div className="bg-indigo-50 border border-indigo-200 rounded-2xl p-6 md:p-8 text-center shadow">
+          <div className="text-4xl md:text-5xl mb-4">✈️</div>
+          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Free Global Travel</div>
+          <p className="text-gray-700 text-sm md:text-base">
+            Unlimited free flights and Uber rides—on us, wherever your journey takes you.
+          </p>
+        </div>
+        {/* Newest Devices */}
+        <div className="bg-pink-50 border border-pink-200 rounded-2xl p-6 md:p-8 text-center shadow">
+          <div className="text-4xl md:text-5xl mb-4">📱</div>
+          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Latest Devices</div>
+          <p className="text-gray-700 text-sm md:text-base">
+            Always work with the newest MacBooks, iPhones, and pro gear—yours to keep.
+          </p>
+        </div>
+        {/* Full Freedom */}
+        <div className="bg-green-50 border border-green-200 rounded-2xl p-6 md:p-8 text-center shadow">
+          <div className="text-4xl md:text-5xl mb-4">🕊️</div>
+          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Full Freedom</div>
+          <p className="text-gray-700 text-sm md:text-base">
+            Set your own schedule, work from anywhere, and grow on your terms.
+          </p>
+        </div>
+        {/* Gourmet Meals */}
+        <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-6 md:p-8 text-center shadow">
+          <div className="text-4xl md:text-5xl mb-4">🍽️</div>
+          <div className="text-2xl md:text-3xl font-bold text-black mb-2">Gourmet Meals</div>
+          <p className="text-gray-700 text-sm md:text-base">
+            Enjoy daily chef-prepared breakfasts, lunches, and dinners—always on the house.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 );
