@@ -167,8 +167,8 @@ const HeroSection = () => (
 
       <div className="text-center relative z-10 mb-8">
         <h1 className="text-4xl font-bold text-black leading-tight mb-4">
-          <div className="mb-1">Community</div>
-          <div className="mb-1">Guidelines</div>
+          <div className="mb-1">Welcome To</div>
+          <div className="mb-1">The Family</div>
           <div className="text-3xl">
             <DynamicHashtag isWhiteTheme={true} />
           </div>
@@ -177,7 +177,7 @@ const HeroSection = () => (
         {/* Business Button - Mobile */}
         <div className="flex justify-center mt-6">
           <button className="bg-black text-white px-4 py-2 rounded-full text-sm font-medium hover:opacity-80 transition-opacity">
-            Decentralised Ecosystem ↗
+            We You Matter
           </button>
         </div>
       </div>
@@ -219,8 +219,8 @@ const HeroSection = () => (
     {/* Main Content - Desktop and Tablet */}
     <div className="text-center relative z-10 hidden md:block mt-8 sm:mt-8 md:mt-0">
       <h1 className="text-4xl md:text-7xl lg:text-8xl xl:text-[96px] font-bold text-black leading-tight mb-4 sm:mb-6">
-        <div className="mb-1">Community</div>
-        <div className="mb-1">Guidelines</div>
+        <div className="mb-1">Welcome To</div>
+        <div className="mb-1">The Family</div>
         <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px]">
           <DynamicHashtag isWhiteTheme={true} />
         </div>
@@ -229,7 +229,7 @@ const HeroSection = () => (
       {/* Business Button - Desktop/Tablet */}
       <div className="flex justify-center mt-6 sm:mt-8">
         <button className="bg-black text-white px-6 py-3 rounded-full text-lg font-medium hover:opacity-80 transition-opacity">
-          Decentralised Ecosystem ↗
+          We You Matter
         </button>
       </div>
     </div>
@@ -283,23 +283,23 @@ const BalanceFreeSpeechSection = () => {
     <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-6 md:mb-8">
-          Balance Free Speech<br />With Moderation
+          Whoever you are<br />wherever you are
         </h2>
         
-        {/* Explanatory Text - Same consistent gap */}
+        {/* Explanatory Text - Updated! */}
         <div className="max-w-4xl mx-auto text-center mb-6 md:mb-8">
           <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6 font-semibold">
-            At Rustless, we believe in creating a space where authentic expression thrives while maintaining a safe and respectful environment for everyone. Our community guidelines are designed to protect free speech while preventing harmful content that could damage our vibrant ecosystem.
+            At Rustless, your happiness comes first—and we prove it with action. Join us and get access to exclusive perks: free Uber rides anywhere, global flights on us, competitive salaries in the millions, powerful networking opportunities, best-in-class wellness support, and career advancement only true industry disruptors can offer. We invest in our people because we want you to thrive and belong.
           </p>
           <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
-            We use a combination of AI-powered moderation tools and human review to ensure content meets our standards. Our approach focuses on transparency, fairness, and giving creators the freedom to express themselves within reasonable boundaries that protect our community.
+            Whether you’re a creator, leader, innovator, dreamer, or anything in between, we want to see you shine here. We don't just say we care, we put resources behind your ambitions, your happiness, and your journey—wherever you come from and wherever you’re going. Don’t settle for less—join Rustless and build the life you deserve.
           </p>
         </div>
         
-        {/* New Title Before Gallery - Same consistent gap */}
+        {/* Updated Title Before Gallery */}
         <div className="text-center mb-6 md:mb-8">
           <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black">
-            A Hello From Your Government
+            #Rustless
           </h3>
         </div>
         
