@@ -729,34 +729,42 @@ const GetTheApp = () => {
     images: []
   });
 
-  // Same registration steps as RegistrationStepsCarousel, for consistency
+  // Replace step numbers with company names
+  const companyNames = [
+    "Meta",
+    "Instagram",
+    "Facebook",
+    "WhatsApp",
+    "Messenger"
+  ];
+
   const registrationSteps = [
     {
-      step: 1,
+      company: companyNames[0],
       title: "Download Rustless",
       description: "Get the app from the App Store or Google Play",
       image: "/lovable-uploads/2aecef10-0caf-4702-8872-8e6db88e12d9.png"
     },
     {
-      step: 2,
+      company: companyNames[1],
       title: "Create Account",
       description: "Sign up with your email or phone number",
       image: "/lovable-uploads/2aecef10-0caf-4702-8872-8e6db88e12d9.png"
     },
     {
-      step: 3,
+      company: companyNames[2],
       title: "Verify Identity",
       description: "Complete our simple verification process",
       image: "/lovable-uploads/2aecef10-0caf-4702-8872-8e6db88e12d9.png"
     },
     {
-      step: 4,
+      company: companyNames[3],
       title: "Set Up Profile",
       description: "Add your photo and basic information",
       image: "/lovable-uploads/2aecef10-0caf-4702-8872-8e6db88e12d9.png"
     },
     {
-      step: 5,
+      company: companyNames[4],
       title: "Join Community",
       description: "Start connecting and sharing your voice",
       image: "/lovable-uploads/2aecef10-0caf-4702-8872-8e6db88e12d9.png"
@@ -816,9 +824,9 @@ const GetTheApp = () => {
                 {registrationSteps.map((step, index) => (
                   <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                     <div className="flex flex-col items-center text-center space-y-4">
-                      {/* Step Number Badge */}
-                      <div className="bg-black text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mb-2">
-                        {step.step}
+                      {/* Company Name Badge (replacing step number) */}
+                      <div className="bg-black text-white rounded-full px-4 py-2 flex items-center justify-center text-sm font-bold mb-2">
+                        {step.company}
                       </div>
                       
                       {/* iPhone Mockup */}
@@ -828,7 +836,7 @@ const GetTheApp = () => {
                       >
                         <img 
                           src={step.image}
-                          alt={`${step.title} - Registration Step ${step.step}`}
+                          alt={`${step.title} - Registration Step ${step.company}`}
                           className="w-48 h-auto mx-auto rounded-3xl shadow-lg"
                         />
                       </div>
