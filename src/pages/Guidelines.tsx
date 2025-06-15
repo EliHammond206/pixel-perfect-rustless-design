@@ -453,12 +453,12 @@ const Guidelines = () => {
         </div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold text-black leading-tight mb-6 md:mb-8">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black leading-tight mb-6 md:mb-8">
             <div className="mb-2">We've Implemented</div>
             <div className="mb-2">Maximum Measures</div>
             <div className="mb-2">To Keep You Safe</div>
             <div className="mb-2">As Much As We Can</div>
-            <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] mt-4">
+            <div className="text-2xl md:text-4xl lg:text-5xl mt-4">
               #Unprecedented
             </div>
           </h2>
