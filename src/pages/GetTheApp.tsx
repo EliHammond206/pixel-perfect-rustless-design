@@ -852,16 +852,11 @@ const GetTheApp = () => {
                         <img
                           src={companyLogos[index]}
                           alt={`Company logo for step ${index + 1}`}
-                          className={
-                            // Smaller size for Meta (0) and TikTok (1, 2) logos
-                            index === 0 || index === 1 || index === 2
-                              ? "h-7 md:h-8 max-w-[72px] md:max-w-[100px] object-contain"
-                              : "h-10 md:h-12 max-w-[120px] md:max-w-[160px] object-contain"
-                          }
+                          className="h-10 md:h-12 max-w-[120px] md:max-w-[160px] object-contain"
                           draggable={false}
                         />
                       </div>
-                      
+
                       {/* iPhone Mockup */}
                       <div 
                         className="relative cursor-pointer hover:scale-105 transition-transform duration-300"
