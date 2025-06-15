@@ -1,11 +1,54 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import DynamicHashtag from '../components/DynamicHashtag';
 import FloatingPhoto from '../components/FloatingPhoto';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '../components/ui/hover-card';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
+import { Dialog, DialogContent, DialogTrigger } from '../components/ui/dialog';
 
 const Guidelines = () => {
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const galleryImages = [
+    {
+      src: "/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png",
+      title: "Authentic Expression",
+      description: "We encourage genuine self-expression while maintaining respect for our diverse community."
+    },
+    {
+      src: "/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png",
+      title: "Safe Environment",
+      description: "Creating a secure space where everyone can participate without fear of harassment or harm."
+    },
+    {
+      src: "/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png",
+      title: "Fair Moderation",
+      description: "Transparent and consistent content moderation that balances freedom with responsibility."
+    },
+    {
+      src: "/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png",
+      title: "Community Growth",
+      description: "Supporting healthy community growth through clear guidelines and positive engagement."
+    },
+    {
+      src: "/lovable-uploads/e9e6b1c7-1505-461a-990d-b8245b537a53.png",
+      title: "Creative Freedom",
+      description: "Empowering creators to share their unique perspectives while respecting community standards."
+    },
+    {
+      src: "/lovable-uploads/2e42b2e2-8671-42c0-8ba1-982d15e5fbf2.png",
+      title: "Inclusive Culture",
+      description: "Building an inclusive environment where all voices are heard and valued equally."
+    }
+  ];
+
+  const handleImageClick = (index: number) => {
+    setSelectedImageIndex(index);
+    setIsModalOpen(true);
+  };
+
   return (
     <div className="bg-white text-black flex flex-col min-h-screen relative overflow-hidden">
       {/* Header */}
@@ -272,92 +315,79 @@ const Guidelines = () => {
             </p>
           </div>
           
-          {/* Image Gallery with Hover Effects */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-            {/* Image 1 */}
-            <HoverCard>
-              <HoverCardTrigger asChild>
-                <div className="cursor-pointer transition-transform duration-300 hover:scale-105">
-                  <img 
-                    src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
-                    alt="Community member"
-                    className="w-full h-48 md:h-64 object-cover rounded-2xl shadow-lg"
-                  />
-                </div>
-              </HoverCardTrigger>
-              <HoverCardContent className="w-80">
-                <div className="space-y-2">
-                  <h4 className="text-sm font-semibold">Authentic Expression</h4>
-                  <p className="text-sm text-muted-foreground">
-                    We encourage genuine self-expression while maintaining respect for our diverse community.
-                  </p>
-                </div>
-              </HoverCardContent>
-            </HoverCard>
-
-            {/* Image 2 */}
-            <HoverCard>
-              <HoverCardTrigger asChild>
-                <div className="cursor-pointer transition-transform duration-300 hover:scale-105">
-                  <img 
-                    src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
-                    alt="Community safety"
-                    className="w-full h-48 md:h-64 object-cover rounded-2xl shadow-lg"
-                  />
-                </div>
-              </HoverCardTrigger>
-              <HoverCardContent className="w-80">
-                <div className="space-y-2">
-                  <h4 className="text-sm font-semibold">Safe Environment</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Creating a secure space where everyone can participate without fear of harassment or harm.
-                  </p>
-                </div>
-              </HoverCardContent>
-            </HoverCard>
-
-            {/* Image 3 */}
-            <HoverCard>
-              <HoverCardTrigger asChild>
-                <div className="cursor-pointer transition-transform duration-300 hover:scale-105">
-                  <img 
-                    src="/lovable-uploads/d501b21d-28ca-414b-a3c7-b882b8a23b68.png"
-                    alt="Community moderation"
-                    className="w-full h-48 md:h-64 object-cover rounded-2xl shadow-lg"
-                  />
-                </div>
-              </HoverCardTrigger>
-              <HoverCardContent className="w-80">
-                <div className="space-y-2">
-                  <h4 className="text-sm font-semibold">Fair Moderation</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Transparent and consistent content moderation that balances freedom with responsibility.
-                  </p>
-                </div>
-              </HoverCardContent>
-            </HoverCard>
-
-            {/* Image 4 */}
-            <HoverCard>
-              <HoverCardTrigger asChild>
-                <div className="cursor-pointer transition-transform duration-300 hover:scale-105">
-                  <img 
-                    src="/lovable-uploads/eeaf3c37-5a5c-4445-b465-f899f46cb853.png"
-                    alt="Community growth"
-                    className="w-full h-48 md:h-64 object-cover rounded-2xl shadow-lg"
-                  />
-                </div>
-              </HoverCardTrigger>
-              <HoverCardContent className="w-80">
-                <div className="space-y-2">
-                  <h4 className="text-sm font-semibold">Community Growth</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Supporting healthy community growth through clear guidelines and positive engagement.
-                  </p>
-                </div>
-              </HoverCardContent>
-            </HoverCard>
+          {/* Scrollable Image Gallery */}
+          <div className="relative max-w-5xl mx-auto">
+            <Carousel className="w-full">
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {galleryImages.map((image, index) => (
+                  <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                    <div 
+                      className="cursor-pointer transition-transform duration-300 hover:scale-105"
+                      onClick={() => handleImageClick(index)}
+                    >
+                      <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                        <img 
+                          src={image.src}
+                          alt={image.title}
+                          className="w-full h-64 md:h-80 object-cover"
+                        />
+                        {/* Dark overlay for text readability */}
+                        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                        {/* Text overlay */}
+                        <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+                          <h4 className="text-white text-lg md:text-xl font-bold mb-2">{image.title}</h4>
+                          <p className="text-white text-sm md:text-base opacity-90 leading-relaxed">
+                            {image.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex" />
+              <CarouselNext className="hidden md:flex" />
+            </Carousel>
           </div>
+
+          {/* Modal for enlarged images */}
+          <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+            <DialogContent className="max-w-4xl w-full h-[80vh] p-0 bg-black border-none">
+              <div className="relative w-full h-full">
+                <Carousel className="w-full h-full">
+                  <CarouselContent className="h-full">
+                    {galleryImages.map((image, index) => (
+                      <CarouselItem key={index} className="h-full flex items-center justify-center">
+                        <div className="relative w-full h-full flex items-center justify-center">
+                          <img 
+                            src={image.src}
+                            alt={image.title}
+                            className="max-w-full max-h-full object-contain"
+                          />
+                          {/* Text overlay for modal */}
+                          <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent">
+                            <h4 className="text-white text-2xl font-bold mb-2">{image.title}</h4>
+                            <p className="text-white text-lg opacity-90 leading-relaxed">
+                              {image.description}
+                            </p>
+                          </div>
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+                  <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+                </Carousel>
+                {/* Close button */}
+                <button 
+                  onClick={() => setIsModalOpen(false)}
+                  className="absolute top-4 right-4 text-white hover:text-gray-300 text-2xl font-bold z-50"
+                >
+                  ×
+                </button>
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
       </section>
 
