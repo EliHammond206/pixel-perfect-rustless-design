@@ -378,9 +378,6 @@ const ContentReportingSection = () => {
     setModalState(prev => ({ ...prev, currentIndex: index }));
   };
 
-  // The SecondSafetyMeasuresSection, reused for "A place where we want to see you #Happy"
-  const HappySection = SecondSafetyMeasuresSection;
-
   return (
     <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
@@ -395,8 +392,58 @@ const ContentReportingSection = () => {
             Want to join Rustless? Applying is easy! From your account, just navigate to <span className="font-bold">Settings</span>, scroll to the <span className="font-bold">Careers & Opportunities</span> section, and tap <span className="font-bold">Apply to Join</span>. Fill out your details, tell us what makes you awesome, and submit your application directly from there. If you stand out or have that special spark, we’ll reach out!
           </p>
 
-          {/* === HAPPY SECTION before iPhone mockup (kept) === */}
-          <HappySection />
+          {/* === REPLACED: HAPPY SECTION before iPhone mockup === */}
+          <section className="py-8 md:py-12 px-4 md:px-8 bg-white relative overflow-hidden">
+            <div className="hidden lg:block">
+              <FloatingPhoto
+                src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+                size="desktop-round"
+                style={{ left: '10%', top: '20%' }}
+                className=""
+              />
+              <FloatingPhoto
+                src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+                size="desktop-round"
+                style={{ right: '10%', top: '30%' }}
+                className=""
+              />
+            </div>
+            <div className="hidden md:block lg:hidden">
+              <FloatingPhoto
+                src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+                size="tablet-round"
+                style={{ left: '10%', top: '20%' }}
+                className=""
+              />
+              <FloatingPhoto
+                src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+                size="tablet-round"
+                style={{ right: '10%', top: '30%' }}
+                className=""
+              />
+            </div>
+            <div className="block md:hidden">
+              <FloatingPhoto
+                src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+                size="mobile-round"
+                style={{ left: '10%', top: '10%' }}
+                className=""
+              />
+              <FloatingPhoto
+                src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+                size="mobile-round"
+                style={{ right: '10%', top: '15%' }}
+                className=""
+              />
+            </div>
+            <div className="max-w-4xl mx-auto text-center relative z-10">
+              <h2 className="font-bold text-black leading-tight mb-6 md:mb-8">
+                <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">No Resume, No Cv</div>
+                <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">No Lettcode</div>
+                <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] mt-2 text-primary font-black tracking-tight inline-block">#Forever</div>
+              </h2>
+            </div>
+          </section>
 
           <div className="flex justify-center my-6">
             <img
@@ -407,8 +454,58 @@ const ContentReportingSection = () => {
             />
           </div>
 
-          {/* === HAPPY SECTION after iPhone mockup (kept) === */}
-          <HappySection />
+          {/* === REPLACED: HAPPY SECTION after iPhone mockup === */}
+          <section className="py-8 md:py-12 px-4 md:px-8 bg-white relative overflow-hidden">
+            <div className="hidden lg:block">
+              <FloatingPhoto
+                src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+                size="desktop-round"
+                style={{ left: '10%', top: '20%' }}
+                className=""
+              />
+              <FloatingPhoto
+                src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+                size="desktop-round"
+                style={{ right: '10%', top: '30%' }}
+                className=""
+              />
+            </div>
+            <div className="hidden md:block lg:hidden">
+              <FloatingPhoto
+                src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+                size="tablet-round"
+                style={{ left: '10%', top: '20%' }}
+                className=""
+              />
+              <FloatingPhoto
+                src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+                size="tablet-round"
+                style={{ right: '10%', top: '30%' }}
+                className=""
+              />
+            </div>
+            <div className="block md:hidden">
+              <FloatingPhoto
+                src="/lovable-uploads/ddcd62c6-f4e6-4dee-952a-fe62a99ef504.png"
+                size="mobile-round"
+                style={{ left: '10%', top: '10%' }}
+                className=""
+              />
+              <FloatingPhoto
+                src="/lovable-uploads/a2a7aef1-b7bb-4052-83a5-40f26ac72b59.png"
+                size="mobile-round"
+                style={{ right: '10%', top: '15%' }}
+                className=""
+              />
+            </div>
+            <div className="max-w-4xl mx-auto text-center relative z-10">
+              <h2 className="font-bold text-black leading-tight mb-6 md:mb-8">
+                <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">We score high</div>
+                <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">and will score</div>
+                <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] mt-2 text-primary font-black tracking-tight inline-block">#Higher</div>
+              </h2>
+            </div>
+          </section>
 
           <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
             You don’t need referrals or fancy resumes—show us your passion, creativity, and drive. We’re always looking for Rustless souls: designers, devs, creators, and genuinely good people. If you’re the one, our team will spot your application (and yes, we read every single one). Show us why you belong!
