@@ -54,16 +54,15 @@ const StartRegisteringSection = () => (
 
     <div className="max-w-4xl mx-auto text-center relative z-10">
       <h2 className="font-bold text-black leading-tight mb-6 md:mb-8">
-        <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">Next part</div>
-        <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">Grab the coffee</div>
-        <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">and prepare</div>
+        <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">Is it legal?</div>
+        <div className="mb-1 text-4xl md:text-7xl lg:text-8xl">Are we safe?</div>
         <div className="text-3xl md:text-6xl lg:text-7xl xl:text-[72px] mt-2 text-primary font-black tracking-tight inline-block">
-          #Start Registering
+          #More Then Ever
         </div>
       </h2>
       <div className="max-w-4xl mx-auto text-center mb-6 md:mb-8 relative z-10">
         <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-semibold">
-          Ready to join? Download the app, create your account, and become part of the Rustless community where your voice truly matters!
+          We require you to verify your age because we are determined to protect our community and avoid tragedies similar to what happened on Discord &mdash; where minors on the platform led to lawsuits and serious consequences. By making sure everyone is old enough to join, we keep Rustless both legal and safe for everyone. Your safety is our priority!
         </p>
       </div>
     </div>
